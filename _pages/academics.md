@@ -8,11 +8,26 @@ author_profile: true
 <div class="main-content">
   <!-- <h2 style="text-align: left; font-size: 18px; text-align: left;">ACADEMICS</h2> -->
   
-  <div class="education" data-year="2025">
+  <!-- <div class="education" data-year="2025">
     <p style="font-size: 17px; text-align: justify;">🏫 <strong><a href="https://www.engineering.txst.edu/programs/industrial.html" target="_blank">Texas State University</a></strong>, San Marcos, Texas<br>📅 <strong> Fall 2025 (Upcoming) </strong><br>🎓 Master's in Industrial Engineering </p>
   </div>
 
-  <hr>
+  <hr> -->
+  <div class="education" data-year="2025">
+  <p style="font-size: 17px; text-align: justify;">
+    🏫 <strong><a href="https://www.engineering.txst.edu/programs/industrial.html" target="_blank">Texas State University</a></strong>, San Marcos, Texas<br>
+    📅 <strong>Fall 2025 (Upcoming)</strong><br>
+    🎓 Master's in Industrial Engineering
+  </p>
+  <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+    <li><strong>Current Coursework:</strong> Applied Operations Research, Nonlinear Optimization, Probability &amp; Statistics.</li>
+    <li><strong>Graduate Instructional Assistant (Fall 2025):</strong> Supply Chain, Operations Research, Facility Location.</li>
+    <li><strong>Student Member:</strong> <a href="https://www.informs.org/" target="_blank">INFORMS</a>.</li>
+  </ul>
+</div>
+
+<hr>
+
 
   <div class="education" data-year="2022">
     <p style="font-size: 17px; text-align: justify;">🏫 <strong><a href="https://kuet.ac.bd/" target="_blank">Khulna University of Engineering & Technology</a></strong> Khulna, Bangladesh<br>📅 <strong>Feb 2017 – Apr 2022</strong><br>🎓 Bachelor of Science in Industrial & Production Engineering (IPE)<br>🎯 <strong>CGPA:</strong> <a href="\files\Transcripts and Certificates of Undergrad - GM Iqbal Mahmud.pdf" target="_blank">3.65</a>/4.00 (3.78 in last four semesters)</p>
