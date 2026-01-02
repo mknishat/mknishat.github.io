@@ -36,12 +36,12 @@ author:
   # Academic websites
   linkedin         : "mahbubul-kabir-nishat"
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_ID_HERE"
+  googlescholar    : # "https://scholar.google.com/citations?user=YOUR_ID_HERE"
   impactstory      : # URL
   # orcid            : "https://orcid.org/my-orcid?orcid=0009-0001-2309-1246"
   semantic         : # URL
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : "https://www.researchgate.net/profile/Your-Profile-Name"
+  researchgate     : # "https://www.researchgate.net/profile/Your-Profile-Name"
   scopus           : # URL
 
   # Repositories and software development
