@@ -6,51 +6,51 @@
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# `jekyll serve -l -H localhost`. If you change this file, please restart the
 # server process.
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "GM Iqbal 🏡"
+title                    : "Nishat's Portfolio 🏡"
 title_separator          : "-"
-name                     : &name "G M Iqbal Mahmud"
+name                     : &name "Mahbubul Kabir Nishat"
 description              : &description "Industrial Engineer"
-url                      : https://gmiqbal.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : http://localhost:4000 # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "gmiqbal/gmiqbal.github.io"
+repository               : "mknisht/mknisht.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "G M Iqbal Mahmud.png"
-  name             : "G M Iqbal Mahmud"
+  avatar           : "Nishat_PP.jpeg"
+  name             : "Md. Mahbubul Kabir Nishat"
   pronouns         : # example: "she/her"
-  bio              : "Industrial Engineer✨ <br>🎯Upwards & onwards! "
+  bio              : "<i>MS in IE at BUET <br>ERP Consultant <br>Researcher</i>"
   location         : "Dhaka, Bangladesh 🇧🇩"
   employer         : #"Khulna University of Engineering & Technology (KUET)"
   uri              : # URL
-  email            : "gmiqbalm@gmail.com" 
+  email            : "mknishat.kuet@gmail.com"
 
   # Academic websites
-  linkedin         : "gmiqbal"
+  linkedin         : "mahbubul-kabir-nishat"
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=3PNQt0EAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=YOUR_ID_HERE"
   impactstory      : # URL
   # orcid            : "https://orcid.org/my-orcid?orcid=0009-0001-2309-1246"
   semantic         : # URL
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : "https://www.researchgate.net/profile/Gm-Mahmud"
+  researchgate     : "https://www.researchgate.net/profile/Your-Profile-Name"
   scopus           : # URL
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "gmiqbal"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  github           : "mknishat"
+  kaggle           : # Username
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   bluesky          : #"bsky.app" # Replace this with you Bluesky username
@@ -68,7 +68,7 @@ author:
   pinterest        : # Username
   soundcloud       : # Username
   steam            : # Username
-  whatsapp         : https://wa.me/15122105413
+  whatsapp         : https://wa.me/1234567890
 
   telegram         : #https://t.me/gm1_9
   tumblr           : # Username
@@ -77,7 +77,7 @@ author:
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username dfsdf
-  youtube          : GMIqbalMahmud
+  youtube          : # GMIqbalMahmud
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
@@ -85,7 +85,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
 

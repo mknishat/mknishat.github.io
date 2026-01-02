@@ -6,182 +6,74 @@ author_profile: true
 ---
 
 <div class="main-content">
-  <div id="experience">
-    <!-- <h2 style="text-align: left; font-size: 18px; font-weight: bold;">EXPERIENCES</h2> -->
 
-    <div class="experience" data-year="2023">
-      <p style="font-size: 17px; text-align: justify;">🛠 <strong>Supply Chain Planning Officer – Nutrition</strong><br> 🏢 <a href="https://www.unileverconsumercarebd.com/" target="_blank"><strong>Unilever Consumer Care Limited</strong></a>, Dhaka<br>📅 <strong>Jun 2023 – Aug 2024</strong></p>
-
-      <!-- Image Slider for Job 1 -->
-      <div class="photo-gallery" style="margin-top: 20px; text-align: center;">
-        <div class="slider-container" style="position: relative; width: 80%; aspect-ratio: 16/9; margin: 0 auto; overflow: hidden; border-radius: 10px; background-color: #f4f4f4;">
-          <div class="slider" id="slider-1" style="display: flex; transition: transform 0.5s ease-in-out;" data-index="0">
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\ucl\IMG-20240820-WA0028~2.jpg" alt="A heartfelt farewell from incredible mentors!" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\ucl\IMG_20230910_233726_775-1.webp" alt="UCL Team" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\ucl\IMG-20231203-WA0017.jpg" alt="One Planning Team" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-          </div>
-        </div>
-        <div style="font-size: 14px; margin-top: 10px;">
-          <p id="caption-1">A heartfelt farewell from incredible mentors!</p>
-        </div>
-        <div class="slider-controls" style="margin-top: 10px; display: flex; align-items: center; justify-content: center;">
-          <button onclick="moveSlide(-1, 'slider-1', 'caption-1', job1Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-right: 10px;">⬅️</button>
-          <span id="counter-1" style="font-size: 16px;">1/3</span>
-          <button onclick="moveSlide(1, 'slider-1', 'caption-1', job1Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-left: 10px;">➡️</button>
-        </div>
-      </div>
-
-      <!-- Description continues -->
-      <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
-        <li>Led daily Master Production Schedule (MPS) meetings, coordinating a team of 20 to drive updates and actionable plans across three plants. Streamlined MPS to align with production capacity, Overall Equipment Efficiency (OEE), and inventory strategy, achieving efficient demand and resource management</li>
-        <li>Develop Material Requirement Planning (MRP) considering reordering points, MOQ, Days On Hand (DOH) coverage and assist Distribution Requirement Planning (DRP) considering inventory targets and demand dynamics.</li>
-        <li>Drive & monitor Supply Planning KPIs: Dispatch Rate (DR), Service Level (OTIF), Inventory FG & RM.</li>
-        <li>Define material wise optimum FG, RM & PM stock norm and monitor inventory expiries to minimize SLOB materials and reduce write-offs.</li>
-        <li>Maintain historical sales data for insightful decision making and manage Material Master data in SAP: Material code creation, multi-level BOM flow, create and modify Production Version (PV), share Purchase Requisitions (PR), Process Orders (PO) for purchasing and material consumption (GR).</li>
-        <li>Facilitate Sales & Operations Planning (S&OP) process by collaborating with Brand, Customer Service, Procurement, Quality, R&D for strategic decision making, new SKU launch and savings projects.</li>
-      </ul>
-      <p style="font-size: 15px; text-align: justify;">🏆 <strong>Achievements:</strong></p>
-      <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
-        <li>Developed Python, Power Automate and SAP-based scripts to automate reporting, boosting ’Execution Tree’ creation speed by 270% with 100% accuracy. Additionally, implemented VBA scripts for streamlined SAP tasks like PO creation, reducing manual workload and increasing process reliability.</li>
-        <li>Proactively supported Knorr SKUs demand upsurge of 158% over forecast for 03 consecutive months.</li>
-        <li>19.53 Million BDT worth write-off has been avoided with proactive actions like ensuring consumption prior expiry or extending material expiry in alignment with R&D and Quality.</li>
-        <li>Streamlined and rolled out Master Production Schedule (MPS) for 03 Plants (MFPL, KGF Foods, FHF).</li>
-        <li>Rebuilt 47 Nutrition SKUs Master Data and BOM from component level for new distributor margin.</li>
-        <li>Incorporated Nutrition into automated supply planning tool “Kinaxis.”</li>
-        <li>Maintained DR (Dispatch Rate) service level at 98% on average with agility.</li>
-        <li>Launched 3 new SKUs smoothly aligning with all stakeholders and successful OTIF.</li>
-        <li>Created automated SAP VBA script for creating FG PO and doing TECO as easily as possible.</li>
-        <li>Introduced Alternate BOM usage for Nutrition by modifying Production Version (PV) and BOM recipe.</li>
-        <li>Automated breakdown of FG production plan into day-wise RM-PM component requirement and coverage calculation against current stock.</li>
-      </ul>
-    </div>
-
-    <hr>
-
-    <div class="experience" data-year="2022">
-      <p style="font-size: 17px; text-align: justify;">🛠 <strong>Unilever Leadership Internship Program (ULIP) Supply Chain Intern</strong><br> 🏢 <a href="https://www.unilever.com.bd/" target="_blank"><strong>Unilever Bangladesh Limited</strong></a>, Dhaka<br>📅 <strong>Sep 2022 – Dec 2022</strong></p>
-
-      <!-- Image Slider for Job 2 -->
-      <div class="photo-gallery" style="margin-top: 20px; text-align: center;">
-        <div class="slider-container" style="position: relative; width: 80%; aspect-ratio: 16/9; margin: 0 auto; overflow: hidden; border-radius: 10px; background-color: #f4f4f4;">
-          <div class="slider" id="slider-2" style="display: flex; transition: transform 0.5s ease-in-out;" data-index="0">
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\Ubl\ULIPs LinkedIn Asset.png" alt="ULIP Program Asset" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\Ubl\ULIPs.jpg" alt="Purpose Workshop" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="\files\job\Ubl\Slide.jpg" alt="Report on Factory visit" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-          </div>
-        </div>
-        <div style="font-size: 14px; margin-top: 10px;">
-          <p id="caption-2">ULIP Program Asset</p>
-        </div>
-        <div class="slider-controls" style="margin-top: 10px; display: flex; align-items: center; justify-content: center;">
-          <button onclick="moveSlide(-1, 'slider-2', 'caption-2', job2Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-right: 10px;">⬅️</button>
-          <span id="counter-2" style="font-size: 16px;">1/3</span>
-          <button onclick="moveSlide(1, 'slider-2', 'caption-2', job2Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-left: 10px;">➡️</button>
-        </div>
-      </div>
-
-      <!-- Description continues -->
-      <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
-        <li> Got selected for the prestigious Unilever Leadership Internship Programme (ULIP) in Supply Chain competing nationally against 4,500+ candidates through a rigorous 4-phase recruitment process </li>
-        <li>Successfully completed induction on manufacturing, warehouse, operations, and quality at MFPL, Gazipur factory, gaining a thorough understanding of the production process.</li>
-        <li>Restructured the Forecast Accuracy & Forecast Bias files, bringing in more automation that aligned with business needs and KPI reporting.</li>
-        <li>Developed automated production planning tool using Microsoft Excel and Microsoft Visual Basic, streamlining the planning process and reducing complexities significantly.</li>
-      </ul>
-    </div>
-
-    <hr>
-
-    <div class="experience" data-year="2022">
-      <p style="font-size: 17px; text-align: justify;">🛠 <strong>Supply Chain Intern</strong><br> 🏢 <a href="https://www.bengalgroup.com/" target="_blank"><strong>Bengal Group of Industries</strong></a><br>📅 <strong>Jun 2022 – Sep 2022</strong></p>
-
-      <!-- Image Slider for Job 3 -->
-      <div class="photo-gallery" style="margin-top: 20px; text-align: center;">
-        <div class="slider-container" style="position: relative; width: 80%; aspect-ratio: 16/9; margin: 0 auto; overflow: hidden; border-radius: 10px; background-color: #f4f4f4;">
-          <div class="slider" id="slider-3" style="display: flex; transition: transform 0.5s ease-in-out;" data-index="0">
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="/files/job/Bgi/boss.jpg" alt="With my inspiring mentor" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="/files/job/Bgi/workshop.JPG" alt="During Professional Workshop" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="slide" style="min-width: 100%; display: flex; align-items: center; justify-content: center;">
-              <img src="/files/job/Bgi/interns.JPG" alt="Fellow interns 🍵" style="width: 100%; height: 100%; object-fit:cover; object-position: center;">
-            </div>
-          </div>
-        </div>
-        <div style="font-size: 14px; margin-top: 10px;">
-          <p id="caption-3">With my inspiring mentor</p>
-        </div>
-        <div class="slider-controls" style="margin-top: 10px; display: flex; align-items: center; justify-content: center;">
-          <button onclick="moveSlide(-1, 'slider-3', 'caption-3', job3Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-right: 10px;">⬅️</button>
-          <span id="counter-3" style="font-size: 16px;">1/3</span>
-          <button onclick="moveSlide(1, 'slider-3', 'caption-3', job3Captions)" style="background: none; border: none; font-size: 18px; cursor: pointer; margin-left: 10px;">➡️</button>
-        </div>
-      </div>
-
-      <!-- Description continues -->
-      <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
-        <li>Collaborated effectively with cross-functional teams including Sales, Marketing, and Finance to gather and ensure the accuracy of data used for demand forecasting.</li>
-        <li>Supported the procurement team in the end-to-end procurement process from indent to GRN using Far Vision ERP.</li>
-        <li>Developed and implemented a Material Requirement Planning (MRP) dashboard for four business units of BGI to streamline material flow in the factories.</li>
-        <li>Optimized the Comparative Statement (CS) process by restructuring and indexing 1400+ files and creating an interactive dashboard using Microsoft Power BI.</li>
-      </ul>
-    </div>
+  <div class="experience" data-year="2025">
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>April 2025 – Present</strong></p>
   </div>
+
+  <hr>
+
+  <div class="experience" data-year="2023">
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – April 2025</strong></p>
+
+    <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li>Gathered and analyzed business requirements, conducted AS-IS analysis, and mapped processes for diverse manufacturing scenarios</li>
+      <li>Configured and optimized SAP PP & QM module, including master data (Material Master, BOM, Routing, Work Center), MRP, production orders, capacity planning, and shop floor control</li>
+      <li>Developed and managed WRICEF objects, preparing detailed Functional Specifications (FS) and collaborating with ABAP developers for custom solutions</li>
+      <li>Designed, tested, and delivered custom ABAP objects to address unique client requirements, ensuring seamless integration with PP and related modules (MM, SD, QM). Authored and maintained crucial project documentation, including Business Blueprint (BBP), Functional Requirement Specification (FRS), user manuals, test scripts, and training materials</li>
+      <li>Facilitated user training sessions and workshops to drive successful system adoption and change management</li>
+      <li>Provided comprehensive post-go-live support, troubleshooting, and continuous process enhancements for improved operational efficiency</li>
+      <li>Participated in all phases of testing—unit, integration, and user acceptance—ensuring solution quality and reliability</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div style="margin: 20px 0;">
+    <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">TEACHING EXPERIENCE</h2>
+  </div>
+
+  <div class="experience" data-year="2022">
+    <p style="font-size: 17px; text-align: justify;">🎓 <strong>Graduate Teaching Assistant</strong><br> 🏢 <strong><a href="https://www.buet.ac.bd/web/#/" target="_blank">IPE, BUET</a></strong><br>📅 <strong>2022</strong></p>
+
+    <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li>Mentored, supervised students, Proctored, graded papers, and helped the instructor with lecture preparation</li>
+      <li>TA for the course "IPE 301: Measurement, Instrumentation and Control"</li>
+      <li>TA for the course "IPE 306: Production Process Sessional"</li>
+      <li>TA for the course "IPE 402: Machine Tools Sessional"</li>
+      <li>TA for the course "IPE 408: Ergonomics and Safety Management Sessional"</li>
+      <li>TA for the course "CSE 296: Computer Programming Techniques Sessional"</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="experience" data-year="2023">
+    <p style="font-size: 17px; text-align: justify;">🎓 <strong>Guest Lecturer</strong><br> 🏢 <strong><a href="https://www.niter.edu.bd/" target="_blank">IPE, National Institute of Textile Engineering & Research (NITER)</a></strong>, Dhaka, Bangladesh<br>📅 <strong>2023</strong></p>
+
+    <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li>Conducted both theoretical and lab classes in Outcome-based Education (OBE) format</li>
+      <li><strong>Courses Conducted:</strong> Modern Manufacturing Technology, CAD/CAM, Advanced Manufacturing Process</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="experience" data-year="2017">
+    <p style="font-size: 17px; text-align: justify;">🎓 <strong>Mentor & Instructor</strong><br> 🏢 <strong>Science Zone Academic Care</strong>, Jashore, Bangladesh<br>�� <strong>2017 – 2024</strong></p>
+
+    <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li>Extensively tutored students for over 7 years at various academic levels, including O-level, A-level, National Curriculum high school, and first-year university students</li>
+      <li>Delivered instruction in High School Level Mathematics, Physics, and Programming, covering topics such as Calculus, Trigonometry, Probability and Statistics, Newtonian Mechanics, Electricity and Magnetism, and more</li>
+    </ul>
+  </div>
+
 </div>
 
 <hr>
 
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
-  <a href="/news/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">📢 News</a>
   <a href="/academics/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🎓 Academics</a>
   <a href="/publications/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">📝 Publications</a>
-  <a href="/eca-certifications/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🐾 ECA & Certs</a>
-  <a href="/files/GM_Iqbal_Academic_CV.pdf" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🔖 CV</a>
+  <a href="/files/Nishat_CV.pdf" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🔖 CV</a>
 </div>
-
-<div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; align-items: center; justify-content: center;">
-  <span style="position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer;" onclick="closeModal()">&times;</span>
-  <img id="modalImage" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
-</div>
-
-<script>
-let job1Captions = ["A heartfelt farewell from incredible mentors!", "UCL Team", "One Planning Team"];
-let job2Captions = ["ULIP Program Asset", "Purpose Workshop", "Report on Factory visit"];
-let job3Captions = ["With my inspiring mentor", "During Professional Workshop", "Fellow interns 🍵"];
-
-function moveSlide(direction, sliderId, captionId, captions) {
-  const slider = document.getElementById(sliderId);
-  const slides = slider.children;
-  let currentIndex = parseInt(slider.getAttribute('data-index')) || 0;
-  const newIndex = (currentIndex + direction + slides.length) % slides.length;
-  slider.style.transform = `translateX(-${newIndex * 100}%)`;
-  slider.setAttribute('data-index', newIndex);
-  document.getElementById(captionId).textContent = captions[newIndex];
-  document.getElementById(`counter-${sliderId.split('-')[1]}`).textContent = `${newIndex + 1}/${slides.length}`;
-}
-
-function enlargeImage(src) {
-  const modal = document.getElementById('imageModal');
-  const modalImage = document.getElementById('modalImage');
-  modal.style.display = 'flex';
-  modalImage.src = src;
-}
-
-function closeModal() {
-  const modal = document.getElementById('imageModal');
-  modal.style.display = 'none';
-}
-</script>

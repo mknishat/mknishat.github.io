@@ -1,36 +1,30 @@
 ---
 permalink: /
-title: "👋 Hello!"
+title: ""
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<!-- 
+<!--
 bundle exec jekyll serve --incremental --livereload
 Use this to test the file on browser locally. If changed on config, need to redo the command, else refresh only.
-https://gmiqbal.goatcounter.com/
  -->
 
-<p style="text-align: justify; font-size: 15px;"> I’m <strong>G M Iqbal Mahmud</strong>, a dedicated professional and researcher with a passion for solving complex problems and driving meaningful change. My expertise lies at the intersection of <strong>Industrial Engineering, Supply Chain Management,</strong> and <strong>Process Automation,</strong> with a focus on innovative, efficient solutions. 
+<p style="text-align: justify; font-size: 15px;">This is <strong>Md. Mahbubul Kabir Nishat</strong>. I am working at <strong>PricewaterhouseCoopers (PwC)</strong>—the world's second-largest professional services network and one of the Big Four accounting firms. I am based in Bangladesh, where I lead the implementation of <strong>Supply Chain and Manufacturing modules</strong>, collaborating with cross-functional teams to deliver digital transformation solutions across the pharmaceutical, textile, electronics, and chemical manufacturing sectors.
 </p>
-<p style="text-align: justify; font-size: 15px;"> In my professional journey, I’ve worked on streamlining operations, developing automation systems, and optimizing workflows at an MNC like <strong>Unilever Bangladesh Limited</strong> and <strong>Bengal Group of Industries</strong>. Beyond the corporate space, I’ve <strong>collaborated on research projects</strong> to explore new frontiers in engineering and management, contributing to several publications and impactful studies.
+<p style="text-align: justify; font-size: 15px;">Before joining PwC, I completed my <strong>M.Sc. in Industrial & Production Engineering (IPE) from Bangladesh University of Engineering and Technology (BUET)</strong>, where I served as a <strong>Teaching Assistant</strong>. I obtained my <strong>B.Sc. in IPE at Khulna University of Engineering and Technology (KUET)</strong>, where I was honored with the <strong>Dean's Award and University Merit Scholarship</strong> in recognition of my outstanding academic performance. I have also served as a <strong>Guest Lecturer at the National Institute of Textile Engineering and Research (NITER)</strong>.
 </p>
-<p style="text-align: justify; font-size: 15px;"> I also take pride in combining technical knowledge with creativity, having <strong>worked with international clients on data-driven solutions and advanced analytics.</strong> My approach is rooted in a commitment to excellence, clear communication, and continuous learning.
-</p>
-
-<p style="text-align: justify; font-size: 15px;"> Whether you're here for professional collaboration, academic insights, or inspiration, I hope you find what you’re looking for. Let’s create something <strong>extraordinary together!</strong> 💪
+<p style="text-align: justify; font-size: 15px;">My current research interests center on <strong>smart and connected systems, Industrial Artificial Intelligence, and data-driven manufacturing process control</strong>. My previous research includes Cyber-Physical Systems, IoT-enabled automation, machine learning for epidemiological modeling (supported by Bangladesh's Ministry of Science and Technology), Digital Twin-based process control, and reinforcement learning for manufacturing and healthcare optimization. I conceptualize and develop methods to solve complex problems by either hybridizing different techniques or by adopting ideas from seemingly unrelated fields to create novel, interdisciplinary solutions.
 </p>
 <!-- sdfsdfjkh -->
 
 <hr>
 
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
-  <a href="/news/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">📢 News</a>
   <a href="/academics/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🎓 Academics</a>
   <a href="/publications/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">📝 Publications</a>
   <a href="/experience/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">💼 Experiences</a>
-  <a href="/eca-certifications/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🐾 ECA & Certs</a>
-  <a href="/files/GM_Iqbal_Academic_CV.pdf" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🔖 CV</a>
+  <a href="/files/Nishat_CV.pdf" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🔖 CV</a>
 </div>

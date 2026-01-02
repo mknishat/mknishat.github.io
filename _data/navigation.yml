@@ -5,26 +5,20 @@
 # prevent it from being included in the site.
 
 main:
-  - title: "📢 News"
-    url: /news/
-
   - title: "🎓 Academics"
-    url: /academics/    
+    url: /academics/
 
-  - title: "📝 Publications"
-    url: /publications/
+  - title: "🔬 Research"
+    url: /research/
+
+  - title: "🚀 Projects"
+    url: /projects/
 
   - title: "💼 Experiences"
     url: /experience/
 
-  - title: "🐾 ECA & Certs"
-    url: /eca-certifications/    
-        
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-    
+  - title: "🏆 Certificates"
+    url: /certificates/
+
   - title: "🔖 CV"
-    url: /files/GM_Iqbal_Academic_CV.pdf
-    
-  # - title: "Guide"
-  #   url: /markdown/
+    url: /files/Nishat_CV.pdf

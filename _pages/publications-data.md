@@ -142,7 +142,7 @@ body {
     <td class="publication-type">Journal</td>
     <td class="publication-details">
       <div class="publication-title">Towards sustainable AI: a comprehensive framework for Green AI</div>
-      <div class="publication-authors">Abdulaziz Tabbakh, Lisan Al Amin, Mahbubul Islam, <strong>GM Iqbal Mahmud</strong>, Imranul Kabir Chowdhury, Md Saddam Hossain Mukta</div>
+      <div class="publication-authors">Abdulaziz Tabbakh, Lisan Al Amin, Mahbubul Islam, <strong>Mahbubul Kabir Nishat</strong>, Imranul Kabir Chowdhury, Md Saddam Hossain Mukta</div>
       <div class="publication-venue">Discover Sustainability</div>
       <div class="abstract-toggle" onclick="toggleAbstract('abstract-2')">See Abstract</div>
       <div id="abstract-2" class="abstract">
@@ -156,7 +156,7 @@ body {
     <td class="publication-type">Journal</td>
     <td class="publication-details">
       <div class="publication-title">Application of artificial intelligence in reverse logistics: A bibliometric and network analysis</div>
-      <div class="publication-authors">Oyshik Bhowmik, Sudipta Chowdhury, Jahid Hasan Ashik,<strong>GM Iqbal Mahmud</strong>, Md Muzahid Khan, Niamat Ullah Ibne Hossain</div>
+      <div class="publication-authors">Oyshik Bhowmik, Sudipta Chowdhury, Jahid Hasan Ashik,<strong>Mahbubul Kabir Nishat</strong>, Md Muzahid Khan, Niamat Ullah Ibne Hossain</div>
       <div class="publication-venue">Supply Chain Analytics</div>
       <div class="abstract-toggle" onclick="toggleAbstract('abstract-1')">See Abstract</div>
       <div id="abstract-1" class="abstract">
@@ -170,7 +170,7 @@ body {
     <td class="publication-type">Thesis</td>
     <td class="publication-details">
       <div class="publication-title">Solving a Capacitated Vehicle Routing Problem (CVRP) by Using Heuristics and Google OR-Tools: A Case Study</div>
-      <div class="publication-authors">G M Iqbal Mahmud <strong> Supervisor: </strong> Md. Habibur Rahman</div>
+      <div class="publication-authors">Mahbubul Kabir Nishat <strong> Supervisor: </strong> Md. Habibur Rahman</div>
       <div class="publication-venue">Khulna University of Engineering & Technology</div>
       <div class="abstract-toggle" onclick="toggleAbstract('abstract-3')">See Abstract</div>
       <div id="abstract-3" class="abstract">
