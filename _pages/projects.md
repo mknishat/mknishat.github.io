@@ -167,9 +167,24 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
   <div class="card-body">
     <p><strong>Abstract:</strong> This study develops a robust, interpretable machine learning framework to identify climatic factors contributing to infectious disease incidence in refugee communities, who are particularly vulnerable due to overcrowding, inadequate sanitation, and delayed healthcare access.</p>
+    
     <img src="/images/thesis-framework.png" alt="ML Framework">
     <figcaption>Figure 1: Comprehensive ML framework for disease prediction</figcaption>
+    
     <p><strong>Methodology:</strong> The framework integrates PSO and Genetic Algorithm for feature selection, Time-VAE for data augmentation, and SHAP for interpretability.</p>
+    
+    <h4>Diarrhea Outbreak Prediction - SHAP Analysis</h4>
+    <img src="/images/shap-diarrhea.png" alt="SHAP Diarrhea">
+    <figcaption>Figure 2: SHAP feature importance for Diarrhea prediction</figcaption>
+    
+    <h4>Malaria Outbreak Prediction - SHAP Analysis</h4>
+    <img src="/images/shap-malaria.png" alt="SHAP Malaria">
+    <figcaption>Figure 3: SHAP feature importance for Malaria prediction</figcaption>
+    
+    <h4>RTI Outbreak Prediction - SHAP Analysis</h4>
+    <img src="/images/shap-rti.png" alt="SHAP RTI">
+    <figcaption>Figure 4: SHAP feature importance for RTI prediction</figcaption>
+    
     <p><strong>Key Findings:</strong> VAE significantly improves predictive performance. BART best captures complex nonlinear climate-disease relationships.</p>
     <div class="keywords">
       <span class="keyword blue">Variational Auto-Encoder</span>
@@ -178,6 +193,9 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       <span class="keyword blue">Climate Sensitivity</span>
       <span class="keyword blue">PSO</span>
       <span class="keyword blue">BART</span>
+      <span class="keyword blue">Diarrhea</span>
+      <span class="keyword blue">Malaria</span>
+      <span class="keyword blue">RTI</span>
     </div>
   </div>
 </div>
@@ -194,8 +212,13 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
   <div class="card-body">
     <p><strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation, identifying and prioritizing implementation barriers using hierarchical weighting analysis.</p>
+    
     <img src="/images/industry40-readiness.png" alt="Industry 4.0 Readiness">
     <figcaption>Figure 1: Readiness assessment radar chart across 7 dimensions</figcaption>
+    
+    <img src="/images/industry40-dimensions.png" alt="Industry 4.0 Dimensions">
+    <figcaption>Figure 2: The Seven Dimensions of Industry 4.0 Readiness Framework</figcaption>
+    
     <p><strong>Methodology:</strong> Best-Worst Method (BWM) with weighted scoring evaluates organizational readiness. Barrier analysis identifies 17 sub-barriers under four major categories.</p>
     <p><strong>Key Findings:</strong> Organizational barriers (44.7%) dominate over Technological (30.4%), Human Resource (15.3%), and Environmental (9.7%) barriers.</p>
     <div class="keywords">
@@ -220,11 +243,24 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
   <div class="card-body">
     <p><strong>Abstract:</strong> This project presents a computational framework for solving the Multi-Depot Heterogeneous Fleet Vehicle Routing Problem (MDHFVRP) in last-mile delivery logistics, optimizing routes across 3 depots serving 69 customers.</p>
+    
     <a href="/files/vrp-project/Technical_Report.pdf" class="btn-link green" target="_blank"><i class="fas fa-file-pdf"></i> Technical Report</a>
     <a href="https://github.com/mknishat/Last-Mile-Delivery-Optimization" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    
     <img src="/images/vrp-project/fig1_multi_depot_topology.png" alt="Network Topology">
     <figcaption>Figure 1: Multi-Depot Delivery Network Topology</figcaption>
+    
+    <img src="/images/vrp-project/fig7_multi_depot_routes.png" alt="Optimized Routes">
+    <figcaption>Figure 2: Optimized Multi-Depot Routes</figcaption>
+    
+    <img src="/images/vrp-project/fig5_ev_gv_cost_comparison.png" alt="EV vs GV Cost">
+    <figcaption>Figure 3: EV vs GV Cost Comparison</figcaption>
+    
+    <img src="/images/vrp-project/fig6_fleet_composition_analysis.png" alt="Fleet Composition">
+    <figcaption>Figure 4: Fleet Composition Analysis</figcaption>
+    
     <p><strong>Methodology:</strong> Decomposition strategy with Google OR-Tools using PATH_CHEAPEST_ARC heuristic and Guided Local Search metaheuristic.</p>
+    
     <table class="results-table">
       <thead><tr><th>Configuration</th><th>EVs</th><th>GVs</th><th>Cost (USD)</th></tr></thead>
       <tbody>
@@ -233,6 +269,10 @@ Welcome to my projects portfolio featuring research in data science, machine lea
         <tr class="highlight"><td>Mixed 50%</td><td>15</td><td>15</td><td>5,971</td></tr>
       </tbody>
     </table>
+    
+    <img src="/images/vrp-project/fig8_summary_dashboard.png" alt="Summary Dashboard">
+    <figcaption>Figure 5: Optimization Results Summary Dashboard</figcaption>
+    
     <p><strong>Key Findings:</strong> Fleet electrification reduces costs by 9.1% while maintaining service levels.</p>
     <div class="keywords">
       <span class="keyword green">Vehicle Routing</span>
