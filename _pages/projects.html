@@ -1,4 +1,4 @@
----
+﻿---
 layout: archive
 title: "Projects"
 permalink: /projects/
@@ -295,8 +295,146 @@ author_profile: true
   </p>
   <p class="click-hint"><i class="fas fa-hand-pointer"></i> Click on any project card to expand details</p>
 
-  <!-- PROJECT 1: Multi-Depot VRP -->
-  <div class="project-box vrp" id="project1">
+  <!-- PROJECT 1: Master's Thesis -->
+  <div class="project-box thesis" id="project1">
+    <div class="project-header">
+      <div class="project-header-content">
+        <div class="project-category"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
+        <h3 class="project-title">A Machine Learning Approach for Evaluating Climate Sensitivity of Infectious Diseases in Refugee Communities</h3>
+        <p class="project-subtitle">ML framework with SHAP interpretability for climate-disease prediction using VAE data augmentation</p>
+      </div>
+      <div class="project-toggle">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <div class="project-details">
+      <div class="project-content">
+        <p>
+          <strong>Abstract:</strong> Globalization, climate change, and increased population mobility have intensified the challenges of infectious disease outbreaks for global public health. Refugee communities are particularly vulnerable due to overcrowding, inadequate sanitation, and delayed healthcare access. This study develops a robust, interpretable machine learning framework to identify climatic factors contributing to infectious disease incidence.
+        </p>
+        
+        <figure class="project-figure">
+          <img src="{{ '/images/thesis-framework.png' | relative_url }}" alt="ML Framework">
+          <figcaption><strong>Figure 1:</strong> Comprehensive ML framework integrating data preprocessing, feature engineering, and model validation.</figcaption>
+        </figure>
+        
+        <p>
+          <strong>Methodology:</strong> The framework integrates meta-heuristics feature selection (PSO, Genetic Algorithm) to select relevant variables. Time Variational Auto-Encoder (Time-VAE) addresses data scarcity. SHAP values provide feature importance explanations with enhanced interpretability.
+        </p>
+        
+        <div class="finding-box green">
+          <h4 style="color: #28a745;"><i class="fas fa-bacteria"></i> Diarrhea Outbreak Prediction</h4>
+          <p>Key predictors: Minimum Temperature, Solar Radiation, Sea Level Pressure</p>
+          <img src="{{ '/images/shap-diarrhea.png' | relative_url }}" alt="SHAP Diarrhea" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
+        </div>
+        
+        <div class="finding-box red">
+          <h4 style="color: #dc3545;"><i class="fas fa-mosquito"></i> Malaria Outbreak Prediction</h4>
+          <p>Key predictors: Minimum Temperature, Relative Humidity, Air Quality Index</p>
+          <img src="{{ '/images/shap-malaria.png' | relative_url }}" alt="SHAP Malaria" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
+        </div>
+        
+        <div class="finding-box orange">
+          <h4 style="color: #fd7e14;"><i class="fas fa-lungs"></i> Respiratory Tract Infection Prediction</h4>
+          <p>Key predictors: Temperature at 2m, Wind Speed, Sunshine Hours</p>
+          <img src="{{ '/images/shap-rti.png' | relative_url }}" alt="SHAP RTI" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
+        </div>
+        
+        <p>
+          <strong>Key Findings:</strong> VAE significantly improves predictive performance against limited sample size. BART best captures complex nonlinear climate-disease relationships. The framework provides actionable insights for public health planning in resource-constrained settings.
+        </p>
+        
+        <div class="keywords-container">
+          <strong>Keywords:</strong>
+          <div class="keywords-list">
+            <span class="keyword-tag blue">Respiratory Tract Infection</span>
+            <span class="keyword-tag blue">Diarrhea</span>
+            <span class="keyword-tag blue">Malaria</span>
+            <span class="keyword-tag blue">Variational Auto-Encoder</span>
+            <span class="keyword-tag blue">Explainable AI</span>
+            <span class="keyword-tag blue">PSO</span>
+            <span class="keyword-tag blue">Genetic Algorithm</span>
+            <span class="keyword-tag blue">Climate Sensitivity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 2: Undergraduate Thesis -->
+  <div class="project-box undergrad" id="project2">
+    <div class="project-header">
+      <div class="project-header-content">
+        <div class="project-category"><i class="fas fa-book"></i> Undergraduate Thesis</div>
+        <h3 class="project-title">Industry 4.0 Readiness Assessment Framework and Barrier Analysis</h3>
+        <p class="project-subtitle">BWM-based framework for evaluating digital transformation readiness across 7 dimensions</p>
+      </div>
+      <div class="project-toggle">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <div class="project-details">
+      <div class="project-content">
+        <p>
+          <strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation. The research identifies and prioritizes implementation barriers using hierarchical weighting analysis across technology, organization, human resources, and regulatory dimensions.
+        </p>
+        
+        <figure class="project-figure">
+          <img src="{{ '/images/industry40-readiness.png' | relative_url }}" alt="Industry 4.0 Readiness">
+          <figcaption><strong>Figure 1:</strong> Readiness assessment radar chart comparing four companies across 7 dimensions.</figcaption>
+        </figure>
+        
+        <figure class="project-figure">
+          <img src="{{ '/images/industry40-dimensions.png' | relative_url }}" alt="Seven Dimensions">
+          <figcaption><strong>Figure 2:</strong> The Seven Dimensions of Industry 4.0 Readiness Framework.</figcaption>
+        </figure>
+        
+        <p>
+          <strong>Methodology:</strong> Best-Worst Method (BWM) with weighted scoring evaluates organizational readiness. A comprehensive barrier analysis identifies 17 sub-barriers categorized under four major barrier types with normalized global weights.
+        </p>
+        
+        <div class="results-box">
+          <h4 style="color: #cc8800;"><i class="fas fa-exclamation-triangle"></i> Top Implementation Barriers</h4>
+          <table class="results-table">
+            <thead style="background: #ffc107; color: #333;">
+              <tr>
+                <th>Rank</th>
+                <th>Barrier</th>
+                <th>Category</th>
+                <th>Global Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight"><td>1</td><td>Digital Strategy Limitations</td><td>Organizational</td><td>0.154</td></tr>
+              <tr><td>2</td><td>Complexity in Production Patterns</td><td>Technological</td><td>0.149</td></tr>
+              <tr><td>3</td><td>High Investment Requirements</td><td>Organizational</td><td>0.126</td></tr>
+              <tr><td>4</td><td>Value Chain Integration Issues</td><td>Organizational</td><td>0.093</td></tr>
+              <tr><td>5</td><td>Lack of Digital Skills</td><td>Human Resource</td><td>0.073</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p>
+          <strong>Key Findings:</strong> <strong>Organizational barriers</strong> (44.7% weight) dominate over Technological (30.4%), Human Resource (15.3%), and Environmental (9.7%) barriers. The framework provides organizations with a prioritized roadmap for Industry 4.0 transformation.
+        </p>
+        
+        <div class="keywords-container">
+          <strong>Focus Areas:</strong>
+          <div class="keywords-list">
+            <span class="keyword-tag yellow">Industry 4.0 Readiness</span>
+            <span class="keyword-tag yellow">Digital Transformation</span>
+            <span class="keyword-tag yellow">Barrier Analysis</span>
+            <span class="keyword-tag yellow">Best-Worst Method</span>
+            <span class="keyword-tag yellow">Smart Manufacturing</span>
+            <span class="keyword-tag yellow">Technology Adoption</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 3: Multi-Depot VRP -->
+  <div class="project-box vrp" id="project3">
     <div class="project-header">
       <div class="project-header-content">
         <div class="project-category"><i class="fas fa-truck"></i> Operations Research Project</div>
@@ -382,144 +520,6 @@ author_profile: true
             <span class="keyword-tag green">Last-Mile Delivery</span>
             <span class="keyword-tag green">OR-Tools</span>
             <span class="keyword-tag green">K-Means Clustering</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECT 2: Master's Thesis -->
-  <div class="project-box thesis" id="project2">
-    <div class="project-header">
-      <div class="project-header-content">
-        <div class="project-category"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
-        <h3 class="project-title">A Machine Learning Approach for Evaluating Climate Sensitivity of Infectious Diseases in Refugee Communities</h3>
-        <p class="project-subtitle">ML framework with SHAP interpretability for climate-disease prediction using VAE data augmentation</p>
-      </div>
-      <div class="project-toggle">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </div>
-    <div class="project-details">
-      <div class="project-content">
-        <p>
-          <strong>Abstract:</strong> Globalization, climate change, and increased population mobility have intensified the challenges of infectious disease outbreaks for global public health. Refugee communities are particularly vulnerable due to overcrowding, inadequate sanitation, and delayed healthcare access. This study develops a robust, interpretable machine learning framework to identify climatic factors contributing to infectious disease incidence.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/thesis-framework.png' | relative_url }}" alt="ML Framework">
-          <figcaption><strong>Figure 1:</strong> Comprehensive ML framework integrating data preprocessing, feature engineering, and model validation.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Methodology:</strong> The framework integrates meta-heuristics feature selection (PSO, Genetic Algorithm) to select relevant variables. Time Variational Auto-Encoder (Time-VAE) addresses data scarcity. SHAP values provide feature importance explanations with enhanced interpretability.
-        </p>
-        
-        <div class="finding-box green">
-          <h4 style="color: #28a745;"><i class="fas fa-bacteria"></i> Diarrhea Outbreak Prediction</h4>
-          <p>Key predictors: Minimum Temperature, Solar Radiation, Sea Level Pressure</p>
-          <img src="{{ '/images/shap-diarrhea.png' | relative_url }}" alt="SHAP Diarrhea" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <div class="finding-box red">
-          <h4 style="color: #dc3545;"><i class="fas fa-mosquito"></i> Malaria Outbreak Prediction</h4>
-          <p>Key predictors: Minimum Temperature, Relative Humidity, Air Quality Index</p>
-          <img src="{{ '/images/shap-malaria.png' | relative_url }}" alt="SHAP Malaria" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <div class="finding-box orange">
-          <h4 style="color: #fd7e14;"><i class="fas fa-lungs"></i> Respiratory Tract Infection Prediction</h4>
-          <p>Key predictors: Temperature at 2m, Wind Speed, Sunshine Hours</p>
-          <img src="{{ '/images/shap-rti.png' | relative_url }}" alt="SHAP RTI" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <p>
-          <strong>Key Findings:</strong> VAE significantly improves predictive performance against limited sample size. BART best captures complex nonlinear climate-disease relationships. The framework provides actionable insights for public health planning in resource-constrained settings.
-        </p>
-        
-        <div class="keywords-container">
-          <strong>Keywords:</strong>
-          <div class="keywords-list">
-            <span class="keyword-tag blue">Respiratory Tract Infection</span>
-            <span class="keyword-tag blue">Diarrhea</span>
-            <span class="keyword-tag blue">Malaria</span>
-            <span class="keyword-tag blue">Variational Auto-Encoder</span>
-            <span class="keyword-tag blue">Explainable AI</span>
-            <span class="keyword-tag blue">PSO</span>
-            <span class="keyword-tag blue">Genetic Algorithm</span>
-            <span class="keyword-tag blue">Climate Sensitivity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECT 3: Undergraduate Thesis -->
-  <div class="project-box undergrad" id="project3">
-    <div class="project-header">
-      <div class="project-header-content">
-        <div class="project-category"><i class="fas fa-book"></i> Undergraduate Thesis</div>
-        <h3 class="project-title">Industry 4.0 Readiness Assessment Framework and Barrier Analysis</h3>
-        <p class="project-subtitle">AHP-based framework for evaluating digital transformation readiness across 7 dimensions</p>
-      </div>
-      <div class="project-toggle">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </div>
-    <div class="project-details">
-      <div class="project-content">
-        <p>
-          <strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation. The research identifies and prioritizes implementation barriers using hierarchical weighting analysis across technology, organization, human resources, and regulatory dimensions.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/industry40-readiness.png' | relative_url }}" alt="Industry 4.0 Readiness">
-          <figcaption><strong>Figure 1:</strong> Readiness assessment radar chart comparing four companies across 7 dimensions.</figcaption>
-        </figure>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/industry40-dimensions.png' | relative_url }}" alt="Seven Dimensions">
-          <figcaption><strong>Figure 2:</strong> The Seven Dimensions of Industry 4.0 Readiness Framework.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Methodology:</strong> Analytic Hierarchy Process (AHP) with weighted scoring evaluates organizational readiness. A comprehensive barrier analysis identifies 17 sub-barriers categorized under four major barrier types with normalized global weights.
-        </p>
-        
-        <div class="results-box">
-          <h4 style="color: #cc8800;"><i class="fas fa-exclamation-triangle"></i> Top Implementation Barriers</h4>
-          <table class="results-table">
-            <thead style="background: #ffc107; color: #333;">
-              <tr>
-                <th>Rank</th>
-                <th>Barrier</th>
-                <th>Category</th>
-                <th>Global Weight</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight"><td>1</td><td>Digital Strategy Limitations</td><td>Organizational</td><td>0.154</td></tr>
-              <tr><td>2</td><td>Complexity in Production Patterns</td><td>Technological</td><td>0.149</td></tr>
-              <tr><td>3</td><td>High Investment Requirements</td><td>Organizational</td><td>0.126</td></tr>
-              <tr><td>4</td><td>Value Chain Integration Issues</td><td>Organizational</td><td>0.093</td></tr>
-              <tr><td>5</td><td>Lack of Digital Skills</td><td>Human Resource</td><td>0.073</td></tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <p>
-          <strong>Key Findings:</strong> <strong>Organizational barriers</strong> (44.7% weight) dominate over Technological (30.4%), Human Resource (15.3%), and Environmental (9.7%) barriers. The framework provides organizations with a prioritized roadmap for Industry 4.0 transformation.
-        </p>
-        
-        <div class="keywords-container">
-          <strong>Focus Areas:</strong>
-          <div class="keywords-list">
-            <span class="keyword-tag yellow">Industry 4.0 Readiness</span>
-            <span class="keyword-tag yellow">Digital Transformation</span>
-            <span class="keyword-tag yellow">Barrier Analysis</span>
-            <span class="keyword-tag yellow">Analytic Hierarchy Process</span>
-            <span class="keyword-tag yellow">Smart Manufacturing</span>
-            <span class="keyword-tag yellow">Technology Adoption</span>
           </div>
         </div>
       </div>
