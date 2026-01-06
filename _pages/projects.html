@@ -1,5 +1,4 @@
----
-# Updated: 2026-01-06 14:29:33
+﻿---
 layout: archive
 title: "Projects"
 permalink: /projects/
@@ -106,13 +105,12 @@ author_profile: true
   .project-details {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease;
     background: #fff;
   }
   
   .project-box.active .project-details {
-    max-height: 5000px;
-    transition: max-height 0.8s ease-in;
+    max-height: 8000px;
   }
   
   .project-content {
@@ -298,7 +296,7 @@ author_profile: true
   <p class="click-hint"><i class="fas fa-hand-pointer"></i> Click on any project card to expand details</p>
 
   <!-- PROJECT 1: Multi-Depot VRP -->
-  <div class="project-box vrp" onclick="toggleProject(this)">
+  <div class="project-box vrp" id="project1">
     <div class="project-header">
       <div class="project-header-content">
         <div class="project-category"><i class="fas fa-truck"></i> Operations Research Project</div>
@@ -391,7 +389,7 @@ author_profile: true
   </div>
 
   <!-- PROJECT 2: Master's Thesis -->
-  <div class="project-box thesis" onclick="toggleProject(this)">
+  <div class="project-box thesis" id="project2">
     <div class="project-header">
       <div class="project-header-content">
         <div class="project-category"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
@@ -457,7 +455,7 @@ author_profile: true
   </div>
 
   <!-- PROJECT 3: Undergraduate Thesis -->
-  <div class="project-box undergrad" onclick="toggleProject(this)">
+  <div class="project-box undergrad" id="project3">
     <div class="project-header">
       <div class="project-header-content">
         <div class="project-category"><i class="fas fa-book"></i> Undergraduate Thesis</div>
@@ -500,8 +498,8 @@ author_profile: true
               </tr>
             </thead>
             <tbody>
-              <tr class="highlight"><td>1</td><td>Digital Strategy Limitations & Resource Shortages</td><td>Organizational</td><td>0.154</td></tr>
-              <tr><td>2</td><td>Complexity in New Production Patterns</td><td>Technological</td><td>0.149</td></tr>
+              <tr class="highlight"><td>1</td><td>Digital Strategy Limitations</td><td>Organizational</td><td>0.154</td></tr>
+              <tr><td>2</td><td>Complexity in Production Patterns</td><td>Technological</td><td>0.149</td></tr>
               <tr><td>3</td><td>High Investment Requirements</td><td>Organizational</td><td>0.126</td></tr>
               <tr><td>4</td><td>Value Chain Integration Issues</td><td>Organizational</td><td>0.093</td></tr>
               <tr><td>5</td><td>Lack of Digital Skills</td><td>Human Resource</td><td>0.073</td></tr>
@@ -539,23 +537,20 @@ author_profile: true
   <a href="{{ '/files/Nishat_CV.pdf' | relative_url }}" class="nav-link"><i class="fas fa-file-pdf"></i> CV</a>
 </div>
 
-<script>
-function toggleProject(element) {
-  // Close all other projects
-  document.querySelectorAll('.project-box').forEach(box => {
-    if (box !== element && box.classList.contains('active')) {
-      box.classList.remove('active');
-    }
-  });
-  
-  // Toggle clicked project
-  element.classList.toggle('active');
-  
-  // Scroll to project if opening
-  if (element.classList.contains('active')) {
-    setTimeout(() => {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+<script type="text/javascript">
+(function() {
+  var boxes = document.querySelectorAll('.project-box');
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].querySelector('.project-header').onclick = function() {
+      var parent = this.parentElement;
+      var wasActive = parent.className.indexOf('active') > -1;
+      for (var j = 0; j < boxes.length; j++) {
+        boxes[j].className = boxes[j].className.replace(' active', '');
+      }
+      if (!wasActive) {
+        parent.className += ' active';
+      }
+    };
   }
-}
+})();
 </script>
