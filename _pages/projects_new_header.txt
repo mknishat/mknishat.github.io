@@ -1,0 +1,142 @@
+﻿---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+<div class="main-content">
+
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-folder-open"></i> Featured Projects</h2>
+
+  <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
+    Welcome to my projects portfolio. Here you'll find a collection of my research, academic, and professional projects showcasing applications of data science, machine learning, industrial engineering, and optimization techniques.
+  </p>
+
+  <hr style="margin: 30px 0;">
+
+  <!-- MULTI-DEPOT VRP PROJECT -->
+  <div class="project-card" style="border: 2px solid #28a745; border-radius: 8px; padding: 25px; margin: 25px 0; background: #f0fff4; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+
+    <h3 style="font-size: 20px; color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 10px;">
+      <i class="fas fa-truck" style="margin-right: 10px;"></i>Operations Research Project
+    </h3>
+
+    <h2 style="font-size: 18px; color: #333; margin: 15px 0 10px 0;">Multi-Depot Vehicle Routing Problem with Heterogeneous Fleet</h2>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Abstract:</strong> This project presents a computational framework for solving the <strong>Multi-Depot Heterogeneous Fleet Vehicle Routing Problem (MDHFVRP)</strong> in last-mile delivery logistics. The system optimizes delivery routes across K = 3 distribution centers serving N = 69 geographically dispersed customers using a mixed fleet of Electric Vehicles (EVs) and Gasoline Vehicles (GVs).
+    </p>
+
+    <!-- Download Links -->
+    <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+      <a href="{{ '/files/vrp-project/Technical_Report.pdf' | relative_url }}" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> Download Technical Report (PDF)
+      </a>
+      <a href="https://github.com/mknishat/Last-Mile-Delivery-Optimization" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <i class="fab fa-github" style="margin-right: 8px;"></i> View on GitHub
+      </a>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Mathematical Formulation:</strong> The objective is to minimize total operational cost across all depots, comprising distance-based vehicle operating costs and time-based labor costs. The problem is formulated as a Mixed Integer Linear Program (MILP) with constraints for customer visits, flow conservation, vehicle range, and working time limits.
+    </p>
+
+    <!-- Network Topology Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig1_multi_depot_topology.png' | relative_url }}" alt="Multi-Depot Network Topology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 1:</strong> Multi-Depot Delivery Network Topology showing 3 depots with color-coded service regions and customer locations assigned via K-means clustering.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Methodology:</strong> The solution approach employs a decomposition strategy where each depot's subproblem is optimized independently using Google OR-Tools. The framework uses PATH_CHEAPEST_ARC heuristic for initial solution generation and Guided Local Search (GLS) metaheuristic for solution improvement.
+    </p>
+
+    <!-- Optimized Routes Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig7_multi_depot_routes.png' | relative_url }}" alt="Optimized Multi-Depot Routes" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 2:</strong> Optimized delivery routes for all three depots showing vehicle assignments and route sequences.</p>
+    </div>
+
+    <!-- Computational Results -->
+    <div style="margin: 20px 0; padding: 15px; background: #fff; border-left: 4px solid #28a745; border-radius: 4px;">
+      <h4 style="color: #28a745; margin-top: 0;">Computational Results</h4>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px;">
+        <thead style="background: #28a745; color: white;">
+          <tr>
+            <th style="border: 1px solid #ddd; padding: 8px;">Configuration</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">EVs</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">GVs</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Total Cost ($)</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Distance (mi)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 8px;">All GV</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">30</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">6,568</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2,908</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Mixed (30% EV)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">9</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">21</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">6,200</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2,931</td>
+          </tr>
+          <tr style="background: #d4edda;">
+            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Mixed (50% EV)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">15</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">15</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">5,971</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">2,939</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px; color: #28a745; margin-top: 10px; font-weight: bold;">
+        <i class="fas fa-chart-line"></i> Cost Reduction: 9.1% savings achieved through fleet electrification
+      </p>
+    </div>
+
+    <!-- Cost Comparison Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig3_multi_depot_cost_comparison.png' | relative_url }}" alt="Cost Comparison Analysis" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 3:</strong> Cost and distance comparison across depots and fleet configurations.</p>
+    </div>
+
+    <!-- Vehicle Utilization Heatmap -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig5_vehicle_utilization_heatmap.png' | relative_url }}" alt="Vehicle Utilization Heatmap" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 4:</strong> Vehicle range utilization heatmap showing percentage of maximum range used by each vehicle across all depots.</p>
+    </div>
+
+    <!-- Summary Dashboard -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig8_summary_dashboard.png' | relative_url }}" alt="Summary Dashboard" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 5:</strong> Summary dashboard showing overall performance metrics, cost breakdown by depot, workload distribution, and route distances.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Key Findings:</strong> (1) Fleet electrification reduces costs by <strong>9.1%</strong> while maintaining service levels; (2) K-means clustering effectively partitions customers for multi-depot operations; (3) Average vehicle utilization of <strong>51.3%</strong> indicates potential for fleet size optimization; (4) Guided Local Search achieves near-optimal solutions within 5 seconds per depot.
+    </p>
+
+    <!-- Keywords -->
+    <div style="margin: 20px 0;">
+      <strong style="color: #333;">Keywords:</strong>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Vehicle Routing Problem</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Multi-Depot</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Heterogeneous Fleet</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Electric Vehicles</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Last-Mile Delivery</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">OR-Tools</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">K-Means Clustering</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Guided Local Search</span>
+      </div>
+    </div>
+
+  </div>
+
+  <hr style="margin: 30px 0;">
