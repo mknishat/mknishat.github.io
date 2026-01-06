@@ -5,554 +5,384 @@ permalink: /projects/
 author_profile: true
 ---
 
-<style>
-  .projects-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .project-box {
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    margin: 20px 0;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    background: #fff;
-  }
-  
-  .project-box:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    transform: translateY(-2px);
-  }
-  
-  .project-box.vrp { border-left: 5px solid #28a745; }
-  .project-box.thesis { border-left: 5px solid #007bff; }
-  .project-box.undergrad { border-left: 5px solid #ffc107; }
-  
-  .project-header {
-    padding: 20px 25px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s ease;
-  }
-  
-  .project-box.vrp .project-header { background: linear-gradient(135deg, #f0fff4 0%, #e8f5e9 100%); }
-  .project-box.thesis .project-header { background: linear-gradient(135deg, #f0f8ff 0%, #e3f2fd 100%); }
-  .project-box.undergrad .project-header { background: linear-gradient(135deg, #fffbf0 0%, #fff8e1 100%); }
-  
-  .project-header:hover {
-    filter: brightness(0.97);
-  }
-  
-  .project-header-content {
-    flex: 1;
-  }
-  
-  .project-category {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  
-  .project-box.vrp .project-category { color: #28a745; }
-  .project-box.thesis .project-category { color: #007bff; }
-  .project-box.undergrad .project-category { color: #cc8800; }
-  
-  .project-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin: 0 0 8px 0;
-    line-height: 1.3;
-  }
-  
-  .project-subtitle {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-  }
-  
-  .project-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    margin-left: 15px;
-  }
-  
-  .project-box.vrp .project-toggle { background: #28a745; color: white; }
-  .project-box.thesis .project-toggle { background: #007bff; color: white; }
-  .project-box.undergrad .project-toggle { background: #ffc107; color: #333; }
-  
-  .project-toggle i {
-    transition: transform 0.3s ease;
-  }
-  
-  .project-box.active .project-toggle i {
-    transform: rotate(180deg);
-  }
-  
-  .project-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    background: #fff;
-  }
-  
-  .project-box.active .project-details {
-    max-height: 8000px;
-  }
-  
-  .project-content {
-    padding: 25px;
-    border-top: 1px solid #eee;
-  }
-  
-  .project-content p {
-    font-size: 15px;
-    text-align: justify;
-    color: #555;
-    line-height: 1.7;
-    margin: 15px 0;
-  }
-  
-  .project-links {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
-  
-  .project-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  
-  .project-link.primary { background: #28a745; color: white; }
-  .project-link.primary:hover { background: #218838; }
-  .project-link.dark { background: #333; color: white; }
-  .project-link.dark:hover { background: #444; }
-  
-  .project-link i { margin-right: 8px; }
-  
-  .project-figure {
-    margin: 25px 0;
-    text-align: center;
-  }
-  
-  .project-figure img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .project-figure figcaption {
-    font-size: 13px;
-    color: #666;
-    margin-top: 10px;
-    font-style: italic;
-  }
-  
-  .results-box {
-    margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-  }
-  
-  .results-box h4 {
-    margin: 0 0 15px 0;
-    font-size: 16px;
-  }
-  
-  .results-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-  
-  .results-table th, .results-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .results-table thead { background: #333; color: white; }
-  .results-table tbody tr:nth-child(even) { background: #f9f9f9; }
-  .results-table .highlight { background: #d4edda; font-weight: bold; }
-  
-  .keywords-container {
-    margin: 20px 0;
-  }
-  
-  .keywords-container strong {
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .keywords-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  
-  .keyword-tag {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .keyword-tag.green { background: #d4edda; color: #28a745; border: 1px solid #28a745; }
-  .keyword-tag.blue { background: #e7f3ff; color: #0066cc; border: 1px solid #0066cc; }
-  .keyword-tag.yellow { background: #fff3cd; color: #cc8800; border: 1px solid #ffc107; }
-  
-  .finding-box {
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin: 15px 0;
-  }
-  
-  .finding-box.green { background: #e8f5e9; border-left: 4px solid #28a745; }
-  .finding-box.red { background: #ffebee; border-left: 4px solid #dc3545; }
-  .finding-box.orange { background: #fff3e0; border-left: 4px solid #fd7e14; }
-  
-  .finding-box h4 { margin: 0 0 10px 0; font-size: 15px; }
-  .finding-box p { margin: 0; font-size: 14px; }
-  
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 30px 0;
-  }
-  
-  .nav-link {
-    padding: 8px 16px;
-    text-decoration: none;
-    background: #f0f0f0;
-    color: #333;
-    border-radius: 4px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    background: #333;
-    color: white;
-    border-color: #333;
-  }
-  
-  .intro-text {
-    font-size: 15px;
-    text-align: justify;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 30px;
-  }
-  
-  .section-title {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .click-hint {
-    font-size: 13px;
-    color: #888;
-    text-align: center;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-</style>
+<div class="main-content">
 
-<div class="projects-container">
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-folder-open"></i> Featured Projects</h2>
 
-  <h2 class="section-title"><i class="fas fa-folder-open"></i> Featured Projects</h2>
-  <p class="intro-text">
+  <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
     Welcome to my projects portfolio. Here you'll find a collection of my research, academic, and professional projects showcasing applications of data science, machine learning, industrial engineering, and optimization techniques.
   </p>
-  <p class="click-hint"><i class="fas fa-hand-pointer"></i> Click on any project card to expand details</p>
 
-  <!-- PROJECT 1: Master's Thesis -->
-  <div class="project-box thesis" id="project1">
-    <div class="project-header">
-      <div class="project-header-content">
-        <div class="project-category"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
-        <h3 class="project-title">A Machine Learning Approach for Evaluating Climate Sensitivity of Infectious Diseases in Refugee Communities</h3>
-        <p class="project-subtitle">ML framework with SHAP interpretability for climate-disease prediction using VAE data augmentation</p>
-      </div>
-      <div class="project-toggle">
-        <i class="fas fa-chevron-down"></i>
+  <hr style="margin: 30px 0;">
+
+  <!-- MULTI-DEPOT VRP PROJECT -->
+  <div class="project-card" style="border: 2px solid #28a745; border-radius: 8px; padding: 25px; margin: 25px 0; background: #f0fff4; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+
+    <h3 style="font-size: 20px; color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 10px;">
+      <i class="fas fa-truck" style="margin-right: 10px;"></i>Operations Research Project
+    </h3>
+
+    <h2 style="font-size: 18px; color: #333; margin: 15px 0 10px 0;">Multi-Depot Vehicle Routing Problem with Heterogeneous Fleet</h2>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Abstract:</strong> This project presents a computational framework for solving the <strong>Multi-Depot Heterogeneous Fleet Vehicle Routing Problem (MDHFVRP)</strong> in last-mile delivery logistics. The system optimizes delivery routes across K = 3 distribution centers serving N = 69 geographically dispersed customers using a mixed fleet of Electric Vehicles (EVs) and Gasoline Vehicles (GVs).
+    </p>
+
+    <!-- Download Links -->
+    <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+      <a href="{{ '/files/vrp-project/Technical_Report.pdf' | relative_url }}" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> Download Technical Report (PDF)
+      </a>
+      <a href="https://github.com/mknishat/Last-Mile-Delivery-Optimization" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <i class="fab fa-github" style="margin-right: 8px;"></i> View on GitHub
+      </a>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Mathematical Formulation:</strong> The objective is to minimize total operational cost across all depots, comprising distance-based vehicle operating costs and time-based labor costs. The problem is formulated as a Mixed Integer Linear Program (MILP) with constraints for customer visits, flow conservation, vehicle range, and working time limits.
+    </p>
+
+    <!-- Network Topology Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig1_multi_depot_topology.png' | relative_url }}" alt="Multi-Depot Network Topology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 1:</strong> Multi-Depot Delivery Network Topology showing 3 depots with color-coded service regions and customer locations assigned via K-means clustering.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Methodology:</strong> The solution approach employs a decomposition strategy where each depot's subproblem is optimized independently using Google OR-Tools. The framework uses PATH_CHEAPEST_ARC heuristic for initial solution generation and Guided Local Search (GLS) metaheuristic for solution improvement.
+    </p>
+
+    <!-- Optimized Routes Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig7_multi_depot_routes.png' | relative_url }}" alt="Optimized Multi-Depot Routes" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 2:</strong> Optimized delivery routes for all three depots showing vehicle assignments and route sequences.</p>
+    </div>
+
+    <!-- Computational Results -->
+    <div style="margin: 20px 0; padding: 15px; background: #fff; border-left: 4px solid #28a745; border-radius: 4px;">
+      <h4 style="color: #28a745; margin-top: 0;">Computational Results</h4>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px;">
+        <thead style="background: #28a745; color: white;">
+          <tr>
+            <th style="border: 1px solid #ddd; padding: 8px;">Configuration</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">EVs</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">GVs</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Total Cost ($)</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Distance (mi)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 8px;">All GV</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">30</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">6,568</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2,908</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Mixed (30% EV)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">9</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">21</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">6,200</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2,931</td>
+          </tr>
+          <tr style="background: #d4edda;">
+            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Mixed (50% EV)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">15</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">15</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">5,971</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">2,939</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px; color: #28a745; margin-top: 10px; font-weight: bold;">
+        <i class="fas fa-chart-line"></i> Cost Reduction: 9.1% savings achieved through fleet electrification
+      </p>
+    </div>
+
+    <!-- Cost Comparison Figure -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig3_multi_depot_cost_comparison.png' | relative_url }}" alt="Cost Comparison Analysis" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 3:</strong> Cost and distance comparison across depots and fleet configurations.</p>
+    </div>
+
+    <!-- Vehicle Utilization Heatmap -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig5_vehicle_utilization_heatmap.png' | relative_url }}" alt="Vehicle Utilization Heatmap" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 4:</strong> Vehicle range utilization heatmap showing percentage of maximum range used by each vehicle across all depots.</p>
+    </div>
+
+    <!-- Summary Dashboard -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/vrp-project/fig8_summary_dashboard.png' | relative_url }}" alt="Summary Dashboard" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 5:</strong> Summary dashboard showing overall performance metrics, cost breakdown by depot, workload distribution, and route distances.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Key Findings:</strong> (1) Fleet electrification reduces costs by <strong>9.1%</strong> while maintaining service levels; (2) K-means clustering effectively partitions customers for multi-depot operations; (3) Average vehicle utilization of <strong>51.3%</strong> indicates potential for fleet size optimization; (4) Guided Local Search achieves near-optimal solutions within 5 seconds per depot.
+    </p>
+
+    <!-- Keywords -->
+    <div style="margin: 20px 0;">
+      <strong style="color: #333;">Keywords:</strong>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Vehicle Routing Problem</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Multi-Depot</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Heterogeneous Fleet</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Electric Vehicles</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Last-Mile Delivery</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">OR-Tools</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">K-Means Clustering</span>
+        <span style="background: #d4edda; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #28a745; border: 1px solid #28a745;">Guided Local Search</span>
       </div>
     </div>
-    <div class="project-details">
-      <div class="project-content">
-        <p>
-          <strong>Abstract:</strong> Globalization, climate change, and increased population mobility have intensified the challenges of infectious disease outbreaks for global public health. Refugee communities are particularly vulnerable due to overcrowding, inadequate sanitation, and delayed healthcare access. This study develops a robust, interpretable machine learning framework to identify climatic factors contributing to infectious disease incidence.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/thesis-framework.png' | relative_url }}" alt="ML Framework">
-          <figcaption><strong>Figure 1:</strong> Comprehensive ML framework integrating data preprocessing, feature engineering, and model validation.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Methodology:</strong> The framework integrates meta-heuristics feature selection (PSO, Genetic Algorithm) to select relevant variables. Time Variational Auto-Encoder (Time-VAE) addresses data scarcity. SHAP values provide feature importance explanations with enhanced interpretability.
-        </p>
-        
-        <div class="finding-box green">
-          <h4 style="color: #28a745;"><i class="fas fa-bacteria"></i> Diarrhea Outbreak Prediction</h4>
-          <p>Key predictors: Minimum Temperature, Solar Radiation, Sea Level Pressure</p>
-          <img src="{{ '/images/shap-diarrhea.png' | relative_url }}" alt="SHAP Diarrhea" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <div class="finding-box red">
-          <h4 style="color: #dc3545;"><i class="fas fa-mosquito"></i> Malaria Outbreak Prediction</h4>
-          <p>Key predictors: Minimum Temperature, Relative Humidity, Air Quality Index</p>
-          <img src="{{ '/images/shap-malaria.png' | relative_url }}" alt="SHAP Malaria" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <div class="finding-box orange">
-          <h4 style="color: #fd7e14;"><i class="fas fa-lungs"></i> Respiratory Tract Infection Prediction</h4>
-          <p>Key predictors: Temperature at 2m, Wind Speed, Sunshine Hours</p>
-          <img src="{{ '/images/shap-rti.png' | relative_url }}" alt="SHAP RTI" style="max-width: 100%; margin-top: 10px; border-radius: 4px;">
-        </div>
-        
-        <p>
-          <strong>Key Findings:</strong> VAE significantly improves predictive performance against limited sample size. BART best captures complex nonlinear climate-disease relationships. The framework provides actionable insights for public health planning in resource-constrained settings.
-        </p>
-        
-        <div class="keywords-container">
-          <strong>Keywords:</strong>
-          <div class="keywords-list">
-            <span class="keyword-tag blue">Respiratory Tract Infection</span>
-            <span class="keyword-tag blue">Diarrhea</span>
-            <span class="keyword-tag blue">Malaria</span>
-            <span class="keyword-tag blue">Variational Auto-Encoder</span>
-            <span class="keyword-tag blue">Explainable AI</span>
-            <span class="keyword-tag blue">PSO</span>
-            <span class="keyword-tag blue">Genetic Algorithm</span>
-            <span class="keyword-tag blue">Climate Sensitivity</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
-  <!-- PROJECT 2: Undergraduate Thesis -->
-  <div class="project-box undergrad" id="project2">
-    <div class="project-header">
-      <div class="project-header-content">
-        <div class="project-category"><i class="fas fa-book"></i> Undergraduate Thesis</div>
-        <h3 class="project-title">Industry 4.0 Readiness Assessment Framework and Barrier Analysis</h3>
-        <p class="project-subtitle">BWM-based framework for evaluating digital transformation readiness across 7 dimensions</p>
-      </div>
-      <div class="project-toggle">
-        <i class="fas fa-chevron-down"></i>
+  <hr style="margin: 30px 0;">
+
+
+  <!-- MASTER'S THESIS -->
+  <div class="project-card" style="border: 2px solid #007bff; border-radius: 8px; padding: 25px; margin: 25px 0; background: #f0f8ff; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+    
+    <h3 style="font-size: 20px; color: #0066cc; margin-top: 0; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
+      <i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>Master's Thesis
+    </h3>
+
+    <h2 style="font-size: 18px; color: #333; margin: 15px 0 10px 0;">A Machine Learning Approach for Evaluating Climate Sensitivity of Infectious Diseases in Refugee Communities</h2>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Abstract:</strong> Globalization, climate change, and increased population mobility have intensified the challenges of infectious disease outbreaks for global public health, as many infectious pathogen's life cycles exhibit strong climate sensitivity. Refugee communities are particularly vulnerable to contagious diseases due to overcrowding, inadequate sanitation infrastructure, and delayed healthcare access. Accurate predictions of disease dynamics can help public health organizations plan interventions to reduce transmission.
+    </p>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      However, traditional time-series methods and reporting surveillance systems fail to detect complex patterns from multiple features in infectious disease forecasting in refugee communities, where data scarcity and crisis-specific factors make reliable predictions difficult. This study develops and validates a robust, interpretable machine learning framework to identify and assess climatic factors contributing to infectious disease incidence in refugee communities.
+    </p>
+
+    <!-- Framework Diagram -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/thesis-framework.png' | relative_url }}" alt="Comprehensive ML Framework for Disease Prediction" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 1:</strong> The comprehensive macro-level data-driven nonparametric machine learning framework integrating data preprocessing, feature engineering, and model validation.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Methodology:</strong> The proposed framework integrates meta-heuristics feature selection algorithms (Particle Swarm Optimization and Genetic Algorithm) to select relevant variables from climate and health datasets. Time Variational Auto-Encoder (Time-VAE) is employed for synthetic data generation to address data scarcity challenges. SHAP (SHapley Additive exPlanations) values are utilized to explain feature importance and its impact on model predictions with enhanced interpretability.
+    </p>
+
+    <!-- SHAP Analysis for Diarrhea -->
+    <div style="margin: 20px 0; padding: 15px; background: #fff; border-left: 4px solid #28a745; border-radius: 4px;">
+      <h4 style="color: #28a745; margin-top: 0;">Diarrhea Outbreak Prediction - SHAP Feature Analysis</h4>
+      <p style="font-size: 14px; color: #555;">Feature importance analysis reveals that Minimum Temperature, Solar Radiation, and Sea Level Pressure are the most critical predictors for diarrhea outbreaks in refugee communities.</p>
+      <img src="{{ '/images/shap-diarrhea.png' | relative_url }}" alt="SHAP Analysis for Diarrhea Prediction" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 10px 0;">
+      <p style="font-size: 13px; color: #666;"><strong>Figure 28:</strong> SHAP feature importance and summary plot for BART model (Diarrhea outbreak prediction). Left panel shows mean absolute SHAP values; right panel displays SHAP value distributions colored by feature magnitude.</p>
+    </div>
+
+    <!-- SHAP Analysis for Malaria -->
+    <div style="margin: 20px 0; padding: 15px; background: #fff; border-left: 4px solid #dc3545; border-radius: 4px;">
+      <h4 style="color: #dc3545; margin-top: 0;">Malaria Outbreak Prediction - SHAP Feature Analysis</h4>
+      <p style="font-size: 14px; color: #555;">Malaria prediction demonstrates strong sensitivity to Minimum Temperature, Relative Humidity at 2m, and Air Quality Index (AQI), reflecting vector ecology and transmission dynamics.</p>
+      <img src="{{ '/images/shap-malaria.png' | relative_url }}" alt="SHAP Analysis for Malaria Prediction" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 10px 0;">
+      <p style="font-size: 13px; color: #666;"><strong>Figure 30:</strong> SHAP feature importance and summary plot for BART model (Malaria outbreak prediction). Shows how climatic variables interact to influence mosquito breeding and transmission rates.</p>
+    </div>
+
+    <!-- SHAP Analysis for RTI -->
+    <div style="margin: 20px 0; padding: 15px; background: #fff; border-left: 4px solid #fd7e14; border-radius: 4px;">
+      <h4 style="color: #fd7e14; margin-top: 0;">Respiratory Tract Infection (RTI) Prediction - SHAP Feature Analysis</h4>
+      <p style="font-size: 14px; color: #555;">RTI prediction emphasizes Temperature at 2 Meters, Wind Speed at 2m, and Sunshine Hours as primary drivers, highlighting the importance of atmospheric conditions on respiratory pathogen transmission.</p>
+      <img src="{{ '/images/shap-rti.png' | relative_url }}" alt="SHAP Analysis for RTI Prediction" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 10px 0;">
+      <p style="font-size: 13px; color: #666;"><strong>Figure 32:</strong> SHAP feature importance and summary plot for BART model (RTI outbreak prediction). Demonstrates the dominant role of temperature and wind patterns in respiratory infection dynamics.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Key Findings:</strong> This study finds significant improvement in predictive performance against limited sample size by using Variational Auto-Encoder as a data augmentation technique. Bayesian Additive Regression Trees (BART) best captures the complex nonlinear structure of climate-disease relationships. The framework successfully identifies climate-sensitive disease patterns and provides actionable insights for public health planning in resource-constrained settings.
+    </p>
+
+    <!-- Keywords -->
+    <div style="margin: 20px 0;">
+      <strong style="color: #333;">Keywords:</strong>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Respiratory Tract Infection</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Diarrhea</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Malaria</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Variational Auto-Encoder</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Explainable AI</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Particle Swarm Optimization</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Genetic Algorithm</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Machine Learning</span>
+        <span style="background: #e7f3ff; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #0066cc; border: 1px solid #0066cc;">Climate Sensitivity</span>
       </div>
     </div>
-    <div class="project-details">
-      <div class="project-content">
-        <p>
-          <strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation. The research identifies and prioritizes implementation barriers using hierarchical weighting analysis across technology, organization, human resources, and regulatory dimensions.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/industry40-readiness.png' | relative_url }}" alt="Industry 4.0 Readiness">
-          <figcaption><strong>Figure 1:</strong> Readiness assessment radar chart comparing four companies across 7 dimensions.</figcaption>
-        </figure>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/industry40-dimensions.png' | relative_url }}" alt="Seven Dimensions">
-          <figcaption><strong>Figure 2:</strong> The Seven Dimensions of Industry 4.0 Readiness Framework.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Methodology:</strong> Best-Worst Method (BWM) with weighted scoring evaluates organizational readiness. A comprehensive barrier analysis identifies 17 sub-barriers categorized under four major barrier types with normalized global weights.
-        </p>
-        
-        <div class="results-box">
-          <h4 style="color: #cc8800;"><i class="fas fa-exclamation-triangle"></i> Top Implementation Barriers</h4>
-          <table class="results-table">
-            <thead style="background: #ffc107; color: #333;">
-              <tr>
-                <th>Rank</th>
-                <th>Barrier</th>
-                <th>Category</th>
-                <th>Global Weight</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight"><td>1</td><td>Digital Strategy Limitations</td><td>Organizational</td><td>0.154</td></tr>
-              <tr><td>2</td><td>Complexity in Production Patterns</td><td>Technological</td><td>0.149</td></tr>
-              <tr><td>3</td><td>High Investment Requirements</td><td>Organizational</td><td>0.126</td></tr>
-              <tr><td>4</td><td>Value Chain Integration Issues</td><td>Organizational</td><td>0.093</td></tr>
-              <tr><td>5</td><td>Lack of Digital Skills</td><td>Human Resource</td><td>0.073</td></tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <p>
-          <strong>Key Findings:</strong> <strong>Organizational barriers</strong> (44.7% weight) dominate over Technological (30.4%), Human Resource (15.3%), and Environmental (9.7%) barriers. The framework provides organizations with a prioritized roadmap for Industry 4.0 transformation.
-        </p>
-        
-        <div class="keywords-container">
-          <strong>Focus Areas:</strong>
-          <div class="keywords-list">
-            <span class="keyword-tag yellow">Industry 4.0 Readiness</span>
-            <span class="keyword-tag yellow">Digital Transformation</span>
-            <span class="keyword-tag yellow">Barrier Analysis</span>
-            <span class="keyword-tag yellow">Best-Worst Method</span>
-            <span class="keyword-tag yellow">Smart Manufacturing</span>
-            <span class="keyword-tag yellow">Technology Adoption</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
-  <!-- PROJECT 3: Multi-Depot VRP -->
-  <div class="project-box vrp" id="project3">
-    <div class="project-header">
-      <div class="project-header-content">
-        <div class="project-category"><i class="fas fa-truck"></i> Operations Research Project</div>
-        <h3 class="project-title">Multi-Depot Vehicle Routing Problem with Heterogeneous Fleet</h3>
-        <p class="project-subtitle">Optimization framework for last-mile delivery with EV/GV mixed fleet across 3 depots</p>
-      </div>
-      <div class="project-toggle">
-        <i class="fas fa-chevron-down"></i>
+  <hr style="margin: 30px 0;">
+
+  <!-- UNDERGRADUATE THESIS -->
+  <div class="project-card" style="border: 2px solid #ffc107; border-radius: 8px; padding: 25px; margin: 25px 0; background: #fffbf0; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+    
+    <h3 style="font-size: 20px; color: #cc8800; margin-top: 0; border-bottom: 2px solid #ffc107; padding-bottom: 10px;">
+      <i class="fas fa-book" style="margin-right: 10px;"></i>Undergraduate Thesis
+    </h3>
+
+    <h2 style="font-size: 18px; color: #333; margin: 15px 0 10px 0;">Industry 4.0 Readiness Assessment Framework and Barrier Analysis</h2>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation. The research identifies and prioritizes implementation barriers across multiple dimensions including technology, organization, human resources, and regulatory environment. Using hierarchical weighting analysis, the study provides a structured approach to assess maturity levels and guide strategic digital transformation initiatives.
+    </p>
+
+    <!-- Industry 4.0 Readiness Radar Chart -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/industry40-readiness.png' | relative_url }}" alt="Industry 4.0 Readiness Assessment Radar Chart" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 7:</strong> The Readiness of Industry 4.0 under 7 Dimensions - comparative assessment across four companies showing varying maturity levels in People & Culture, Industry 4.0 Awareness, Organizational Strategy, Value Chain & Processes, Smart Manufacturing Technology, Product/Services Technology, and Industry 4.0 Base Technology.</p>
+    </div>
+
+    <!-- Industry 4.0 Seven Dimensions -->
+    <div style="margin: 20px 0; text-align: center;">
+      <img src="{{ '/images/industry40-dimensions.png' | relative_url }}" alt="Industry 4.0 Seven Dimensions Framework" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+      <p style="font-size: 13px; color: #666; margin-top: 8px;"><strong>Figure 6:</strong> The Seven Dimensions of Industry 4.0 Readiness Framework - comprising People & Culture, Industry 4.0 Awareness, Organizational Strategy, Value Chain & Processes, Smart Manufacturing Technology, Product/Services Technology, and Industry 4.0 Base Technology.</p>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Methodology:</strong> The research employs Analytic Hierarchy Process (AHP) with weighted scoring to evaluate organizational readiness across seven critical dimensions. A comprehensive barrier analysis identifies 17 sub-barriers categorized under four major barrier types, with normalized global weights determining implementation priority.
+    </p>
+
+    <!-- Barriers Analysis Table -->
+    <div style="margin: 20px 0; overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; background: #fff;">
+        <thead style="background: #ffc107; color: #333;">
+          <tr>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: left;"><strong>Barrier Category</strong></th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>Category Weight</strong></th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: left;"><strong>Sub-Barrier</strong></th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>Local Weight</strong></th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>Global Weight</strong></th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>Priority Rank</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f9f9f9;">
+            <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; font-weight: bold;">Technological</td>
+            <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.304</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Complexity in Configuration of New Production Pattern</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.492</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.149</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center; background: #ffe680;"><strong>2</strong></td>
+          </tr>
+          <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Desired Technology Isn't Fully Matured</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.234</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.071</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">6</td>
+          </tr>
+          <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Obstacles in Ensuring Data Quality</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.189</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.057</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">7</td>
+          </tr>
+          <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Security Threats</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.157</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.048</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">10</td>
+          </tr>
+
+          <tr style="background: #fff5f5;">
+            <td rowspan="5" style="border: 1px solid #ddd; padding: 10px; font-weight: bold;">Organizational</td>
+            <td rowspan="5" style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.447</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Digital Strategy Limitations and Resource Shortages</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.346</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.154</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center; background: #ff9999;"><strong>1</strong></td>
+          </tr>
+          <tr style="background: #fff5f5;">
+            <td style="border: 1px solid #ddd; padding: 10px;">High Investment Requirements</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.282</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.126</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">3</td>
+          </tr>
+          <tr style="background: #fff5f5;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Integration Issues in Value Chain Integration</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.207</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.093</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">4</td>
+          </tr>
+          <tr style="background: #fff5f5;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Lack of Digital Culture and Training</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.077</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.034</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">12</td>
+          </tr>
+          <tr style="background: #fff5f5;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Unstable Intercompany Connectivity</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.087</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.039</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">11</td>
+          </tr>
+
+          <tr style="background: #f0f8ff;">
+            <td rowspan="2" style="border: 1px solid #ddd; padding: 10px; font-weight: bold;">Human Resource</td>
+            <td rowspan="2" style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.153</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Lack of Digital Skills of Employees and Workers</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.479</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.073</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">5</td>
+          </tr>
+          <tr style="background: #f0f8ff;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Inadequate Knowledge of Employees and Workers</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.324</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.049</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">9</td>
+          </tr>
+
+          <tr style="background: #f5f5f5;">
+            <td rowspan="2" style="border: 1px solid #ddd; padding: 10px; font-weight: bold;">Environment & Regulation</td>
+            <td rowspan="2" style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.097</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Weak Infrastructure</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.523</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.051</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">8</td>
+          </tr>
+          <tr style="background: #f5f5f5;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Absence of Government Assistance</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.237</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;"><strong>0.022</strong></td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">13</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin: 15px 0;">
+      <strong>Key Findings:</strong> The analysis reveals that <strong>Digital Strategy Limitations and Resource Shortages</strong> (Rank 1, Global Weight: 0.154) is the most critical barrier, followed by <strong>Complexity in Configuration of New Production Patterns</strong> (Rank 2, Global Weight: 0.149) and <strong>High Investment Requirements</strong> (Rank 3, Global Weight: 0.126). The framework provides organizations with a prioritized roadmap for addressing implementation barriers and allocating resources effectively toward Industry 4.0 transformation.
+    </p>
+
+    <!-- Keywords -->
+    <div style="margin: 20px 0;">
+      <strong style="color: #333;">Focus Areas:</strong>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Industry 4.0 Readiness</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Digital Transformation</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Barrier Analysis</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Analytic Hierarchy Process</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Organizational Strategy</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Technology Adoption</span>
+        <span style="background: #fff3cd; padding: 6px 14px; border-radius: 15px; font-size: 13px; color: #cc8800; border: 1px solid #ffc107;">Smart Manufacturing</span>
       </div>
     </div>
-    <div class="project-details">
-      <div class="project-content">
-        <p>
-          <strong>Abstract:</strong> This project presents a computational framework for solving the <strong>Multi-Depot Heterogeneous Fleet Vehicle Routing Problem (MDHFVRP)</strong> in last-mile delivery logistics. The system optimizes delivery routes across K = 3 distribution centers serving N = 69 geographically dispersed customers using a mixed fleet of Electric Vehicles (EVs) and Gasoline Vehicles (GVs).
-        </p>
-        
-        <div class="project-links">
-          <a href="{{ '/files/vrp-project/Technical_Report.pdf' | relative_url }}" target="_blank" class="project-link primary">
-            <i class="fas fa-file-pdf"></i> Download Technical Report
-          </a>
-          <a href="https://github.com/mknishat/Last-Mile-Delivery-Optimization" target="_blank" class="project-link dark">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-        
-        <p>
-          <strong>Mathematical Formulation:</strong> The objective is to minimize total operational cost across all depots, comprising distance-based vehicle operating costs and time-based labor costs. The problem is formulated as a Mixed Integer Linear Program (MILP) with constraints for customer visits, flow conservation, vehicle range, and working time limits.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/vrp-project/fig1_multi_depot_topology.png' | relative_url }}" alt="Multi-Depot Network Topology">
-          <figcaption><strong>Figure 1:</strong> Multi-Depot Delivery Network Topology showing 3 depots with color-coded service regions.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Methodology:</strong> The solution approach employs a decomposition strategy where each depot's subproblem is optimized independently using Google OR-Tools. The framework uses PATH_CHEAPEST_ARC heuristic for initial solution generation and Guided Local Search (GLS) metaheuristic for solution improvement.
-        </p>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/vrp-project/fig7_multi_depot_routes.png' | relative_url }}" alt="Optimized Routes">
-          <figcaption><strong>Figure 2:</strong> Optimized delivery routes for all three depots showing vehicle assignments.</figcaption>
-        </figure>
-        
-        <div class="results-box">
-          <h4 style="color: #28a745;"><i class="fas fa-chart-bar"></i> Computational Results</h4>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Configuration</th>
-                <th>EVs</th>
-                <th>GVs</th>
-                <th>Total Cost (USD)</th>
-                <th>Distance (mi)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>All GV</td><td>0</td><td>30</td><td>6,568</td><td>2,908</td></tr>
-              <tr><td>Mixed (30% EV)</td><td>9</td><td>21</td><td>6,200</td><td>2,931</td></tr>
-              <tr class="highlight"><td>Mixed (50% EV)</td><td>15</td><td>15</td><td>5,971</td><td>2,939</td></tr>
-            </tbody>
-          </table>
-          <p style="color: #28a745; margin-top: 12px; font-weight: bold;">
-            <i class="fas fa-chart-line"></i> Cost Reduction: 9.1% savings achieved through fleet electrification
-          </p>
-        </div>
-        
-        <figure class="project-figure">
-          <img src="{{ '/images/vrp-project/fig3_multi_depot_cost_comparison.png' | relative_url }}" alt="Cost Comparison">
-          <figcaption><strong>Figure 3:</strong> Cost and distance comparison across depots and fleet configurations.</figcaption>
-        </figure>
-        
-        <p>
-          <strong>Key Findings:</strong> (1) Fleet electrification reduces costs by <strong>9.1%</strong> while maintaining service levels; (2) K-means clustering effectively partitions customers for multi-depot operations; (3) Average vehicle utilization of <strong>51.3%</strong> indicates potential for fleet size optimization.
-        </p>
-        
-        <div class="keywords-container">
-          <strong>Keywords:</strong>
-          <div class="keywords-list">
-            <span class="keyword-tag green">Vehicle Routing Problem</span>
-            <span class="keyword-tag green">Multi-Depot</span>
-            <span class="keyword-tag green">Heterogeneous Fleet</span>
-            <span class="keyword-tag green">Electric Vehicles</span>
-            <span class="keyword-tag green">Last-Mile Delivery</span>
-            <span class="keyword-tag green">OR-Tools</span>
-            <span class="keyword-tag green">K-Means Clustering</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
+
+  <hr style="margin: 30px 0;">
 
 </div>
 
 <!-- Navigation Links -->
-<div class="nav-links">
-  <a href="{{ '/academics/' | relative_url }}" class="nav-link"><i class="fas fa-graduation-cap"></i> Academics</a>
-  <a href="{{ '/research/' | relative_url }}" class="nav-link"><i class="fas fa-flask-vial"></i> Research</a>
-  <a href="{{ '/projects/' | relative_url }}" class="nav-link"><i class="fas fa-folder-open"></i> Projects</a>
-  <a href="{{ '/experience/' | relative_url }}" class="nav-link"><i class="fas fa-briefcase"></i> Experiences</a>
-  <a href="{{ '/files/Nishat_CV.pdf' | relative_url }}" class="nav-link"><i class="fas fa-file-pdf"></i> CV</a>
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
+  <a href="{{ '/academics/' | relative_url }}" style="padding: 8px 16px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-graduation-cap"></i> Academics</a>
+  <a href="{{ '/research/' | relative_url }}" style="padding: 8px 16px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-flask-vial"></i> Research</a>
+  <a href="{{ '/projects/' | relative_url }}" style="padding: 8px 16px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-folder-open"></i> Projects</a>
+  <a href="{{ '/experience/' | relative_url }}" style="padding: 8px 16px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-briefcase"></i> Experiences</a>
+  <a href="{{ '/files/Nishat_CV.pdf' | relative_url }}" style="padding: 8px 16px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-file-pdf"></i> CV</a>
 </div>
 
-<script type="text/javascript">
-(function() {
-  var boxes = document.querySelectorAll('.project-box');
-  for (var i = 0; i < boxes.length; i++) {
-    boxes[i].querySelector('.project-header').onclick = function() {
-      var parent = this.parentElement;
-      var wasActive = parent.className.indexOf('active') > -1;
-      for (var j = 0; j < boxes.length; j++) {
-        boxes[j].className = boxes[j].className.replace(' active', '');
-      }
-      if (!wasActive) {
-        parent.className += ' active';
-      }
-    };
-  }
-})();
-</script>
- 
- 
