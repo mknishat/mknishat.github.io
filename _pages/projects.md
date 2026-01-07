@@ -166,7 +166,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
-    <p><strong>Abstract:</strong> This study develops a robust, interpretable machine learning framework to identify climatic factors contributing to infectious disease incidence in refugee communities, who are particularly vulnerable due to overcrowding, inadequate sanitation, and delayed healthcare access.</p>
+    <p><strong>Abstract:</strong> Globalization, climate change, and increased population mobility have intensified the challenges of infectious disease outbreaks for global public health, as many infectious pathogen's life cycles exhibit strong climate sensitivity. Refugee communities are particularly vulnerable to contagious diseases due to overcrowding, inadequate sanitation infrastructure, and delayed healthcare access. Accurate predictions of disease dynamics can help public health organizations plan interventions to reduce transmission. However, traditional time-series methods and reporting surveillance systems fail to detect complex patterns from multiple features in infectious disease forecasting in refugee communities, where data scarcity and crisis-specific factors make reliable predictions difficult. This study develops and validates a robust, interpretable machine learning framework to identify and assess climatic factors contributing to infectious disease incidence in refugee communities. The proposed framework integrates meta-heuristics feature selection algorithm to select relevant variables, a Time Variational Auto-Encoder (Time-VAE) for synthetic data generation to address data scarcity, and SHAP values to explain feature importance and its impact on the model's prediction. Additionally, it assesses multiple hyperparameter tuning techniques to ensure model-specific and dataset-specific configurations. This study finds significant improvement in predictive performance against a limited sample size by using a Variational Auto-Encoder as a data augmentation technique, and Bayesian Additive Regression Trees (BART) best capture the complex structure of the data.</p>
     
     <img src="/images/thesis-framework.png" alt="ML Framework">
     <figcaption>Figure 1: Comprehensive ML framework for disease prediction</figcaption>
@@ -187,15 +187,13 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     
     <p><strong>Key Findings:</strong> VAE significantly improves predictive performance. BART best captures complex nonlinear climate-disease relationships.</p>
     <div class="keywords">
-      <span class="keyword blue">Variational Auto-Encoder</span>
-      <span class="keyword blue">Explainable AI</span>
-      <span class="keyword blue">SHAP</span>
-      <span class="keyword blue">Climate Sensitivity</span>
-      <span class="keyword blue">PSO</span>
-      <span class="keyword blue">BART</span>
+      <span class="keyword blue">Respiratory Tract Infection</span>
       <span class="keyword blue">Diarrhea</span>
       <span class="keyword blue">Malaria</span>
-      <span class="keyword blue">RTI</span>
+      <span class="keyword blue">Variational Auto-Encoder</span>
+      <span class="keyword blue">Explainable AI</span>
+      <span class="keyword blue">Particle Swarm Optimization</span>
+      <span class="keyword blue">Genetic Algorithm</span>
     </div>
   </div>
 </div>
@@ -211,7 +209,12 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
-    <p><strong>Overview:</strong> This thesis presents a comprehensive framework for evaluating organizational readiness for Industry 4.0 digital transformation, identifying and prioritizing implementation barriers using hierarchical weighting analysis.</p>
+    <p><strong>Abstract:</strong></p>
+    <p><strong>Purpose:</strong> Industry 4.0 is a new industrial stage in which several developing technologies are coming together to deliver digital solutions. However, there are several barriers to implementing Industry 4.0 in manufacturing processes. This research aims to investigate the current readiness level of industry 4.0 and identify the challenges for adopting industry 4.0 in Bangladeshi electronics industries.</p>
+    <p><strong>Design/methodology/approach:</strong> The research utilized A. A. Wagire's readiness model, which contains seven key dimensions and 38 maturity items. The Best-Worst Method of Multi-Criteria Decision Making is used to assess the 17 barriers identified by a comprehensive literature review and expert discussions. The data were acquired from four Bangladeshi electronics companies.</p>
+    <p><strong>Findings:</strong> The findings of the study are as follows: i) four organizations scored 3.572, 3.060, 3.098, and 2.638 out of 5 on the overall maturity scale, indicating that three companies are at the 'Experienced' readiness level and the fourth is at the 'Digital Novice' readiness level ii) The most critical barrier that may stymie the adoption of Industry 4.0 in Bangladesh is 'digital strategy limitations and resource shortage,' while 'cheap labor' is the least of the concerns that may hinder the implementation of Industry 4.0 in Bangladesh's electronics industry.</p>
+    <p><strong>Practical implications:</strong> This study may aid decision-makers, industrial managers, and practitioners in the Bangladeshi electronics industry in recognizing the actual challenges they face when attempting to implement Industry 4.0 and focusing their attention on how to address these challenges so that Industry 4.0 can be implemented successfully.</p>
+    <p><strong>Originality/value:</strong> Several studies on Industry 4.0 implementation have been done, but none have established the present degree of preparation for Industry 4.0 in Bangladeshi electronics or highlighted the problems that firms face. As a consequence, companies, and researchers can better comprehend Industry 4.0 and plan and monitor transformation operations.</p>
     
     <img src="/images/industry40-readiness.png" alt="Industry 4.0 Readiness">
     <figcaption>Figure 1: Readiness assessment radar chart across 7 dimensions</figcaption>
@@ -223,10 +226,13 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p><strong>Key Findings:</strong> Organizational barriers (44.7%) dominate over Technological (30.4%), Human Resource (15.3%), and Environmental (9.7%) barriers.</p>
     <div class="keywords">
       <span class="keyword yellow">Industry 4.0</span>
-      <span class="keyword yellow">Best-Worst Method</span>
+      <span class="keyword yellow">Maturity Model</span>
+      <span class="keyword yellow">Challenges</span>
+      <span class="keyword yellow">Readiness Level</span>
       <span class="keyword yellow">Digital Transformation</span>
-      <span class="keyword yellow">Barrier Analysis</span>
-      <span class="keyword yellow">Smart Manufacturing</span>
+      <span class="keyword yellow">Electronics Industries</span>
+      <span class="keyword yellow">Barriers</span>
+      <span class="keyword yellow">Best-Worst Method (BWM)</span>
     </div>
   </div>
 </div>
