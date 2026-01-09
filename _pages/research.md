@@ -7,6 +7,118 @@ author_profile: true
 
 <div class="main-content">
 
+  <!-- High-Level Researcher Profile Visual -->
+  <style>
+    .research-profile { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: stretch; margin: 10px 0 28px; }
+    .profile-card { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 10px; padding: 20px; }
+    .profile-title { margin: 0 0 6px; font-size: 22px; font-weight: 700; color: var(--text-color, #333); }
+    .profile-sub { margin: 4px 0 14px; color: #666; font-size: 14px; }
+    .focus-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+    .focus-badge { padding: 5px 10px; border-radius: 14px; font-size: 12px; border: 1px solid rgba(0,0,0,0.08); }
+    .focus-badge.blue { background: #e7f3ff; color: #0b5cad; border-color: #b5d5ff; }
+    .focus-badge.green { background: #e8f5e9; color: #1b5e20; border-color: #c8e6c9; }
+    .focus-badge.amber { background: #fff3cd; color: #8a6d1a; border-color: #ffe69c; }
+    .focus-badge.purple { background: #f3e5f5; color: #6a1b9a; border-color: #e1bee7; }
+    .profile-list { margin: 8px 0 0 18px; color: var(--text-color, #444); font-size: 14px; line-height: 1.6; }
+    .profile-stat { display: inline-block; margin-right: 16px; font-size: 13px; color: #777; }
+    .profile-chart { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 10px; padding: 16px; }
+    .profile-chart h4 { margin: 0 0 8px; font-size: 14px; color: var(--text-color, #333); font-weight: 700; }
+    @media (max-width: 900px) { .research-profile { grid-template-columns: 1fr; } }
+  </style>
+
+  <div class="research-profile">
+    <div class="profile-card">
+      <h3 class="profile-title"><i class="fas fa-user-astronaut"></i> High-Level Researcher Profile</h3>
+      <p class="profile-sub">Applied Machine Learning for Public Health, Operations Research, and Digital Transformation</p>
+
+      <div class="focus-badges">
+        <span class="focus-badge blue">Infectious Disease Modeling</span>
+        <span class="focus-badge blue">Explainable AI (SHAP)</span>
+        <span class="focus-badge purple">Generative Models (VAE)</span>
+        <span class="focus-badge green">Optimization & OR (VRP)</span>
+        <span class="focus-badge amber">Industry 4.0 & MCDM (BWM)</span>
+        <span class="focus-badge blue">Bayesian Modeling (BART)</span>
+        <span class="focus-badge purple">Time Series & Forecasting</span>
+        <span class="focus-badge green">Meta-heuristics (PSO/GA)</span>
+      </div>
+
+      <ul class="profile-list">
+        <li>Builds interpretable ML systems for climate-sensitive disease prediction in refugee communities.</li>
+        <li>Augments scarce data with Time-VAE to boost model generalization.</li>
+        <li>Applies OR and heuristic optimization to complex routing and planning problems.</li>
+        <li>Evaluates digital readiness and transformation barriers in Industry 4.0 contexts.</li>
+      </ul>
+
+      <div style="margin-top: 12px;">
+        <span class="profile-stat"><i class="fas fa-flask-vial"></i> Core: ML for Health</span>
+        <span class="profile-stat"><i class="fas fa-shuffle"></i> OR & Heuristics</span>
+        <span class="profile-stat"><i class="fas fa-microchip"></i> Industry 4.0</span>
+      </div>
+    </div>
+
+    <div class="profile-chart">
+      <h4><i class="fas fa-chart-radar"></i> Research Focus Radar</h4>
+      <canvas id="researchRadar" height="220"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    (function() {
+      const labels = [
+        'Infectious Disease', 'Explainable AI', 'Generative (VAE)',
+        'Optimization & OR', 'Industry 4.0 & MCDM', 'Time Series', 'Public Health Analytics'
+      ];
+      const weights = [90, 85, 80, 85, 70, 75, 80];
+
+      function themeColors() {
+        const cs = getComputedStyle(document.documentElement);
+        const text = cs.getPropertyValue('--text-color')?.trim() || '#333';
+        const border = cs.getPropertyValue('--border-color')?.trim() || 'rgba(0,0,0,0.1)';
+        const accent = cs.getPropertyValue('--link-color')?.trim() || '#1976d2';
+        const fill = accent + '22'; // transparent fill
+        return { text, border, accent, fill };
+      }
+
+      const ctx = document.getElementById('researchRadar');
+      if (!ctx) return;
+
+      let { text, border, accent, fill } = themeColors();
+      let chart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Focus', data: weights,
+            borderColor: accent, backgroundColor: fill,
+            pointBackgroundColor: accent, pointBorderColor: accent, pointHoverBackgroundColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: { r: {
+            angleLines: { color: border }, grid: { color: border }, suggestedMin: 0, suggestedMax: 100,
+            pointLabels: { color: text, font: { size: 11 } }, ticks: { display: false }
+          }},
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // Update on theme toggle (MutationObserver watches data-theme changes)
+      const observer = new MutationObserver(() => {
+        const c = themeColors();
+        chart.data.datasets[0].borderColor = c.accent;
+        chart.data.datasets[0].backgroundColor = c.fill;
+        chart.data.datasets[0].pointBackgroundColor = c.accent;
+        chart.options.scales.r.grid.color = c.border;
+        chart.options.scales.r.angleLines.color = c.border;
+        chart.options.scales.r.pointLabels.color = c.text;
+        chart.update();
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    })();
+  </script>
+
   <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-cube"></i> Research Areas</h2>
 
   <!-- Research Area 1 -->
