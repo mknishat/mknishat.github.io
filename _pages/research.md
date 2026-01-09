@@ -10,18 +10,14 @@ author_profile: true
   <!-- High-Level Researcher Profile Visual -->
   <style>
     .research-profile { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: stretch; margin: 10px 0 28px; }
-    .profile-card { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 10px; padding: 20px; }
+    .profile-card { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 8px; padding: 20px; }
     .profile-title { margin: 0 0 6px; font-size: 22px; font-weight: 700; color: var(--text-color, #333); }
-    .profile-sub { margin: 4px 0 14px; color: #666; font-size: 14px; }
-    .focus-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
-    .focus-badge { padding: 5px 10px; border-radius: 14px; font-size: 12px; border: 1px solid rgba(0,0,0,0.08); }
-    .focus-badge.blue { background: #e7f3ff; color: #0b5cad; border-color: #b5d5ff; }
-    .focus-badge.green { background: #e8f5e9; color: #1b5e20; border-color: #c8e6c9; }
-    .focus-badge.amber { background: #fff3cd; color: #8a6d1a; border-color: #ffe69c; }
-    .focus-badge.purple { background: #f3e5f5; color: #6a1b9a; border-color: #e1bee7; }
+    .profile-sub { margin: 4px 0 14px; color: var(--text-color, #555); font-size: 14px; }
+    .focus-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }
+    .focus-badge { padding: 4px 10px; border-radius: 12px; font-size: 12px; border: 1px solid var(--border-color, #e0e0e0); background: transparent; color: var(--text-color, #333); }
     .profile-list { margin: 8px 0 0 18px; color: var(--text-color, #444); font-size: 14px; line-height: 1.6; }
-    .profile-stat { display: inline-block; margin-right: 16px; font-size: 13px; color: #777; }
-    .profile-chart { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 10px; padding: 16px; }
+    .profile-stat { display: inline-block; margin-right: 16px; font-size: 12px; color: #777; }
+    .profile-chart { background: var(--card-background, #fff); border: 1px solid var(--border-color, #e0e0e0); border-radius: 8px; padding: 16px; }
     .profile-chart h4 { margin: 0 0 8px; font-size: 14px; color: var(--text-color, #333); font-weight: 700; }
     @media (max-width: 900px) { .research-profile { grid-template-columns: 1fr; } }
   </style>
@@ -29,30 +25,30 @@ author_profile: true
   <div class="research-profile">
     <div class="profile-card">
       <h3 class="profile-title"><i class="fas fa-user-astronaut"></i> High-Level Researcher Profile</h3>
-      <p class="profile-sub">Visualizing focus across five core areas using your provided topics.</p>
+      <p class="profile-sub">Focus across five core areas derived from current research themes.</p>
 
       <div class="focus-badges">
         <!-- Smart & Connected Systems -->
-        <span class="focus-badge blue">IoT</span>
-        <span class="focus-badge blue">Smart Systems</span>
-        <span class="focus-badge blue">Connectivity</span>
+        <span class="focus-badge">IoT</span>
+        <span class="focus-badge">Smart Systems</span>
+        <span class="focus-badge">Connectivity</span>
         <!-- Manufacturing Process Control -->
-        <span class="focus-badge amber">Process Control</span>
-        <span class="focus-badge amber">SPC</span>
-        <span class="focus-badge amber">Optimization</span>
+        <span class="focus-badge">Process Control</span>
+        <span class="focus-badge">SPC</span>
+        <span class="focus-badge">Optimization</span>
         <!-- High Dimensional Data Modeling and Analysis -->
-        <span class="focus-badge purple">Big Data</span>
-        <span class="focus-badge purple">Dimensionality Reduction</span>
-        <span class="focus-badge purple">Feature Engineering</span>
+        <span class="focus-badge">Big Data</span>
+        <span class="focus-badge">Dimensionality Reduction</span>
+        <span class="focus-badge">Feature Engineering</span>
         <!-- Healthcare Optimization -->
-        <span class="focus-badge green">Healthcare Systems</span>
-        <span class="focus-badge green">Hospital Operations</span>
-        <span class="focus-badge green">Resource Optimization</span>
+        <span class="focus-badge">Healthcare Systems</span>
+        <span class="focus-badge">Hospital Operations</span>
+        <span class="focus-badge">Resource Optimization</span>
         <!-- Predictive Analytics and AI -->
-        <span class="focus-badge blue">Predictive Analytics</span>
-        <span class="focus-badge blue">AI/ML</span>
-        <span class="focus-badge blue">Neural Networks</span>
-        <span class="focus-badge blue">Explainable AI</span>
+        <span class="focus-badge">Predictive Analytics</span>
+        <span class="focus-badge">AI/ML</span>
+        <span class="focus-badge">Neural Networks</span>
+        <span class="focus-badge">Explainable AI</span>
       </div>
 
       <ul class="profile-list">
@@ -73,7 +69,7 @@ author_profile: true
     </div>
 
     <div class="profile-chart">
-      <h4><i class="fas fa-chart-radar"></i> Research Focus Radar</h4>
+      <h4><i class="fas fa-chart-bar"></i> Research Focus Overview</h4>
       <canvas id="researchRadar" height="220"></canvas>
     </div>
   </div>
@@ -105,22 +101,21 @@ author_profile: true
 
       let { text, border, accent, fill } = themeColors();
       let chart = new Chart(ctx, {
-        type: 'radar',
+        type: 'bar',
         data: {
           labels,
           datasets: [{
             label: 'Focus', data: weights,
-            borderColor: accent, backgroundColor: fill,
-            pointBackgroundColor: accent, pointBorderColor: accent, pointHoverBackgroundColor: '#fff'
+            backgroundColor: fill, borderColor: accent, borderWidth: 1, barThickness: 18, borderRadius: 4
           }]
         },
         options: {
-          responsive: true, maintainAspectRatio: false,
-          scales: { r: {
-            angleLines: { color: border }, grid: { color: border }, suggestedMin: 0, suggestedMax: 100,
-            pointLabels: { color: text, font: { size: 11 } }, ticks: { display: false }
-          }},
-          plugins: { legend: { display: false } }
+          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+          scales: {
+            x: { min: 0, max: 100, grid: { color: border }, ticks: { color: text } },
+            y: { grid: { display: false }, ticks: { color: text } }
+          },
+          plugins: { legend: { display: false }, tooltip: { enabled: true } }
         }
       });
 
@@ -129,10 +124,9 @@ author_profile: true
         const c = themeColors();
         chart.data.datasets[0].borderColor = c.accent;
         chart.data.datasets[0].backgroundColor = c.fill;
-        chart.data.datasets[0].pointBackgroundColor = c.accent;
-        chart.options.scales.r.grid.color = c.border;
-        chart.options.scales.r.angleLines.color = c.border;
-        chart.options.scales.r.pointLabels.color = c.text;
+        chart.options.scales.x.grid.color = c.border;
+        chart.options.scales.x.ticks.color = c.text;
+        chart.options.scales.y.ticks.color = c.text;
         chart.update();
       });
       observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
