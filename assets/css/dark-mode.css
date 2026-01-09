@@ -1,0 +1,106 @@
+/* Dark Mode Styles */
+html[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --code-background: #2d2d2d;
+  --border-color: #404040;
+  --link-color: #64b5f6;
+  --card-background: #242424;
+}
+
+html[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #424242;
+  --code-background: #fafafa;
+  --border-color: #e0e0e0;
+  --link-color: #1976d2;
+  --card-background: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
+}
+
+code, pre {
+  background-color: var(--code-background);
+}
+
+.masthead {
+  background-color: var(--card-background);
+  border-bottom-color: var(--border-color);
+}
+
+.project-card {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+.card-body {
+  border-top-color: var(--border-color);
+}
+
+.page__content {
+  color: var(--text-color);
+}
+
+table {
+  border-color: var(--border-color);
+}
+
+table th, table td {
+  border-color: var(--border-color);
+}
+
+/* Dark mode theme adjustments */
+html[data-theme="dark"] .project-card {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+html[data-theme="dark"] .page {
+  background-color: var(--background-color);
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea {
+  background-color: var(--code-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] button {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--code-background);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
