@@ -29,30 +29,46 @@ author_profile: true
   <div class="research-profile">
     <div class="profile-card">
       <h3 class="profile-title"><i class="fas fa-user-astronaut"></i> High-Level Researcher Profile</h3>
-      <p class="profile-sub">Applied Machine Learning for Public Health, Operations Research, and Digital Transformation</p>
+      <p class="profile-sub">Visualizing focus across five core areas using your provided topics.</p>
 
       <div class="focus-badges">
-        <span class="focus-badge blue">Infectious Disease Modeling</span>
-        <span class="focus-badge blue">Explainable AI (SHAP)</span>
-        <span class="focus-badge purple">Generative Models (VAE)</span>
-        <span class="focus-badge green">Optimization & OR (VRP)</span>
-        <span class="focus-badge amber">Industry 4.0 & MCDM (BWM)</span>
-        <span class="focus-badge blue">Bayesian Modeling (BART)</span>
-        <span class="focus-badge purple">Time Series & Forecasting</span>
-        <span class="focus-badge green">Meta-heuristics (PSO/GA)</span>
+        <!-- Smart & Connected Systems -->
+        <span class="focus-badge blue">IoT</span>
+        <span class="focus-badge blue">Smart Systems</span>
+        <span class="focus-badge blue">Connectivity</span>
+        <!-- Manufacturing Process Control -->
+        <span class="focus-badge amber">Process Control</span>
+        <span class="focus-badge amber">SPC</span>
+        <span class="focus-badge amber">Optimization</span>
+        <!-- High Dimensional Data Modeling and Analysis -->
+        <span class="focus-badge purple">Big Data</span>
+        <span class="focus-badge purple">Dimensionality Reduction</span>
+        <span class="focus-badge purple">Feature Engineering</span>
+        <!-- Healthcare Optimization -->
+        <span class="focus-badge green">Healthcare Systems</span>
+        <span class="focus-badge green">Hospital Operations</span>
+        <span class="focus-badge green">Resource Optimization</span>
+        <!-- Predictive Analytics and AI -->
+        <span class="focus-badge blue">Predictive Analytics</span>
+        <span class="focus-badge blue">AI/ML</span>
+        <span class="focus-badge blue">Neural Networks</span>
+        <span class="focus-badge blue">Explainable AI</span>
       </div>
 
       <ul class="profile-list">
-        <li>Builds interpretable ML systems for climate-sensitive disease prediction in refugee communities.</li>
-        <li>Augments scarce data with Time-VAE to boost model generalization.</li>
-        <li>Applies OR and heuristic optimization to complex routing and planning problems.</li>
-        <li>Evaluates digital readiness and transformation barriers in Industry 4.0 contexts.</li>
+        <li>Smart & Connected Systems: IoT platforms enabling real-time monitoring and control.</li>
+        <li>Manufacturing Process Control: Feedback control, SPC, and process optimization.</li>
+        <li>High-Dimensional Data: Dimensionality reduction, feature extraction, pattern discovery.</li>
+        <li>Healthcare Optimization: Patient flow, resource allocation, clinical decision support.</li>
+        <li>Predictive Analytics & AI: Neural nets, ensembles, and explainable AI.</li>
       </ul>
 
       <div style="margin-top: 12px;">
-        <span class="profile-stat"><i class="fas fa-flask-vial"></i> Core: ML for Health</span>
-        <span class="profile-stat"><i class="fas fa-shuffle"></i> OR & Heuristics</span>
-        <span class="profile-stat"><i class="fas fa-microchip"></i> Industry 4.0</span>
+        <span class="profile-stat"><i class="fas fa-wifi"></i> Connected Systems</span>
+        <span class="profile-stat"><i class="fas fa-cogs"></i> Process Control</span>
+        <span class="profile-stat"><i class="fas fa-chart-area"></i> High-Dimensional</span>
+        <span class="profile-stat"><i class="fas fa-heart"></i> Healthcare</span>
+        <span class="profile-stat"><i class="fas fa-brain"></i> Predictive AI</span>
       </div>
     </div>
 
@@ -66,10 +82,14 @@ author_profile: true
   <script>
     (function() {
       const labels = [
-        'Infectious Disease', 'Explainable AI', 'Generative (VAE)',
-        'Optimization & OR', 'Industry 4.0 & MCDM', 'Time Series', 'Public Health Analytics'
+        'Smart & Connected Systems',
+        'Manufacturing Process Control',
+        'High-Dimensional Data',
+        'Healthcare Optimization',
+        'Predictive Analytics & AI'
       ];
-      const weights = [90, 85, 80, 85, 70, 75, 80];
+      // Default weights derived from tag counts (3,3,3,3,4) -> scaled to 0-100
+      const weights = [60, 60, 60, 60, 80];
 
       function themeColors() {
         const cs = getComputedStyle(document.documentElement);
