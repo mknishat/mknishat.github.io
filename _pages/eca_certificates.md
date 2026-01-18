@@ -63,7 +63,6 @@ author_profile: true
 
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
   <a href="/academics/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🎓 Academics</a>
-  <a href="/publications/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">📝 Publications</a>
   <a href="/experience/" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">💼 Experiences</a>
   <a href="/files/Nishat_CV.pdf" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;">🔖 CV</a>
 </div>
