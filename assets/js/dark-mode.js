@@ -6,27 +6,17 @@
   // Set initial theme
   document.documentElement.setAttribute('data-theme', savedTheme);
   
-  // Create and inject toggle button
-  function createThemeToggle() {
-    const nav = document.querySelector('.greedy-nav');
-    if (!nav) return;
+  // Initialize theme toggle button if it exists
+  function initThemeToggle() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (!toggleBtn) return;
     
-    const toggleBtn = document.createElement('button');
-    toggleBtn.className = 'theme-toggle';
-    toggleBtn.setAttribute('aria-label', 'Toggle dark/light mode');
-    toggleBtn.id = 'theme-toggle';
-    
-    const icon = document.createElement('i');
-    icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    toggleBtn.appendChild(icon);
+    const icon = toggleBtn.querySelector('i');
+    if (icon) {
+      icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
     
     toggleBtn.addEventListener('click', toggleTheme);
-    
-    // Insert after the site title
-    const siteTitle = nav.querySelector('.masthead__menu-item--lg');
-    if (siteTitle) {
-      siteTitle.parentElement.appendChild(toggleBtn);
-    }
   }
   
   // Toggle theme function
@@ -46,8 +36,8 @@
   
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createThemeToggle);
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
   } else {
-    createThemeToggle();
+    initThemeToggle();
   }
 })();
