@@ -22,8 +22,8 @@ function updateNav() {
     // Record the width of the list
     breaks.push($vlinks.width());
 
-    // Move item to the hidden list
-    $vlinks.children('*:not(.masthead__menu-item--lg)').last().prependTo($hlinks);
+    // Move item to the hidden list (but not the theme toggle or title)
+    $vlinks.children('*:not(.masthead__menu-item--lg):not(.theme-toggle-item)').last().prependTo($hlinks);
 
     // Show the dropdown btn
     if($btn.hasClass('hidden')) {
