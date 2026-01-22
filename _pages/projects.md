@@ -289,3 +289,71 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </div>
   </div>
 </div>
+<!-- PROJECT 4: Supply Chain Optimization -->
+<div class="project-card vrp" onclick="this.classList.toggle('open')">
+  <div class="card-header">
+    <div>
+      <div class="card-category"><i class="fas fa-network-wired"></i> Operations Research Project</div>
+      <h3 class="card-title">Bioethanol Supply Chain Network Design with Sensitivity Analysis</h3>
+      <p class="card-subtitle">MILP-based facility location model optimizing biomass flow in Texas</p>
+    </div>
+    <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
+  </div>
+  <div class="card-body">
+    <p><strong>Abstract:</strong> This project presents a mixed-integer linear programming (MILP) model for designing an optimal bioethanol supply chain network in Texas. The model determines optimal hub and plant locations while balancing local biomass sourcing with third-party procurement to minimize total system cost including facility investments, transportation, and purchasing costs.</p>
+
+    <a href="https://github.com/mknishat/SC_Network_gurobi" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+
+    <p><strong>Problem Overview:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Total Demand: 6.36 million Mg of biomass annually</li>
+      <li>Local Supply Available: 3.05 million Mg (48% of demand)</li>
+      <li>Network: 167 suppliers, 21 potential hubs, 10 potential plants</li>
+      <li>Transportation: Truck (supplierhub) and Rail (hubplant)</li>
+    </ul>
+
+    <p><strong>Mathematical Formulation:</strong></p>
+    <p style="font-size: 13px; color: #555;">Minimize: Hub Investment + Plant Investment + Truck Transport + Rail Transport + Third-Party Purchases</p>
+    <p style="font-size: 13px; color: #555;">Subject to: Supply limits, Hub/Plant capacity constraints, Flow balance, Demand satisfaction</p>
+
+    <p><strong>Key Parameters:</strong></p>
+    <table class="results-table">
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Hub Investment</td><td>.47M each</td></tr>
+        <tr><td>Plant Investment</td><td>.96M each</td></tr>
+        <tr><td>Hub Capacity</td><td>300,000 Mg</td></tr>
+        <tr><td>Plant Capacity</td><td>655,447 Mg</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Sensitivity Analysis Results:</strong></p>
+    <table class="results-table">
+      <thead><tr><th>3rd-Party Price</th><th>Total Cost</th><th>Own Production</th><th>Facilities</th></tr></thead>
+      <tbody>
+        <tr><td>/Mg</td><td>.49B</td><td>0%</td><td>0 hubs, 0 plants</td></tr>
+        <tr><td>/Mg</td><td>.67B</td><td>48%</td><td>11 hubs, 5 plants</td></tr>
+        <tr class="highlight"><td>/Mg</td><td>.92B</td><td>48%</td><td>11 hubs, 5 plants</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Methodology:</strong> Mixed-Integer Linear Programming solved using PuLP with CBC solver. Includes interactive map visualization with Folium and comprehensive sensitivity analysis on third-party biomass pricing.</p>
+
+    <p><strong>Key Findings:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Local supply can only meet 48% of demand - third-party procurement is unavoidable</li>
+      <li>Third-party price significantly impacts total cost (.49B to .92B range)</li>
+      <li>Optimal network requires 11 hubs and 5 plants at higher third-party prices</li>
+      <li>At low third-party prices (/Mg), building own facilities is not cost-effective</li>
+    </ul>
+
+    <div class="keywords">
+      <span class="keyword green">Supply Chain Optimization</span>
+      <span class="keyword green">Mixed-Integer Programming</span>
+      <span class="keyword green">Facility Location</span>
+      <span class="keyword green">PuLP/CBC Solver</span>
+      <span class="keyword green">Sensitivity Analysis</span>
+      <span class="keyword green">Bioethanol</span>
+    </div>
+  </div>
+</div>
