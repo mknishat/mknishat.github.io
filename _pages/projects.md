@@ -303,6 +303,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p><strong>Abstract:</strong> This project presents a mixed-integer linear programming (MILP) model for designing an optimal bioethanol supply chain network in Texas. The model determines optimal hub and plant locations while balancing local biomass sourcing with third-party procurement to minimize total system cost including facility investments, transportation, and purchasing costs.</p>
 
     <a href="https://github.com/mknishat/SC_Network_gurobi" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+    <a href="/files/supply_chain_map.html" class="btn-link green" target="_blank"><i class="fas fa-map"></i> Interactive Map</a>
 
     <p><strong>Problem Overview:</strong></p>
     <ul style="font-size: 14px; color: #555;">
@@ -326,6 +327,9 @@ Welcome to my projects portfolio featuring research in data science, machine lea
         <tr><td>Plant Capacity</td><td>655,447 Mg</td></tr>
       </tbody>
     </table>
+
+    <img src="/images/sc-project/sensitivity_analysis.png" alt="Sensitivity Analysis">
+    <figcaption>Figure 1: Sensitivity Analysis - Cost vs Third-Party Price</figcaption>
 
     <p><strong>Sensitivity Analysis Results:</strong></p>
     <table class="results-table">
@@ -357,3 +361,5 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </div>
   </div>
 </div>
+
+
