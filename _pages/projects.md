@@ -1,4 +1,4 @@
----
+﻿---
 layout: archive
 title: "Projects"
 permalink: /projects/
@@ -363,3 +363,83 @@ Welcome to my projects portfolio featuring research in data science, machine lea
 </div>
 
 
+
+<!-- PROJECT 5: TRSPTW -->
+<div class="project-card vrp" onclick="this.classList.toggle('open')">
+  <div class="card-header">
+    <div>
+      <div class="card-category"><i class="fas fa-route"></i> Operations Research Project</div>
+      <h3 class="card-title">Technician Routing and Scheduling Problem with Time Windows (TRSPTW)</h3>
+      <p class="card-subtitle">GA and MIP optimization for multi-technician service scheduling with calendar integration</p>
+    </div>
+    <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
+  </div>
+  <div class="card-body">
+    <p><strong>Abstract:</strong> This project addresses the Technician Routing and Scheduling Problem with Time Windows (TRSPTW), optimizing multi-technician routes while minimizing travel costs, service delays, and overtime expenses. The implementation combines Genetic Algorithms for fast near-optimal solutions and Mixed-Integer Programming for exact optimization.</p>
+    
+    <a href="https://github.com/mknishat/TRSPTW" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+
+    <p><strong>Problem Overview:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Network: 9 customer communities across regions</li>
+      <li>Resources: 3 technicians with individual workday schedules</li>
+      <li>Constraints: Time windows, service requirements, workday limits</li>
+      <li>Objectives: Minimize total cost (travel + delay + overtime)</li>
+    </ul>
+
+    <p><strong>Optimization Approaches:</strong></p>
+    <p style="font-size: 13px; color: #555;"><strong>Genetic Algorithm:</strong> Population-based search with tournament selection, order crossover, and swap mutation (Population=50, Generations=100)</p>
+    <p style="font-size: 13px; color: #555;"><strong>Mixed-Integer Programming:</strong> Exact formulation solved with PuLP/CBC solver (5-minute time limit)</p>
+
+    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/convergence_curve.png" alt="GA Convergence">
+    <figcaption>Figure 1: Genetic Algorithm Convergence Over 100 Generations</figcaption>
+
+    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/cost_breakdown.png" alt="Cost Breakdown">
+    <figcaption>Figure 2: Cost Components Analysis (Travel, Delay, Overtime)</figcaption>
+
+    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/gantt_chart.png" alt="Schedule Gantt">
+    <figcaption>Figure 3: Technician Schedule Gantt Chart with Time Windows</figcaption>
+
+    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/route_map.png" alt="Route Visualization">
+    <figcaption>Figure 4: Optimized Technician Routes Across Communities</figcaption>
+
+    <p><strong>Key Results:</strong></p>
+    <table class="results-table">
+      <thead><tr><th>Metric</th><th>Initial Solution</th><th>Optimized (GA)</th><th>Improvement</th></tr></thead>
+      <tbody>
+        <tr><td>Total Cost</td><td>$6,090</td><td>$5,152</td><td>15.4%</td></tr>
+        <tr><td>Travel Cost</td><td>$4,040</td><td>$2,637</td><td>34.7%</td></tr>
+        <tr><td>Delay Cost</td><td>$1,350</td><td>$1,815</td><td>-34.4%</td></tr>
+        <tr class="highlight"><td>Overtime Cost</td><td>$700</td><td>$700</td><td>0%</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Advanced Features:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li><strong>Calendar Integration:</strong> Automatic export to .ics format for Google Calendar, Outlook, Apple Calendar</li>
+      <li><strong>CSV Export:</strong> Structured schedule data for Excel/spreadsheet analysis</li>
+      <li><strong>Interactive Visualizations:</strong> 5 comprehensive charts including convergence, Gantt, and route maps</li>
+      <li><strong>Dual Solver Architecture:</strong> GA for speed, MIP for accuracy verification</li>
+    </ul>
+
+    <p><strong>Methodology:</strong> Genetic Algorithm with tournament selection (size=5), order crossover (rate=0.8), and swap mutation (rate=0.2). MIP formulation uses binary decision variables for route assignments with time window constraints.</p>
+
+    <p><strong>Key Findings:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>GA achieves 15.4% cost reduction compared to initial greedy solution</li>
+      <li>Travel efficiency improves 34.7% through intelligent route optimization</li>
+      <li>Calendar integration enables seamless deployment in real-world scheduling systems</li>
+      <li>MIP solver validates GA solutions with exact optimal benchmarks</li>
+    </ul>
+
+    <div class="keywords">
+      <span class="keyword green">Technician Routing</span>
+      <span class="keyword green">Time Windows</span>
+      <span class="keyword green">Genetic Algorithm</span>
+      <span class="keyword green">Mixed-Integer Programming</span>
+      <span class="keyword green">PuLP/CBC Solver</span>
+      <span class="keyword green">Calendar Integration</span>
+      <span class="keyword green">Operations Research</span>
+    </div>
+  </div>
+</div>
