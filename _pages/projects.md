@@ -391,16 +391,16 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p style="font-size: 13px; color: #555;"><strong>Genetic Algorithm:</strong> Population-based search with tournament selection, order crossover, and swap mutation (Population=50, Generations=100)</p>
     <p style="font-size: 13px; color: #555;"><strong>Mixed-Integer Programming:</strong> Exact formulation solved with PuLP/CBC solver (5-minute time limit)</p>
 
-    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/convergence_curve.png" alt="GA Convergence">
+    <img src="/images/trsptw-project/convergence_plot.png" alt="GA Convergence">
     <figcaption>Figure 1: Genetic Algorithm Convergence Over 100 Generations</figcaption>
 
-    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/cost_breakdown.png" alt="Cost Breakdown">
+    <img src="/images/trsptw-project/cost_breakdown.png" alt="Cost Breakdown">
     <figcaption>Figure 2: Cost Components Analysis (Travel, Delay, Overtime)</figcaption>
 
-    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/gantt_chart.png" alt="Schedule Gantt">
+    <img src="/images/trsptw-project/schedule_gantt.png" alt="Schedule Gantt">
     <figcaption>Figure 3: Technician Schedule Gantt Chart with Time Windows</figcaption>
 
-    <img src="https://raw.githubusercontent.com/mknishat/TRSPTW/master/route_map.png" alt="Route Visualization">
+    <img src="/images/trsptw-project/route_map.png" alt="Route Visualization">
     <figcaption>Figure 4: Optimized Technician Routes Across Communities</figcaption>
 
     <p><strong>Key Results:</strong></p>
@@ -443,4 +443,5 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </div>
   </div>
 </div>
+
 
