@@ -377,7 +377,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   <div class="card-body">
     <p><strong>Abstract:</strong> This project addresses the Technician Routing and Scheduling Problem with Time Windows (TRSPTW), optimizing multi-technician routes while minimizing travel costs, service delays, and overtime expenses. The implementation combines Genetic Algorithms for fast near-optimal solutions and Mixed-Integer Programming for exact optimization.</p>
     
-    <a href="https://github.com/mknishat/TRSPTW" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+    <a href="https://github.com/mknishat/TRSPTW" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>`n    <a href="/files/project_details.pdf" class="btn-link green" target="_blank"><i class="fas fa-file-pdf"></i> Mathematical Formulations</a>
 
     <p><strong>Problem Overview:</strong></p>
     <ul style="font-size: 14px; color: #555;">
@@ -443,3 +443,4 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </div>
   </div>
 </div>
+
