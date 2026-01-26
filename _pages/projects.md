@@ -462,7 +462,6 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p><strong>Abstract:</strong> This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks during healthcare crises. The system supports multiple state-of-the-art algorithms and provides publication-ready analysis with statistical rigor.</p>
     
     <a href="https://github.com/mknishat/ICU-resource-optimization-RL" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
-    <a href="https://github.com/mknishat/ICU-resource-optimization-RL/tree/main/journal_results" class="btn-link green" target="_blank"><i class="fas fa-chart-bar"></i> Full Results & Visualizations</a>
     
     <p><strong>Key Results:</strong></p>
     <table class="results-table" style="width: 100%; max-width: 100%;">
