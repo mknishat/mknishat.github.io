@@ -17,6 +17,7 @@ author_profile: true
 .project-card.thesis { border-left: 5px solid #007bff; }
 .project-card.undergrad { border-left: 5px solid #ffc107; }
 .project-card.vrp { border-left: 5px solid #28a745; }
+.project-card.ai { border-left: 5px solid #dc3545; }
 
 .card-header {
   padding: 18px 22px;
@@ -28,6 +29,7 @@ author_profile: true
 .project-card.thesis .card-header { background: #f0f8ff; }
 .project-card.undergrad .card-header { background: #fffbf0; }
 .project-card.vrp .card-header { background: #f0fff4; }
+.project-card.ai .card-header { background: #fff5f5; }
 
 .card-header:hover { opacity: 0.9; }
 
@@ -47,6 +49,7 @@ author_profile: true
 .project-card.thesis .card-category { color: #007bff; }
 .project-card.undergrad .card-category { color: #cc8800; }
 .project-card.vrp .card-category { color: #28a745; }
+.project-card.ai .card-category { color: #dc3545; }
 
 .card-subtitle {
   font-size: 13px;
@@ -68,6 +71,7 @@ author_profile: true
 .project-card.thesis .toggle-icon { background: #007bff; }
 .project-card.undergrad .toggle-icon { background: #ffc107; color: #333; }
 .project-card.vrp .toggle-icon { background: #28a745; }
+.project-card.ai .toggle-icon { background: #dc3545; }
 
 .card-body {
   display: none;
@@ -440,6 +444,75 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       <span class="keyword green">PuLP/CBC Solver</span>
       <span class="keyword green">Calendar Integration</span>
       <span class="keyword green">Operations Research</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 6: Healthcare MARL -->
+<div class="project-card ai" onclick="this.classList.toggle('open')">
+  <div class="card-header">
+    <div>
+      <div class="card-category"><i class="fas fa-brain"></i> AI/ML Project</div>
+      <h3 class="card-title">Multi-Agent Reinforcement Learning for Healthcare Resource Allocation</h3>
+      <p class="card-subtitle">Comprehensive MARL system with SOTA algorithms for ICU resource optimization across hospital networks</p>
+    </div>
+    <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
+  </div>
+  <div class="card-body">
+    <p><strong>Abstract:</strong> This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks during healthcare crises. The system supports multiple state-of-the-art algorithms and provides publication-ready analysis with statistical rigor.</p>
+    
+    <a href="https://github.com/mknishat/ICU-resource-optimization-RL" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+    
+    <p><strong>Key Results:</strong></p>
+    <table class="results-table">
+      <thead><tr><th>Method</th><th>Deaths (mean±std)</th><th>95% CI</th><th>vs FIFO</th></tr></thead>
+      <tbody>
+        <tr class="highlight"><td><strong>SAC</strong></td><td>3,372.6 ± 108.6</td><td>[3,217.9, 3,565.1]</td><td><strong>+52.3%</strong></td></tr>
+        <tr><td>DQN</td><td>4,978.4 ± 1,253.7</td><td>[3,596.2, 6,331.2]</td><td>+29.6%</td></tr>
+        <tr><td>QMIX</td><td>6,698.2 ± 155.0</td><td>[6,317.6, 6,883.5]</td><td>+5.3%</td></tr>
+        <tr><td>FIFO (baseline)</td><td>7,076.1 ± 84.3</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+    
+    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/method_comparison.png" alt="Method Comparison">
+    <figcaption>Figure 1: Method Comparison - Deaths Reduction vs FIFO Baseline</figcaption>
+    
+    <p><strong>Algorithms Implemented:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li><strong>DQN (Ensemble):</strong> Deep Q-Network with uncertainty estimation</li>
+      <li><strong>PPO:</strong> Proximal Policy Optimization with advantage estimation</li>
+      <li><strong>SAC:</strong> Soft Actor-Critic with entropy regularization</li>
+      <li><strong>QMIX:</strong> Centralized training, decentralized execution</li>
+      <li><strong>MAPPO:</strong> Multi-Agent PPO with shared critic</li>
+    </ul>
+    
+    <p><strong>Environment Features:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>10 hospitals with different specialties (Trauma, Cardiac, Respiratory, etc.)</li>
+      <li>Realistic patient generation calibrated to MIMIC-IV statistics</li>
+      <li>Multiple scenarios: Normal, Surge, Pandemic, Mass Casualty</li>
+      <li>Inter-hospital patient transfers and communication</li>
+      <li>Fairness tracking across demographics</li>
+    </ul>
+    
+    <p><strong>Analysis & Validation:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Bootstrap 95% confidence intervals</li>
+      <li>Statistical tests (Wilcoxon, Mann-Whitney U, Cohen's d)</li>
+      <li>Comprehensive data collection and visualization</li>
+      <li>Ablation studies and scalability analysis</li>
+    </ul>
+    
+    <p><strong>Key Finding:</strong> SAC achieves 52.3% reduction in deaths compared to FIFO baseline, demonstrating significant potential of RL-based resource allocation in healthcare crises.</p>
+    
+    <div class="keywords">
+      <span class="keyword blue">Multi-Agent Reinforcement Learning</span>
+      <span class="keyword blue">Healthcare Optimization</span>
+      <span class="keyword blue">Deep Q-Network</span>
+      <span class="keyword blue">Soft Actor-Critic</span>
+      <span class="keyword blue">QMIX</span>
+      <span class="keyword blue">Resource Allocation</span>
+      <span class="keyword blue">ICU Management</span>
     </div>
   </div>
 </div>
