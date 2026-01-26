@@ -462,9 +462,10 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p><strong>Abstract:</strong> This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks during healthcare crises. The system supports multiple state-of-the-art algorithms and provides publication-ready analysis with statistical rigor.</p>
     
     <a href="https://github.com/mknishat/ICU-resource-optimization-RL" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+    <a href="https://github.com/mknishat/ICU-resource-optimization-RL/tree/main/journal_results" class="btn-link green" target="_blank"><i class="fas fa-chart-bar"></i> Full Results & Visualizations</a>
     
     <p><strong>Key Results:</strong></p>
-    <table class="results-table">
+    <table class="results-table" style="width: 100%; max-width: 100%;">
       <thead><tr><th>Method</th><th>Deaths (mean±std)</th><th>95% CI</th><th>vs FIFO</th></tr></thead>
       <tbody>
         <tr class="highlight"><td><strong>SAC</strong></td><td>3,372.6 ± 108.6</td><td>[3,217.9, 3,565.1]</td><td><strong>+52.3%</strong></td></tr>
@@ -476,6 +477,12 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     
     <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/method_comparison.png" alt="Method Comparison">
     <figcaption>Figure 1: Method Comparison - Deaths Reduction vs FIFO Baseline</figcaption>
+    
+    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/ablation_study.png" alt="Ablation Study">
+    <figcaption>Figure 2: Ablation Study - Component Contribution to Performance</figcaption>
+    
+    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/sensitivity_analysis.png" alt="Sensitivity Analysis">
+    <figcaption>Figure 3: Hyperparameter Sensitivity Analysis</figcaption>
     
     <p><strong>Algorithms Implemented:</strong></p>
     <ul style="font-size: 14px; color: #555;">
