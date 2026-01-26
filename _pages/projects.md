@@ -484,16 +484,16 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/sensitivity_analysis.png" alt="Sensitivity Analysis">
     <figcaption>Figure 3: Hyperparameter Sensitivity Analysis</figcaption>
     
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/training_curves_real.png" alt="Training Curves">
+    <img src="/images/training_curves_real.png" alt="Training Curves">
     <figcaption>Figure 4: Training Curves for Different Algorithms</figcaption>
     
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/performance_table_real.png" alt="Performance Table">
+    <img src="/images/performance_table_real.png" alt="Performance Table">
     <figcaption>Figure 5: Detailed Performance Metrics Table</figcaption>
     
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/agent_heatmap_real.png" alt="Agent Heatmap">
+    <img src="/images/agent_heatmap_real.png" alt="Agent Heatmap">
     <figcaption>Figure 6: Agent Performance Heatmap Across Hospitals</figcaption>
     
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/survival_rates_real.png" alt="Survival Rates">
+    <img src="/images/survival_rates_real.png" alt="Survival Rates">
     <figcaption>Figure 7: Survival Rates by Algorithm and Scenario</figcaption>
     
     <p><strong>Algorithms Implemented:</strong></p>
