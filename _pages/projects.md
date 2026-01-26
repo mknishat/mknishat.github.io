@@ -459,7 +459,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body" style="width: 100%;">
-    <p><strong>Abstract:</strong> This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks during healthcare crises. The system supports multiple state-of-the-art algorithms and provides publication-ready analysis with statistical rigor.</p>
+    <p><strong>Abstract:</strong> During healthcare crises (pandemics, mass casualty events, seasonal surges), efficient allocation of limited ICU resources across hospital networks is critical. Traditional rule-based systems fail to adapt to dynamic patient flows and varying severity levels. This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks. The system supports multiple state-of-the-art algorithms including DQN, PPO, SAC, QMIX, and MAPPO, with features like patient transfers, fairness constraints, inter-hospital communication, and statistical validation. It provides publication-ready analysis with bootstrap confidence intervals, Wilcoxon tests, and Cohen's d effect sizes.</p>
     
     <a href="https://github.com/mknishat/ICU-resource-optimization-RL" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
     
@@ -474,26 +474,18 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       </tbody>
     </table>
     
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/method_comparison.png" alt="Method Comparison">
-    <figcaption>Figure 1: Method Comparison - Deaths Reduction vs FIFO Baseline</figcaption>
-    
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/ablation_study.png" alt="Ablation Study">
-    <figcaption>Figure 2: Ablation Study - Component Contribution to Performance</figcaption>
-    
-    <img src="https://raw.githubusercontent.com/mknishat/ICU-resource-optimization-RL/main/journal_results/sensitivity_analysis.png" alt="Sensitivity Analysis">
-    <figcaption>Figure 3: Hyperparameter Sensitivity Analysis</figcaption>
-    
+
     <img src="/images/training_curves_real.png" alt="Training Curves">
     <figcaption>Figure 4: Training Curves for Different Algorithms</figcaption>
     
     <img src="/images/performance_table_real.png" alt="Performance Table">
-    <figcaption>Figure 5: Detailed Performance Metrics Table</figcaption>
+    <figcaption>Figure 2: Detailed Performance Metrics Table</figcaption>
     
     <img src="/images/agent_heatmap_real.png" alt="Agent Heatmap">
-    <figcaption>Figure 6: Agent Performance Heatmap Across Hospitals</figcaption>
+    <figcaption>Figure 3: Agent Performance Heatmap Across Hospitals</figcaption>
     
     <img src="/images/survival_rates_real.png" alt="Survival Rates">
-    <figcaption>Figure 7: Survival Rates by Algorithm and Scenario</figcaption>
+    <figcaption>Figure 4: Survival Rates by Algorithm and Scenario</figcaption>
     
     <p><strong>Algorithms Implemented:</strong></p>
     <ul style="font-size: 14px; color: #555;">
