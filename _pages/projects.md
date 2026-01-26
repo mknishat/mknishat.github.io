@@ -449,7 +449,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
 </div>
 
 <!-- PROJECT 6: Healthcare MARL -->
-<div class="project-card ai" onclick="this.classList.toggle('open')">
+<div class="project-card ai" onclick="this.classList.toggle('open')" style="width: 100%;">
   <div class="card-header">
     <div>
       <div class="card-category"><i class="fas fa-brain"></i> AI/ML Project</div>
@@ -458,7 +458,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </div>
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
-  <div class="card-body">
+  <div class="card-body" style="width: 100%;">
     <p><strong>Abstract:</strong> This project implements a comprehensive Multi-Agent Deep Reinforcement Learning (MARL) system for optimizing ICU resource allocation across hospital networks during healthcare crises. The system supports multiple state-of-the-art algorithms and provides publication-ready analysis with statistical rigor.</p>
     
     <a href="https://github.com/mknishat/ICU-resource-optimization-RL" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
