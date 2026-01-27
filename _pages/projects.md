@@ -374,7 +374,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div>
       <div class="card-category"><i class="fas fa-route"></i> Operations Research Project</div>
       <h3 class="card-title">Technician Routing and Scheduling Problem with Time Windows (TRSPTW)</h3>
-      <p class="card-subtitle">GA and MIP optimization for multi-technician service scheduling with calendar integration</p>
+      <p class="card-subtitle">GA and MIP optimization for multi-technician service scheduling</p>
     </div>
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
@@ -424,7 +424,6 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <ul style="font-size: 14px; color: #555;">
       <li>GA achieves 15.4% cost reduction compared to initial greedy solution</li>
       <li>Travel efficiency improves 34.7% through intelligent route optimization</li>
-      <li>Calendar integration enables seamless deployment in real-world scheduling systems</li>
       <li>MIP solver validates GA solutions with exact optimal benchmarks</li>
     </ul>
 
@@ -434,7 +433,6 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       <span class="keyword green">Genetic Algorithm</span>
       <span class="keyword green">Mixed-Integer Programming</span>
       <span class="keyword green">PuLP/CBC Solver</span>
-      <span class="keyword green">Calendar Integration</span>
       <span class="keyword green">Operations Research</span>
     </div>
   </div>
