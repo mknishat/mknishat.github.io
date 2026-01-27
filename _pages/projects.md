@@ -418,14 +418,6 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       </tbody>
     </table>
 
-    <p><strong>Advanced Features:</strong></p>
-    <ul style="font-size: 14px; color: #555;">
-      <li><strong>Calendar Integration:</strong> Automatic export to .ics format for Google Calendar, Outlook, Apple Calendar</li>
-      <li><strong>CSV Export:</strong> Structured schedule data for Excel/spreadsheet analysis</li>
-      <li><strong>Interactive Visualizations:</strong> 5 comprehensive charts including convergence, Gantt, and route maps</li>
-      <li><strong>Dual Solver Architecture:</strong> GA for speed, MIP for accuracy verification</li>
-    </ul>
-
     <p><strong>Methodology:</strong> Genetic Algorithm with tournament selection (size=5), order crossover (rate=0.8), and swap mutation (rate=0.2). MIP formulation uses binary decision variables for route assignments with time window constraints.</p>
 
     <p><strong>Key Findings:</strong></p>
