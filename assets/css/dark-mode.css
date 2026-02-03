@@ -73,58 +73,60 @@ html[data-theme="dark"] textarea {
   border-color: var(--border-color);
 }
 
-html[data-theme="dark"] button {
+html[data-theme="dark"] button:not(.theme-toggle) {
   background-color: var(--card-background);
   color: var(--text-color);
   border-color: var(--border-color);
 }
 
-/* Theme toggle button */
+/* ========== THEME TOGGLE BUTTON - FORCE VISIBILITY ========== */
+.theme-toggle-item {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  visibility: visible !important;
+}
+
+#theme-toggle,
 .theme-toggle {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 8px 12px;
-  border: none;
-  background: transparent;
+  border: none !important;
+  background: transparent !important;
   color: #333;
   transition: transform 0.3s ease, color 0.3s ease;
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  z-index: 99;
+  margin-left: 10px;
 }
 
-html[data-theme="dark"] .theme-toggle {
-  color: #f0f0f0;
-}
-
-.theme-toggle-item {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-  background-color: rgba(0,0,0,0.1);
-}
-
-html[data-theme="dark"] .theme-toggle:hover {
-  background-color: rgba(255,255,255,0.1);
-}
-
+#theme-toggle i,
 .theme-toggle i {
-  transition: transform 0.3s ease;
-  font-size: 18px;
+  font-size: 18px !important;
+  display: inline-block !important;
+  visibility: visible !important;
 }
 
-/* Desktop visibility for theme toggle */
-@media (min-width: 768px) {
-  .theme-toggle-item {
-    display: table-cell !important;
-  }
+html[data-theme="dark"] #theme-toggle,
+html[data-theme="dark"] .theme-toggle {
+  color: #f0f0f0 !important;
+}
+
+#theme-toggle:hover,
+.theme-toggle:hover {
+  transform: scale(1.15);
+  background-color: rgba(0,0,0,0.08) !important;
+}
+
+html[data-theme="dark"] #theme-toggle:hover,
+html[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255,255,255,0.1) !important;
 }
 
 /* Additional dark mode styles for all page elements */
