@@ -11,39 +11,50 @@ author_profile: true
     <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">HONORS AND AWARDS</h2>
   </div>
 
-  <div class="award" data-year="2023">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>National Science and Technology (NST) Fellowship</strong><br> 🏢 <strong>Ministry of Science and Technology, Government of the People's Republic of Bangladesh</strong><br>📅 <strong>2023</strong></p>
-  </div>
-
-  <hr>
-
-  <div class="award" data-year="2021">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>Dean's Listed</strong><br> 📚 <strong>For achieving CGPA over 3.75 (3.82) in the academic session 2020-21</strong></p>
-  </div>
-
-  <hr>
-
-  <div class="award">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>University Merit Scholarship</strong><br> 📚 <strong>Four consecutive years of undergrad study</strong></p>
-  </div>
-
-  <hr>
-
-  <div class="award">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>PMO for SAP Implementation Projects</strong><br> 🏢 <strong>Four companies</strong></p>
-  </div>
-
-  <hr>
-
-  <div class="award" data-year="2021">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>Winner (1st Runner-Up)</strong><br> 🏢 <strong><a href="#" target="_blank">2021 ISCEA PTAK PRIZE Case Competition</a></strong>, ISCEA Bangladesh<br>📅 <strong>2021</strong></p>
-  </div>
-
-  <hr>
-
-  <div class="award" data-year="2021">
-    <p style="font-size: 17px; text-align: justify;">🏆 <strong>Winner (1st Runner-Up)</strong><br> 🏢 <strong><a href="#" target="_blank">BIHRM Innovetia 2021 Supply Chain Case Competition</a></strong><br>📅 <strong>2021</strong></p>
-  </div>
+  <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 12px 8px; vertical-align: top; width: 70%;">
+        <strong>🏆 National Science and Technology (NST) Fellowship</strong><br>
+        <span style="color: #555;">Ministry of Science and Technology, Government of Bangladesh</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2023</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 12px 8px; vertical-align: top;">
+        <strong>🏆 Dean's List</strong><br>
+        <span style="color: #555;">For achieving CGPA 3.82/4.00 in Academic Session 2020-21</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2021</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 12px 8px; vertical-align: top;">
+        <strong>🏆 University Merit Scholarship</strong><br>
+        <span style="color: #555;">Awarded for four consecutive years of undergraduate study</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2017–2021</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 12px 8px; vertical-align: top;">
+        <strong>🏆 PMO for SAP Implementation Projects</strong><br>
+        <span style="color: #555;">Led project management for four companies</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2023–Present</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 12px 8px; vertical-align: top;">
+        <strong>🥈 1st Runner-Up, ISCEA PTAK PRIZE Case Competition</strong><br>
+        <span style="color: #555;">ISCEA Bangladesh</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2021</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 8px; vertical-align: top;">
+        <strong>🥈 1st Runner-Up, BIHRM Innovetia Supply Chain Case Competition</strong><br>
+        <span style="color: #555;">BIHRM Bangladesh</span>
+      </td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2021</td>
+    </tr>
+  </table>
 
   <hr>
 
