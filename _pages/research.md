@@ -7,102 +7,43 @@ author_profile: true
 
 <div class="main-content">
 
-  <!-- Research Interests Overview -->
-  <div style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #007bff;">
-    <h2 style="font-size: 22px; margin-top: 0; color: #333;"><i class="fas fa-compass"></i> Research Interests</h2>
-    <p style="font-size: 15px; text-align: justify; color: #444; line-height: 1.7;">
-      My research interests center on developing and applying <strong><em>data-driven mathematical models</em></strong> and <strong><em>solution algorithms</em></strong> for complex decision-making problems involving <strong><em>uncertainty</em></strong> and <strong><em>game-theoretic settings</em></strong>. I am particularly drawn to problems in <strong><em>infrastructure protection</em></strong>, <strong><em>sustainable transportation network design</em></strong>, <strong><em>disaster mitigation</em></strong>, and <strong><em>healthcare systems optimization</em></strong>. These areas present several challenges, including managing uncertainty in dynamic environments, coordinating multi-stakeholder decisions, and scaling optimization algorithms for large-scale networks. My prior research experiences have prepared me to address these challenges in my doctoral studies and contribute to building <strong><em>data-driven resilience frameworks</em></strong>.
-    </p>
-  </div>
+  <!-- Research Areas -->
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-compass"></i> Research Areas</h2>
+  <ul style="font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 30px;">
+    <li>Data-driven Mathematical Models</li>
+    <li>Solution Algorithms for Complex Decision-Making</li>
+    <li>Optimization under Uncertainty</li>
+    <li>Game-theoretic Settings</li>
+    <li>Infrastructure Protection</li>
+    <li>Sustainable Transportation Network Design</li>
+    <li>Disaster Mitigation</li>
+    <li>Healthcare Systems Optimization</li>
+  </ul>
 
   <hr style="margin: 40px 0;">
 
+  <!-- Past Research Experience -->
   <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-microscope"></i> Past Research Experience</h2>
-  <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin-bottom: 25px;">
+  <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6; margin-bottom: 15px;">
     My past research has yielded academic outcomes in the following categories:
   </p>
-
-  <!-- Past Research 1 -->
-  <div class="research-area" style="margin-bottom: 25px; padding: 20px; border-left: 4px solid #17a2b8; background: #f8f9fa; border-radius: 4px;">
-    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-brain"></i> Robust & Interpretable Machine Learning in Data-Scarce Regions</h3>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      Developing machine learning frameworks that maintain robustness and interpretability when operating with limited data availability, addressing challenges common in developing regions and emerging application domains.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-      <span style="background: #e0f2f1; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #00695c;">Interpretable ML</span>
-      <span style="background: #e0f2f1; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #00695c;">Robustness</span>
-      <span style="background: #e0f2f1; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #00695c;">Data Scarcity</span>
-    </div>
-  </div>
-
-  <!-- Past Research 2 -->
-  <div class="research-area" style="margin-bottom: 25px; padding: 20px; border-left: 4px solid #e91e63; background: #f8f9fa; border-radius: 4px;">
-    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-shapes"></i> Geometry Prediction</h3>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      Applying computational methods and machine learning techniques for accurate geometry prediction in manufacturing and engineering applications.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-      <span style="background: #fce4ec; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #880e4f;">Geometry Modeling</span>
-      <span style="background: #fce4ec; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #880e4f;">Predictive Analytics</span>
-      <span style="background: #fce4ec; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #880e4f;">Manufacturing</span>
-    </div>
-  </div>
-
-  <!-- Past Research 3 -->
-  <div class="research-area" style="margin-bottom: 25px; padding: 20px; border-left: 4px solid #ff6f00; background: #f8f9fa; border-radius: 4px;">
-    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-route"></i> Scheduling and Route Optimization</h3>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      Developing optimization algorithms for scheduling and routing problems, addressing resource allocation, time constraints, and operational efficiency in complex systems.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-      <span style="background: #fff3e0; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #cc5200;">Scheduling</span>
-      <span style="background: #fff3e0; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #cc5200;">Vehicle Routing</span>
-      <span style="background: #fff3e0; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #cc5200;">Optimization</span>
-    </div>
-  </div>
-
-  <!-- Past Research 4 -->
-  <div class="research-area" style="margin-bottom: 25px; padding: 20px; border-left: 4px solid #1976d2; background: #f8f9fa; border-radius: 4px;">
-    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-chart-line"></i> Process Monitoring</h3>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      Implementing statistical and machine learning methods for real-time process monitoring, quality control, and anomaly detection in industrial systems.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-      <span style="background: #e3f2fd; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #0d47a1;">Process Control</span>
-      <span style="background: #e3f2fd; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #0d47a1;">Quality Monitoring</span>
-      <span style="background: #e3f2fd; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #0d47a1;">Statistical Methods</span>
-    </div>
-  </div>
+  <ul style="font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 30px;">
+    <li>Developing robust and interpretable machine learning framework in data-scarce regions</li>
+    <li>Geometry prediction</li>
+    <li>Scheduling and route optimization</li>
+    <li>Process monitoring</li>
+  </ul>
 
   <hr style="margin: 40px 0;">
 
+  <!-- Future Research Directions -->
   <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-rocket"></i> Future Research Directions</h2>
 
-  <!-- Future Research Direction -->
+  <!-- Direction 1: Supply Chain -->
   <div class="research-area" style="margin-bottom: 30px; padding: 25px; border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 4px;">
     <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-truck-fast"></i> Supply Chain Route Optimization and Scheduling</h3>
     <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      I will advance supply chain optimization by integrating <strong>machine learning</strong> and <strong>operations research</strong> for routing problems under stochastic and dynamic conditions. This research combines forecasting models (<em>transformers, N-BEATS</em>) and <strong>graph neural networks</strong> with <strong>reinforcement learning agents</strong> and <strong>mixed-integer programming</strong> strategies.
-    </p>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      To handle uncertainty, the framework may incorporate:
-    </p>
-    <ul style="font-size: 15px; color: #555; line-height: 1.6;">
-      <li><strong>Sample-average approximation</strong></li>
-      <li><strong>Benders decomposition</strong></li>
-      <li><strong>Digital-twin simulations</strong> with neural surrogates</li>
-    </ul>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      Key challenges to be addressed include:
-    </p>
-    <ul style="font-size: 15px; color: #555; line-height: 1.6;">
-      <li>Scaling to networks exceeding <strong>10,000 nodes</strong> under real-time latency</li>
-      <li>Uncertainty propagation across decision pipelines</li>
-      <li>Fairness in decentralized routing</li>
-      <li>Environmental integration</li>
-    </ul>
-    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
-      These challenges will be addressed through <strong>neural combinatorial optimization</strong>, <strong>causal inference</strong>, satellite and IoT data integration, and <strong>robust optimization under Knightian uncertainty</strong>.
+      I will advance supply chain optimization by integrating machine learning and operations research for routing problems under stochastic and dynamic conditions. This research combines forecasting models (transformers, N-BEATS) and graph neural networks with reinforcement learning agents and mixed-integer programming strategies. To handle uncertainty, the framework may incorporate sample-average approximation, Benders decomposition, and digital-twin simulations with neural surrogates. Key challenges—scaling to networks exceeding 10,000 nodes under real-time latency, uncertainty propagation across decision pipelines, fairness in decentralized routing, and environmental integration—will be addressed through neural combinatorial optimization, causal inference, satellite and IoT data integration, and robust optimization under Knightian uncertainty.
     </p>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
       <span style="background: #e8f5e9; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #2d7d3d;">Machine Learning</span>
@@ -112,6 +53,23 @@ author_profile: true
       <span style="background: #e8f5e9; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #2d7d3d;">Mixed-Integer Programming</span>
       <span style="background: #e8f5e9; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #2d7d3d;">Digital Twins</span>
       <span style="background: #e8f5e9; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #2d7d3d;">Robust Optimization</span>
+    </div>
+  </div>
+
+  <!-- Direction 2: MARL -->
+  <div class="research-area" style="margin-bottom: 30px; padding: 25px; border-left: 4px solid #6f42c1; background: #f8f9fa; border-radius: 4px;">
+    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-robot"></i> Multi-Agent Reinforcement Learning</h3>
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
+      My research aim in multi-agent reinforcement learning (MARL) focuses on advancing distributed decision-making in partially observable stochastic games (POSGs), where multiple autonomous agents must jointly optimize individual or collective objectives. Recent methodological progress—including centralized training with decentralized execution (CTDE), value-decomposition frameworks such as QMIX and QTRAN, policy-gradient approaches (PPO, TRPO), and graph neural networks for encoding agent interactions—has substantially enhanced coordination efficiency in StarCraft multi-agent coordination, intelligent transportation systems, and swarm robotics. Nonetheless, significant scopes remain, particularly in establishing convergence guarantees under non-stationarity, scaling to heterogeneous teams, characterizing emergent collective phenomena, and quantifying sample-complexity limits. In future my research will focus on principled compositional representations that generalize across team sizes, function-approximation error analysis for value-decomposition methods, and communication-efficient consensus algorithms that preserve performance in large-scale decentralized systems.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">MARL</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">POSGs</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">CTDE</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">Value Decomposition</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">Policy Gradient</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">Graph Neural Networks</span>
+      <span style="background: #f3e5f5; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #6600cc;">Swarm Robotics</span>
     </div>
   </div>
 
