@@ -214,3 +214,219 @@ html[data-theme="dark"] .btn {
 html[data-theme="dark"] .btn:hover {
   background-color: #444;
 }
+
+/* ========== PROJECT CARDS DARK MODE ========== */
+html[data-theme="dark"] .project-card {
+  background: #242424 !important;
+  border-color: #404040 !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4) !important;
+}
+
+html[data-theme="dark"] .project-card.thesis { border-left-color: #64b5f6 !important; }
+html[data-theme="dark"] .project-card.undergrad { border-left-color: #ffd54f !important; }
+html[data-theme="dark"] .project-card.vrp { border-left-color: #81c784 !important; }
+html[data-theme="dark"] .project-card.ai { border-left-color: #e57373 !important; }
+
+html[data-theme="dark"] .card-header {
+  background: #2a2a2a !important;
+}
+
+html[data-theme="dark"] .project-card.thesis .card-header { background: #1e3a5f !important; }
+html[data-theme="dark"] .project-card.undergrad .card-header { background: #3d3520 !important; }
+html[data-theme="dark"] .project-card.vrp .card-header { background: #1e3d2a !important; }
+html[data-theme="dark"] .project-card.ai .card-header { background: #3d1e1e !important; }
+
+html[data-theme="dark"] .card-title {
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .card-subtitle {
+  color: #a0a0a0 !important;
+}
+
+html[data-theme="dark"] .card-category {
+  opacity: 0.9;
+}
+
+html[data-theme="dark"] .card-body {
+  background: #242424 !important;
+  border-top-color: #404040 !important;
+}
+
+html[data-theme="dark"] .card-body p {
+  color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] .card-body img {
+  border-color: #404040 !important;
+}
+
+html[data-theme="dark"] .card-body figcaption {
+  color: #909090 !important;
+}
+
+/* ========== BADGES AND TAGS ========== */
+html[data-theme="dark"] .badge,
+html[data-theme="dark"] span[style*="background"] {
+  filter: brightness(0.85);
+}
+
+/* ========== TABLES ========== */
+html[data-theme="dark"] table {
+  background-color: #242424;
+}
+
+html[data-theme="dark"] table th {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] table td {
+  color: #c0c0c0;
+  background-color: #242424;
+}
+
+html[data-theme="dark"] table tr:nth-child(even) td {
+  background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] table tr:hover td {
+  background-color: #333;
+}
+
+/* ========== INLINE STYLES OVERRIDE ========== */
+html[data-theme="dark"] [style*="color: #333"],
+html[data-theme="dark"] [style*="color:#333"] {
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] [style*="color: #444"],
+html[data-theme="dark"] [style*="color:#444"] {
+  color: #d0d0d0 !important;
+}
+
+html[data-theme="dark"] [style*="color: #555"],
+html[data-theme="dark"] [style*="color:#555"] {
+  color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] [style*="color: #666"],
+html[data-theme="dark"] [style*="color:#666"] {
+  color: #a0a0a0 !important;
+}
+
+html[data-theme="dark"] [style*="background: #f8f9fa"],
+html[data-theme="dark"] [style*="background:#f8f9fa"],
+html[data-theme="dark"] [style*="background: #f0f0f0"],
+html[data-theme="dark"] [style*="background:#f0f0f0"] {
+  background: #2a2a2a !important;
+}
+
+html[data-theme="dark"] [style*="background: #fff"],
+html[data-theme="dark"] [style*="background:#fff"],
+html[data-theme="dark"] [style*="background: white"],
+html[data-theme="dark"] [style*="background:white"] {
+  background: #242424 !important;
+}
+
+/* ========== LINKS AND BUTTONS ========== */
+html[data-theme="dark"] a[style*="background: #f0f0f0"],
+html[data-theme="dark"] a[style*="background:#f0f0f0"] {
+  background: #333 !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+html[data-theme="dark"] a[style*="background: #f0f0f0"]:hover,
+html[data-theme="dark"] a[style*="background:#f0f0f0"]:hover {
+  background: #444 !important;
+}
+
+/* ========== EXPERIENCE & CERTIFICATE SECTIONS ========== */
+html[data-theme="dark"] .experience,
+html[data-theme="dark"] .award,
+html[data-theme="dark"] .cert-card {
+  background: #242424 !important;
+  border-color: #404040 !important;
+}
+
+html[data-theme="dark"] .cert-header {
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .cert-details {
+  color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] .cert-learned {
+  background: #1e3a5f !important;
+  border-left-color: #64b5f6 !important;
+}
+
+/* ========== AUTHOR PROFILE SIDEBAR ========== */
+html[data-theme="dark"] .author__avatar img {
+  border-color: #404040;
+}
+
+html[data-theme="dark"] .author__urls-wrapper a {
+  color: #b0b0b0;
+}
+
+html[data-theme="dark"] .author__urls-wrapper a:hover {
+  color: #64b5f6;
+}
+
+html[data-theme="dark"] .author__urls li {
+  color: #b0b0b0;
+}
+
+/* ========== STRONG AND EMPHASIS ========== */
+html[data-theme="dark"] strong {
+  color: #e8e8e8;
+}
+
+html[data-theme="dark"] em {
+  color: #d0d0d0;
+}
+
+/* ========== BLOCKQUOTES ========== */
+html[data-theme="dark"] blockquote {
+  background: #2a2a2a;
+  border-left-color: #64b5f6;
+  color: #b0b0b0;
+}
+
+/* ========== FOOTER ========== */
+html[data-theme="dark"] .page__footer {
+  background-color: #141414 !important;
+  border-top-color: #333;
+}
+
+html[data-theme="dark"] .page__footer a {
+  color: #64b5f6;
+}
+
+/* ========== SCROLL BAR ========== */
+html[data-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 5px;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ========== SELECTION ========== */
+html[data-theme="dark"] ::selection {
+  background: #64b5f6;
+  color: #1a1a1a;
+}
