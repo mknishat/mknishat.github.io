@@ -7,16 +7,11 @@ author_profile: true
 
 <div class="main-content">
 
-  <div class="experience" data-year="2025">
-    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>April 2025 – Present</strong></p>
-  </div>
-
-  <hr>
-
   <div class="experience" data-year="2023">
-    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – April 2025</strong></p>
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate → SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Present</strong></p>
 
     <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li><em>Promoted to SAP Associate in April 2025</em></li>
       <li>Gathered and analyzed business requirements, conducted AS-IS analysis, and mapped processes for diverse manufacturing scenarios</li>
       <li>Configured and optimized SAP PP & QM module, including master data (Material Master, BOM, Routing, Work Center), MRP, production orders, capacity planning, and shop floor control</li>
       <li>Developed and managed WRICEF objects, preparing detailed Functional Specifications (FS) and collaborating with ABAP developers for custom solutions</li>
