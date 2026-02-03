@@ -86,8 +86,8 @@ html[data-theme="dark"] button {
   padding: 8px 12px;
   border: none;
   background: transparent;
-  color: var(--text-color);
-  transition: transform 0.3s ease;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -97,6 +97,10 @@ html[data-theme="dark"] button {
   z-index: 99;
 }
 
+html[data-theme="dark"] .theme-toggle {
+  color: #f0f0f0;
+}
+
 .theme-toggle-item {
   display: table-cell;
   vertical-align: middle;
@@ -104,9 +108,101 @@ html[data-theme="dark"] button {
 
 .theme-toggle:hover {
   transform: scale(1.1);
-  background-color: var(--code-background);
+  background-color: rgba(0,0,0,0.1);
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
 .theme-toggle i {
   transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+/* Desktop visibility for theme toggle */
+@media (min-width: 768px) {
+  .theme-toggle-item {
+    display: table-cell !important;
+  }
+}
+
+/* Additional dark mode styles for all page elements */
+html[data-theme="dark"] .masthead__menu-item a {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .masthead__menu-item a:hover {
+  color: #64b5f6;
+}
+
+html[data-theme="dark"] .greedy-nav {
+  background-color: #1a1a1a;
+}
+
+html[data-theme="dark"] .author__name,
+html[data-theme="dark"] .author__bio {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .sidebar {
+  background-color: #1a1a1a;
+}
+
+html[data-theme="dark"] .page__title,
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, 
+html[data-theme="dark"] h3, html[data-theme="dark"] h4 {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] p {
+  color: #c0c0c0;
+}
+
+html[data-theme="dark"] li {
+  color: #c0c0c0;
+}
+
+html[data-theme="dark"] .research-area {
+  background: #242424 !important;
+  border-color: #404040 !important;
+}
+
+html[data-theme="dark"] .research-area h3 {
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .research-area p {
+  color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] hr {
+  border-color: #404040;
+}
+
+html[data-theme="dark"] .archive__item-title a {
+  color: #64b5f6;
+}
+
+html[data-theme="dark"] .page__footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .nav__list a {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .toc__menu a {
+  color: #c0c0c0;
+}
+
+html[data-theme="dark"] .btn {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+html[data-theme="dark"] .btn:hover {
+  background-color: #444;
 }

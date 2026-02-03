@@ -10,10 +10,7 @@ author_profile: true
   <!-- Research Areas -->
   <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-compass"></i> Research Areas</h2>
   <ul style="font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 30px;">
-    <li>Data-driven Mathematical Models</li>
-    <li>Solution Algorithms for Complex Decision-Making</li>
     <li>Optimization under Uncertainty</li>
-    <li>Game-theoretic Settings</li>
     <li>Infrastructure Protection</li>
     <li>Sustainable Transportation Network Design</li>
     <li>Disaster Mitigation</li>
@@ -36,8 +33,8 @@ author_profile: true
 
   <hr style="margin: 40px 0;">
 
-  <!-- Future Research Directions -->
-  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-rocket"></i> Future Research Directions</h2>
+  <!-- Research Directions -->
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-rocket"></i> Research Directions</h2>
 
   <!-- Direction 1: Supply Chain -->
   <div class="research-area" style="margin-bottom: 30px; padding: 25px; border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 4px;">
