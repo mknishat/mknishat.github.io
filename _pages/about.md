@@ -16,9 +16,9 @@ Use this to test the file on browser locally. If changed on config, need to redo
 </p>
 <p style="text-align: justify; font-size: 15px;">Before joining PwC, I completed my <strong>M.Sc. in Industrial & Production Engineering (IPE) from Bangladesh University of Engineering and Technology (BUET)</strong>, where I served as a <strong>Teaching Assistant</strong>. I obtained my <strong>B.Sc. in IPE at Khulna University of Engineering and Technology (KUET)</strong>, where I was honored with the <strong>Dean's Award and University Merit Scholarship</strong> in recognition of my outstanding academic performance. I have also served as a <strong>Guest Lecturer at the National Institute of Textile Engineering and Research (NITER)</strong>.
 </p>
+<h2>About Me</h2>
 <p style="text-align: justify; font-size: 15px;">My research interests center on developing and applying data-driven mathematical models and solution algorithms for complex decision-making problems involving uncertainty and game-theoretic settings. I am particularly drawn to problems in infrastructure protection, sustainable transportation network design, disaster mitigation, and healthcare systems optimization. These areas present several challenges, including managing uncertainty in dynamic environments, coordinating multi-stakeholder decisions, and scaling optimization algorithms for large-scale networks. My prior research experiences have prepared me to address these challenges in my doctoral studies and contribute to building data-driven resilience frameworks.
 </p>
-<!-- sdfsdfjkh -->
 
 <hr>
 
