@@ -529,15 +529,31 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
-    <p><strong>Abstract:</strong> This project builds an end-to-end multi-label car damage analysis pipeline for vehicle images. The model predicts location-severity labels across front, back, corner, door, and tire damage categories, then uses confidence calibration and threshold optimization to improve decision quality under class imbalance.</p>
+    <h4>1) Project Description</h4>
+    <p>This project builds an end-to-end multi-label car damage analysis pipeline for vehicle images. The model predicts damage location and severity labels such as front, back, corner, door, and tire classes, then calibrates confidence scores for more reliable decisions in practical workflows.</p>
 
-    <p><strong>Pipeline Highlights:</strong></p>
+    <h4>2) Dataset Description</h4>
+    <p>The dataset is organized into train, validation, and test splits with location-severity labels. Data processing includes image validation, duplicate control, multilabel target construction, and stratified splitting to preserve class distribution.</p>
     <ul style="font-size: 14px; color: #555;">
-      <li>Multi-label training with class imbalance handling and stratified splitting</li>
-      <li>EfficientNet-based ensemble with augmentation, EMA, and TTA inference</li>
-      <li>Per-class threshold optimization and structured prediction constraints</li>
-      <li>Comprehensive diagnostics: Micro/Macro F1, class-wise TP/FP/FN, confidence curves</li>
+      <li>Input types: JPG, JPEG, PNG, BMP, WEBP</li>
+      <li>Label style: multi-label damage location and severity</li>
+      <li>Imbalance handling: oversampling plus weighted sampling</li>
     </ul>
+
+    <h4>3) Methodology (Flowchart)</h4>
+    <p>Training uses EfficientNet backbones with augmentation, EMA, TTA, and threshold optimization for multilabel inference.</p>
+    <pre style="font-size: 12px; color: #444; background: #fafafa; border: 1px solid #eee; border-radius: 6px; padding: 12px; overflow-x: auto;">Input Images
+  -> Data Scan + Dedup + Label Build
+  -> Stratified Train/Val/Test Split
+  -> Oversampling + Weighted Sampler
+  -> EfficientNet Ensemble Training
+  -> Validation + Temperature Calibration
+  -> Per-Class Threshold Optimization
+  -> TTA Inference + Structured Prediction
+  -> Final Metrics + Plots + Export</pre>
+
+    <h4>4) Result with Plots</h4>
+    <p>The following plots summarize class performance, operating thresholds, and confidence behavior.</p>
 
     <img src="/images/car-damage/evaluation_summary.png" alt="Car Damage Evaluation Summary">
     <figcaption>Figure 1: Per-class F1, distribution alignment, optimized thresholds, and TP/FP/FN analysis</figcaption>
@@ -551,9 +567,14 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="/images/car-damage/f1_confidence.png" alt="F1 Confidence Curve">
     <figcaption>Figure 4: F1 score vs confidence threshold</figcaption>
 
-    <p><strong>Methodology:</strong> Transfer learning with EfficientNet backbones, asymmetric-loss-driven multilabel optimization, and calibrated thresholding for robust deployment across imbalanced classes.</p>
+    <h4>5) Discussion</h4>
+    <p>The model shows strong micro-level performance and useful class-level separation. Confidence-threshold tuning significantly improves trade-offs between precision and recall across classes.</p>
 
-    <p><strong>Key Findings:</strong> The system reaches strong micro-level performance while exposing class-specific precision-recall trade-offs, making it suitable for inspection and insurance triage workflows.</p>
+    <h4>6) Limitation</h4>
+    <p>Minority and visually similar classes remain challenging, and classification-only outputs do not provide explicit localized damage masks or bounding boxes.</p>
+
+    <h4>7) Future Direction</h4>
+    <p>Next steps include adding detection or segmentation for localization, improving class-wise calibration, and expanding dataset diversity for stronger real-world robustness.</p>
 
     <div class="keywords">
       <span class="keyword blue">Computer Vision</span>
