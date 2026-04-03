@@ -530,7 +530,9 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
   <div class="card-body">
     <h4>1) Project Description</h4>
-    <p>This project builds an end-to-end multi-label car damage analysis pipeline for vehicle images. The model predicts damage location and severity labels such as front, back, corner, door, and tire classes, then calibrates confidence scores for more reliable decisions in practical workflows.</p>
+    <p>This project develops a production-oriented multi-label car damage classification system designed for insurance triage, workshop pre-inspection, and fleet maintenance workflows. Instead of predicting only one label per image, the model captures multiple simultaneous damage attributes and severity levels from a single vehicle photo.</p>
+    <p>The solution uses an EfficientNet ensemble to improve generalization across viewpoint, lighting, and damage-scale variation. The training pipeline includes imbalance-aware loss design, structured augmentation, and confidence calibration, while inference uses threshold optimization and rule-based consistency constraints to reduce contradictory predictions.</p>
+    <p>Beyond final accuracy, the project emphasizes deployable decision quality by analyzing precision-recall behavior at different thresholds, per-class failure modes, and operating-point sensitivity. This enables practical policy tuning, such as precision-first operation for automated approvals or recall-first operation for manual review pipelines.</p>
 
     <h4>2) Dataset Description</h4>
     <p>The dataset is organized into train, validation, and test splits with location-severity labels. Data processing includes image validation, duplicate control, multilabel target construction, and stratified splitting to preserve class distribution.</p>
@@ -539,6 +541,22 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       <li>Label style: multi-label damage location and severity</li>
       <li>Imbalance handling: oversampling plus weighted sampling</li>
     </ul>
+    <p><strong>Class-wise number of images:</strong></p>
+    <table class="results-table">
+      <thead><tr><th>Class</th><th>Train</th><th>Val</th><th>Test</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td>back_high</td><td>16</td><td>3</td><td>0</td><td>19</td></tr>
+        <tr><td>back_low</td><td>44</td><td>9</td><td>0</td><td>53</td></tr>
+        <tr><td>corner_high</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>corner_low</td><td>30</td><td>6</td><td>0</td><td>36</td></tr>
+        <tr><td>door_high</td><td>49</td><td>10</td><td>0</td><td>59</td></tr>
+        <tr><td>door_low</td><td>161</td><td>34</td><td>0</td><td>195</td></tr>
+        <tr><td>front_high</td><td>113</td><td>23</td><td>0</td><td>136</td></tr>
+        <tr><td>front_low</td><td>139</td><td>35</td><td>32</td><td>206</td></tr>
+        <tr><td>tire_high</td><td>4</td><td>1</td><td>1</td><td>6</td></tr>
+        <tr class="highlight"><td>tire_low</td><td>63</td><td>13</td><td>16</td><td>92</td></tr>
+      </tbody>
+    </table>
 
     <h4>3) Methodology (Flowchart)</h4>
     <p>Training uses EfficientNet backbones with augmentation, EMA, TTA, and threshold optimization for multilabel inference.</p>
