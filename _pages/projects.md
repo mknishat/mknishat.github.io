@@ -529,6 +529,9 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
+    <a href="https://github.com/mknishat/mknishat.github.io/tree/master/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
+    <a href="https://github.com/mknishat/mknishat.github.io/tree/master/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
+
     <h4>1) Project Description</h4>
     <p>This project develops a production-oriented multi-label car damage classification system designed for insurance triage, workshop pre-inspection, and fleet maintenance workflows. Instead of predicting only one label per image, the model captures multiple simultaneous damage attributes and severity levels from a single vehicle photo.</p>
     <p>The solution uses an EfficientNet ensemble to improve generalization across viewpoint, lighting, and damage-scale variation. The training pipeline includes imbalance-aware loss design, structured augmentation, and confidence calibration, while inference uses threshold optimization and rule-based consistency constraints to reduce contradictory predictions.</p>
