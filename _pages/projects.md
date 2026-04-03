@@ -535,26 +535,27 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p>Beyond final accuracy, the project emphasizes deployable decision quality by analyzing precision-recall behavior at different thresholds, per-class failure modes, and operating-point sensitivity. This enables practical policy tuning, such as precision-first operation for automated approvals or recall-first operation for manual review pipelines.</p>
 
     <h4>2) Dataset Description</h4>
-    <p>The dataset is organized into train, validation, and test splits with location-severity labels. Data processing includes image validation, duplicate control, multilabel target construction, and stratified splitting to preserve class distribution.</p>
+    <p>This project uses the <strong>finetune_dataset_multilabel</strong> dataset organized into train, validation, and test splits with location-severity labels. Data processing includes image validation, duplicate control, multilabel target construction, and stratified splitting to preserve class distribution.</p>
     <ul style="font-size: 14px; color: #555;">
       <li>Input types: JPG, JPEG, PNG, BMP, WEBP</li>
       <li>Label style: multi-label damage location and severity</li>
+      <li>Total images: 2289 (train: 1798, val: 366, test: 124)</li>
       <li>Imbalance handling: oversampling plus weighted sampling</li>
     </ul>
     <p><strong>Class-wise number of images:</strong></p>
     <table class="results-table">
       <thead><tr><th>Class</th><th>Train</th><th>Val</th><th>Test</th><th>Total</th></tr></thead>
       <tbody>
-        <tr><td>back_high</td><td>16</td><td>3</td><td>0</td><td>19</td></tr>
-        <tr><td>back_low</td><td>44</td><td>9</td><td>0</td><td>53</td></tr>
-        <tr><td>corner_high</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
-        <tr><td>corner_low</td><td>30</td><td>6</td><td>0</td><td>36</td></tr>
-        <tr><td>door_high</td><td>49</td><td>10</td><td>0</td><td>59</td></tr>
-        <tr><td>door_low</td><td>161</td><td>34</td><td>0</td><td>195</td></tr>
-        <tr><td>front_high</td><td>113</td><td>23</td><td>0</td><td>136</td></tr>
-        <tr><td>front_low</td><td>139</td><td>35</td><td>32</td><td>206</td></tr>
-        <tr><td>tire_high</td><td>4</td><td>1</td><td>1</td><td>6</td></tr>
-        <tr class="highlight"><td>tire_low</td><td>63</td><td>13</td><td>16</td><td>92</td></tr>
+        <tr><td>back_high</td><td>79</td><td>18</td><td>3</td><td>100</td></tr>
+        <tr><td>back_low</td><td>105</td><td>18</td><td>2</td><td>125</td></tr>
+        <tr><td>corner_high</td><td>201</td><td>38</td><td>12</td><td>251</td></tr>
+        <tr><td>corner_low</td><td>218</td><td>43</td><td>14</td><td>275</td></tr>
+        <tr><td>door_high</td><td>138</td><td>28</td><td>3</td><td>169</td></tr>
+        <tr><td>door_low</td><td>242</td><td>51</td><td>5</td><td>298</td></tr>
+        <tr><td>front_high</td><td>225</td><td>49</td><td>16</td><td>290</td></tr>
+        <tr class="highlight"><td>front_low</td><td>222</td><td>53</td><td>37</td><td>312</td></tr>
+        <tr><td>tire_high</td><td>161</td><td>31</td><td>9</td><td>201</td></tr>
+        <tr><td>tire_low</td><td>207</td><td>37</td><td>23</td><td>267</td></tr>
       </tbody>
     </table>
 
