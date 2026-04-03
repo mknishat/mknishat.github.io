@@ -200,6 +200,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
       <span class="keyword blue">Genetic Algorithm</span>
     </div>
   </div>
+
 </div>
 
 <!-- PROJECT 2: Undergraduate Thesis -->
@@ -517,4 +518,51 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
 </div>
 
+<!-- PROJECT 7: Car Damage Classification -->
+<div class="project-card ai" onclick="this.classList.toggle('open')">
+  <div class="card-header">
+    <div>
+      <div class="card-category"><i class="fas fa-car-crash"></i> AI/ML Project</div>
+      <h3 class="card-title">Car Damage Multi-Label Classification and Severity Analysis</h3>
+      <p class="card-subtitle">EfficientNet ensemble for damage-location and severity-aware predictions with threshold-calibrated confidence curves</p>
+    </div>
+    <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
+  </div>
+  <div class="card-body">
+    <p><strong>Abstract:</strong> This project builds an end-to-end multi-label car damage analysis pipeline for vehicle images. The model predicts location-severity labels across front, back, corner, door, and tire damage categories, then uses confidence calibration and threshold optimization to improve decision quality under class imbalance.</p>
+
+    <p><strong>Pipeline Highlights:</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Multi-label training with class imbalance handling and stratified splitting</li>
+      <li>EfficientNet-based ensemble with augmentation, EMA, and TTA inference</li>
+      <li>Per-class threshold optimization and structured prediction constraints</li>
+      <li>Comprehensive diagnostics: Micro/Macro F1, class-wise TP/FP/FN, confidence curves</li>
+    </ul>
+
+    <img src="/images/car-damage/evaluation_summary.png" alt="Car Damage Evaluation Summary">
+    <figcaption>Figure 1: Per-class F1, distribution alignment, optimized thresholds, and TP/FP/FN analysis</figcaption>
+
+    <img src="/images/car-damage/precision_confidence.png" alt="Precision Confidence Curve">
+    <figcaption>Figure 2: Precision vs confidence threshold</figcaption>
+
+    <img src="/images/car-damage/precision_recall.png" alt="Precision Recall Curve">
+    <figcaption>Figure 3: Precision-Recall performance trade-off</figcaption>
+
+    <img src="/images/car-damage/f1_confidence.png" alt="F1 Confidence Curve">
+    <figcaption>Figure 4: F1 score vs confidence threshold</figcaption>
+
+    <p><strong>Methodology:</strong> Transfer learning with EfficientNet backbones, asymmetric-loss-driven multilabel optimization, and calibrated thresholding for robust deployment across imbalanced classes.</p>
+
+    <p><strong>Key Findings:</strong> The system reaches strong micro-level performance while exposing class-specific precision-recall trade-offs, making it suitable for inspection and insurance triage workflows.</p>
+
+    <div class="keywords">
+      <span class="keyword blue">Computer Vision</span>
+      <span class="keyword blue">Multi-Label Classification</span>
+      <span class="keyword blue">EfficientNet</span>
+      <span class="keyword blue">Damage Severity</span>
+      <span class="keyword blue">Confidence Calibration</span>
+      <span class="keyword blue">Precision-Recall</span>
+    </div>
+  </div>
+</div>
 
