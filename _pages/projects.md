@@ -530,8 +530,8 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   </div>
   <div class="card-body">
     <a href="https://github.com/mknishat/Car-Damage-Classification" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Project Repository</a>
-    <a href="https://github.com/mknishat/mknishat.github.io/tree/master/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
-    <a href="https://github.com/mknishat/mknishat.github.io/tree/master/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
+    <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
+    <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
 
     <h4>1) Project Description</h4>
     <p>This project develops a production-oriented multi-label car damage classification system designed for insurance triage, workshop pre-inspection, and fleet maintenance workflows. Instead of predicting only one label per image, the model captures multiple simultaneous damage attributes and severity levels from a single vehicle photo.</p>
