@@ -563,7 +563,12 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </table>
 
     <h4>3) Methodology (Flowchart)</h4>
-    <p>Training uses EfficientNet backbones with augmentation, EMA, TTA, and threshold optimization for multilabel inference.</p>
+    <p>Training uses an EfficientNet ensemble, imbalance-aware optimization, and calibrated multilabel decision logic. The workflow combines data quality checks, robust augmentation, temperature calibration, and per-class threshold search to make predictions more stable for operational use.</p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Backbones: EfficientNet-B0 and EfficientNet-B1 ensemble</li>
+      <li>Learning strategy: asymmetric-loss-guided multilabel optimization with weighted sampling</li>
+      <li>Inference strategy: TTA + structured post-processing constraints + threshold calibration</li>
+    </ul>
     <pre style="font-size: 12px; color: #444; background: #fafafa; border: 1px solid #eee; border-radius: 6px; padding: 12px; overflow-x: auto;">Input Images
   -> Data Scan + Dedup + Label Build
   -> Stratified Train/Val/Test Split
@@ -575,7 +580,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
   -> Final Metrics + Plots + Export</pre>
 
     <h4>4) Result with Plots</h4>
-    <p>The following plots summarize class performance, operating thresholds, and confidence behavior.</p>
+    <p>The following five plots summarize class-level quality, operating thresholds, and confidence sensitivity for deployment tuning.</p>
 
     <img src="/images/car-damage/evaluation_summary.png" alt="Car Damage Evaluation Summary">
     <figcaption>Figure 1: Per-class F1, distribution alignment, optimized thresholds, and TP/FP/FN analysis</figcaption>
@@ -583,20 +588,39 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="/images/car-damage/precision_confidence.png" alt="Precision Confidence Curve">
     <figcaption>Figure 2: Precision vs confidence threshold</figcaption>
 
+    <img src="/images/car-damage/recall_confidence.png" alt="Recall Confidence Curve">
+    <figcaption>Figure 3: Recall vs confidence threshold</figcaption>
+
     <img src="/images/car-damage/precision_recall.png" alt="Precision Recall Curve">
-    <figcaption>Figure 3: Precision-Recall performance trade-off</figcaption>
+    <figcaption>Figure 4: Precision-Recall performance trade-off</figcaption>
 
     <img src="/images/car-damage/f1_confidence.png" alt="F1 Confidence Curve">
-    <figcaption>Figure 4: F1 score vs confidence threshold</figcaption>
+    <figcaption>Figure 5: F1 score vs confidence threshold</figcaption>
 
     <h4>5) Discussion</h4>
-    <p>The model shows strong micro-level performance and useful class-level separation. Confidence-threshold tuning significantly improves trade-offs between precision and recall across classes.</p>
+    <p>The model shows strong micro-level stability and meaningful class-level separation, but class imbalance still shapes behavior across rare labels. Confidence-threshold tuning materially changes precision and recall trade-offs, which makes calibrated operating points essential for real-world deployment.</p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Higher thresholds improve precision but can sharply reduce recall for sparse classes</li>
+      <li>Curve analysis helps select policy-specific operating modes (precision-first vs recall-first)</li>
+      <li>Per-class diagnostics expose where targeted data collection will have highest impact</li>
+    </ul>
 
     <h4>6) Limitation</h4>
-    <p>Minority and visually similar classes remain challenging, and classification-only outputs do not provide explicit localized damage masks or bounding boxes.</p>
+    <p>Minority and visually similar classes remain challenging, especially under high threshold settings. The current system is classification-first and does not produce explicit pixel-level masks or bounding boxes for localization-driven decision support.</p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Residual class imbalance may increase false negatives in low-support classes</li>
+      <li>Ensemble + TTA improves quality but adds inference latency</li>
+      <li>No direct localization map for explainability in inspection workflows</li>
+    </ul>
 
     <h4>7) Future Direction</h4>
-    <p>Next steps include adding detection or segmentation for localization, improving class-wise calibration, and expanding dataset diversity for stronger real-world robustness.</p>
+    <p>Next steps focus on localization-aware modeling, stronger calibration, and robust deployment policy design.</p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Add detection/segmentation heads for explicit damage localization</li>
+      <li>Introduce uncertainty estimation and reject-option inference for safer automation</li>
+      <li>Expand data coverage across lighting, camera angles, and vehicle categories</li>
+      <li>Build business-mode thresholds for insurance triage and manual review routing</li>
+    </ul>
 
     <div class="keywords">
       <span class="keyword blue">Computer Vision</span>
