@@ -533,19 +533,25 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
     <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
 
+    <h4>0) Abstract</h4>
+    <p>This Project presents a comprehensive deep learning framework for multi-label car damage classification, capable of simultaneously identifying both the location (back, corner, door, front, tire) and severity (high, low) of damage across ten fine-grained categories. The proposed system employs an ensemble of EfficientNet-B0 and EfficientNet-B1 backbones augmented with a channel attention mechanism, a multi-task auxiliary loss, and Asymmetric Loss (ASL) to address severe class imbalance. Advanced training strategies - including CutMix, MixUp, RandAugment, Exponential Moving Average (EMA), Test-Time Augmentation (TTA), temperature calibration, and structured per-class threshold optimization - are systematically integrated. Experimental results demonstrate a micro-F1 score of 0.47 and a macro-F1 score of 0.52 at an optimal confidence threshold of approximately 0.50, with per-class F1 scores ranging from 0.24 to 0.59. Precision-recall analysis reveals strong recall capacity but limited precision at low confidence thresholds, underscoring the challenge of fine-grained damage differentiation. The findings provide actionable insights for both model improvement and real-world deployment.</p>
+    <p><strong>Keywords:</strong> multi-label classification, car damage detection, EfficientNet, ensemble learning, asymmetric loss, CutMix, threshold optimization, deep learning.</p>
+
     <h4>1) Project Description</h4>
-    <p>This project develops a production-oriented multi-label car damage classification system designed for insurance triage, workshop pre-inspection, and fleet maintenance workflows. Instead of predicting only one label per image, the model captures multiple simultaneous damage attributes and severity levels from a single vehicle photo.</p>
-    <p>The solution uses an EfficientNet ensemble to improve generalization across viewpoint, lighting, and damage-scale variation. The training pipeline includes imbalance-aware loss design, structured augmentation, and confidence calibration, while inference uses threshold optimization and rule-based consistency constraints to reduce contradictory predictions.</p>
-    <p>Beyond final accuracy, the project emphasizes deployable decision quality by analyzing precision-recall behavior at different thresholds, per-class failure modes, and operating-point sensitivity. This enables practical policy tuning, such as precision-first operation for automated approvals or recall-first operation for manual review pipelines.</p>
+    <p>The automated detection and classification of vehicle damage has emerged as a high-value application of computer vision, particularly within the automotive insurance, fleet management, and road safety domains. Traditionally, damage assessment has relied on manual inspection by trained assessors - a process that is time-consuming, inconsistent, and often subject to human bias. The rapid advancement of deep convolutional neural networks (CNNs) offers a compelling alternative: automated systems capable of analyzing vehicle images and providing structured, repeatable damage assessments at scale.</p>
+    <p>This project addresses the challenge of multi-label car damage classification, wherein a single vehicle image may simultaneously exhibit damage at multiple locations and of varying severity levels. Unlike binary or single-label classification, the multi-label setting introduces additional complexity due to label co-occurrence, class imbalance, and the need for semantically coherent prediction structures.</p>
+    <p>The system classifies vehicle damage across ten fine-grained categories, formed by the Cartesian product of five damage locations (back, corner, door, front, tire) and two severity levels (high, low). A key design goal is to maintain location exclusivity - i.e., at most one severity level predicted per location - while allowing predictions across multiple locations. This structural constraint reflects real-world inspection requirements and is enforced through post-processing logic applied after model inference.</p>
 
     <h4>2) Dataset Description</h4>
-    <p>This project uses the <strong>finetune_dataset_multilabel</strong> dataset organized into train, validation, and test splits with location-severity labels. Data processing includes image validation, duplicate control, multilabel target construction, and stratified splitting to preserve class distribution.</p>
+    <p>The dataset employed in this study is a curated multi-label image collection organized around a hierarchical taxonomy of vehicle damage. Images are stored in a directory structure where each subdirectory corresponds to one of the ten damage classes, and a single image may reside in multiple class folders, thereby encoding its multi-label ground truth. Exact duplicate images are identified and deduplicated using MD5 checksums computed at ingestion time, ensuring no image contributes to multiple splits.</p>
+    <p><strong>Class Taxonomy:</strong> The label space is defined by the Cartesian product of two attribute axes: Location (5 categories: back, corner, door, front, tire) and Severity (2 levels: high, low). This yields ten joint class labels: back_high, back_low, corner_high, corner_low, door_high, door_low, front_high, front_low, tire_high, and tire_low.</p>
+    <p><strong>Class Imbalance Characteristics:</strong> The dataset exhibits significant label imbalance, with some classes (e.g., back_high, back_low) substantially underrepresented relative to others (e.g., front_low, door_low). This is addressed through a three-pronged strategy:</p>
     <ul style="font-size: 14px; color: #555;">
-      <li>Input types: JPG, JPEG, PNG, BMP, WEBP</li>
-      <li>Label style: multi-label damage location and severity</li>
-      <li>Total images: 2289 (train: 1798, val: 366, test: 124)</li>
-      <li>Imbalance handling: oversampling plus weighted sampling</li>
+      <li>Deterministic oversampling: the lowest-frequency quarter of classes are oversampled 5x; the next quarter are oversampled 2x, producing an augmented training pool.</li>
+      <li>Weighted random sampling: sample weights computed as inverse class frequency to the power of 0.75, applied via WeightedRandomSampler.</li>
+      <li>Loss-level reweighting: Asymmetric Loss further down-weights easy negative samples.</li>
     </ul>
+    <p><strong>2.4 Data Augmentation:</strong> A rich augmentation policy is applied during training: random resized cropping with scale (0.6-1.0), RandAugment (2 operations, magnitude 12), random horizontal flip (p=0.5), random vertical flip (p=0.2), random affine transforms (+/-10 deg, translation 8%, scale 90-110%), color jitter, and random erasing (p=0.3). At the batch level, CutMix (p=0.4, alpha=1.0) and MixUp (p=0.2, alpha=0.4) are applied with soft label mixing. Evaluation images are resized to 288x288 and normalized using ImageNet statistics only.</p>
     <p><strong>Class-wise number of images:</strong></p>
     <table class="results-table">
       <thead><tr><th>Class</th><th>Train</th><th>Val</th><th>Test</th><th>Total</th></tr></thead>
@@ -564,21 +570,20 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     </table>
 
     <h4>3) Methodology (Flowchart)</h4>
-    <p>Training uses an EfficientNet ensemble, imbalance-aware optimization, and calibrated multilabel decision logic. The workflow combines data quality checks, robust augmentation, temperature calibration, and per-class threshold search to make predictions more stable for operational use.</p>
+    <p>The proposed framework integrates complementary techniques across data preparation, model architecture, training strategy, and post-processing. The end-to-end pipeline is presented in the flowchart below, followed by detailed descriptions of each component.</p>
+    <img src="/images/car-damage/car_damage_pipeline_flowchart.png" alt="Car Damage Pipeline Flowchart">
+    <figcaption>Figure M1: End-to-end pipeline for multi-label car damage classification</figcaption>
+    <p><strong>Model Architecture:</strong> Each ensemble member adopts the ImprovedMultiTaskModel architecture. The backbone is a pretrained EfficientNet (B0 or B1) from the timm library with stochastic depth regularization (drop_path_rate=0.2). Features from the global average pooling layer are refined by a channel attention module - a squeeze-and-excitation style two-layer MLP (d -> d/4 -> d) with sigmoid activation - before passing to three task-specific heads:</p>
     <ul style="font-size: 14px; color: #555;">
-      <li>Backbones: EfficientNet-B0 and EfficientNet-B1 ensemble</li>
-      <li>Learning strategy: asymmetric-loss-guided multilabel optimization with weighted sampling</li>
-      <li>Inference strategy: TTA + structured post-processing constraints + threshold calibration</li>
+      <li>Main head: Dropout(0.5) -> Linear(d, d/2) -> ReLU -> Dropout(0.3) -> Linear(d/2, 10 classes).</li>
+      <li>Location auxiliary head: Dropout(0.4) -> Linear(d, 5 locations).</li>
+      <li>Severity auxiliary head: Dropout(0.4) -> Linear(d, 2 severity levels).</li>
     </ul>
-    <pre style="font-size: 12px; color: #444; background: #fafafa; border: 1px solid #eee; border-radius: 6px; padding: 12px; overflow-x: auto;">Input Images
-  -> Data Scan + Dedup + Label Build
-  -> Stratified Train/Val/Test Split
-  -> Oversampling + Weighted Sampler
-  -> EfficientNet Ensemble Training
-  -> Validation + Temperature Calibration
-  -> Per-Class Threshold Optimization
-  -> TTA Inference + Structured Prediction
-  -> Final Metrics + Plots + Export</pre>
+    <p>The auxiliary heads are supervised using marginal labels derived from the joint label vectors, providing structured supervisory signal encoding the semantic relationship between joint damage classes and their constituent spatial and severity attributes.</p>
+    <p><strong>3.3 Loss Function:</strong> The primary classification objective uses Asymmetric Loss (ASL) with gamma+ = 1.0 for positive samples, gamma- = 4.0 for negative samples, and a probability margin shift of 0.05 to decouple easy negatives. This design specifically targets the multi-label, class-imbalanced regime where easy negatives dominate gradients. Auxiliary losses use binary cross-entropy with class-frequency-derived positive weights (clamped to [0.5, 15]). The total loss is: L_total = L_ASL (main) + 0.25 x ( L_BCE (location) + L_BCE (severity) ).</p>
+    <p><strong>3.4 Training Protocol:</strong> Training proceeds for up to 35 epochs with early stopping (patience = 10). The backbone is frozen for the first 3 epochs to stabilize task heads before end-to-end fine-tuning. Learning rate scheduling combines linear warmup (epochs 1-4, start factor = 0.05) with cosine annealing (epochs 5-35, eta_min = 1x10^-7). The base learning rate is 1.5x10^-5 with AdamW (weight decay = 2x10^-3). Gradient accumulation over 2 steps and gradient clipping (max_norm = 0.5) ensure stable optimization. An Exponential Moving Average of model weights (decay = 0.9997) is maintained and used for all validation and test evaluation passes.</p>
+    <p><strong>3.5 Ensemble and Test-Time Augmentation:</strong> Two model variants - EfficientNet-B0 and EfficientNet-B1 - are trained independently, and their predicted probabilities are averaged to form the ensemble output. At inference, Test-Time Augmentation is applied by averaging predictions across three views: the original image, a horizontal flip, and a vertical flip. Before threshold application, logits are temperature-scaled using a scalar T calibrated by minimizing binary cross-entropy on the validation set (T searched over [0.3, 3.0] in 100 steps).</p>
+    <p><strong>3.6 Threshold Optimization and Post-Processing:</strong> Per-class decision thresholds are independently optimized on the validation set via exhaustive grid search over [0.05, 0.85] (81 points), selecting the threshold maximizing per-class binary F1. Structured prediction constraints are then enforced: total active labels are clamped to [1, 4]; within each location group, at most one severity label is retained (the one with the highest predicted probability). This post-processing step prevents physically implausible multi-severity predictions for the same damage location.</p>
 
     <h4>4) Result with Plots</h4>
     <p>The following five plots summarize class-level quality, operating thresholds, and confidence sensitivity for deployment tuning.</p>
@@ -602,28 +607,60 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <p>The evaluation curves for the Car Damage detection model reveal several critical characteristics of its performance across ten damage categories. The Precision-Recall curve demonstrates that the model achieves its highest precision values (reaching up to ~0.85 for front_high and ~0.75 for door_low) only at very low recall levels, with precision declining sharply as recall increases toward 1.0, indicating a fundamental precision-recall trade-off that is particularly pronounced for underrepresented classes such as back_high and back_low, which maintain comparatively low precision throughout. The F1 vs. Confidence curve shows that per-class F1 scores remain relatively stable across a wide range of confidence thresholds (approximately 0.1-0.45), with the macro F1 peaking at roughly 0.52 and the micro F1 at approximately 0.47 near the optimal threshold of ~0.5, beyond which all scores collapse precipitously to near zero - suggesting the model's predictions are heavily clustered around a narrow confidence band. This behavior is corroborated by the Recall vs. Confidence curve, where recall remains near 1.0 for all classes until the confidence threshold approaches ~0.5, at which point it drops abruptly, indicating that the model assigns low-to-moderate confidence scores to the vast majority of its detections. Similarly, the Precision vs. Confidence curve reveals that raw precision values are low across all classes at permissive thresholds (~0.13-0.42), rising sharply only near the 0.5 threshold before detection volume becomes negligible. Collectively, these results suggest that while the model demonstrates reasonable recall capacity, its overall discriminative ability is limited - reflected in moderate macro F1 scores and low baseline precision - pointing to the need for improved training data balance, class-specific augmentation strategies, or post-hoc threshold calibration to achieve operationally acceptable performance across all damage categories.</p>
 
     <h4>5) Discussion</h4>
-    <p>The model shows strong micro-level stability and meaningful class-level separation, but class imbalance still shapes behavior across rare labels. Confidence-threshold tuning materially changes precision and recall trade-offs, which makes calibrated operating points essential for real-world deployment.</p>
-    <ul style="font-size: 14px; color: #555;">
-      <li>Higher thresholds improve precision but can sharply reduce recall for sparse classes</li>
-      <li>Curve analysis helps select policy-specific operating modes (precision-first vs recall-first)</li>
-      <li>Per-class diagnostics expose where targeted data collection will have highest impact</li>
-    </ul>
+    <p><strong>5.1 Interpretation of Performance Patterns:</strong> The results highlight a clear dichotomy in model performance between well-represented and underrepresented classes. Front and corner damage categories, which tend to be more visually distinctive and more frequently photographed in automotive datasets, achieve comparatively higher F1 scores (~0.53-0.59). Conversely, back_high and back_low exhibit markedly lower precision and F1, suggesting that even after aggressive oversampling, the model lacks sufficient training diversity to develop reliable discriminative representations for these categories.</p>
+    <p>The sharp collapse of recall beyond a confidence threshold of ~0.50 is a notable behavioral pattern. This indicates the model operates in a low-confidence regime for the majority of its correct predictions. This is a known consequence of training with Asymmetric Loss under severe class imbalance: ASL suppresses easy negatives effectively but may not sufficiently encourage high-confidence positive activations, particularly for rare classes.</p>
+    <p><strong>5.2 Impact of Ensemble and TTA:</strong> The use of a two-model ensemble (EfficientNet-B0 and B1) combined with TTA across three views provides consistent improvement in prediction stability. Averaging logits across architecturally complementary models reduces prediction variance for borderline examples near the decision boundary. TTA with horizontal and vertical flips is well-motivated for vehicle damage images, as damage may appear at various orientations depending on the camera angle and parking configuration.</p>
+    <p><strong>5.3 Effectiveness of Structured Post-Processing:</strong> The location exclusivity constraint - enforcing that only one severity level is predicted per spatial location - is critical for semantically coherent predictions. Without this constraint, the model would occasionally predict both high and low severity for the same location, which is physically implausible. The combination of label count bounds (1-4 active labels) and location exclusivity significantly reduces the rate of structurally invalid predictions near threshold boundaries.</p>
 
     <h4>6) Limitation</h4>
-    <p>Minority and visually similar classes remain challenging, especially under high threshold settings. The current system is classification-first and does not produce explicit pixel-level masks or bounding boxes for localization-driven decision support.</p>
+    <p>Despite the comprehensive design of the proposed framework, several limitations constrain the current system's performance and generalizability:</p>
+    <p><strong>6.1 Data-Level Limitations</strong></p>
     <ul style="font-size: 14px; color: #555;">
-      <li>Residual class imbalance may increase false negatives in low-support classes</li>
-      <li>Ensemble + TTA improves quality but adds inference latency</li>
-      <li>No direct localization map for explainability in inspection workflows</li>
+      <li>Persistent class imbalance: back_high and back_low remain substantially underrepresented even after aggressive oversampling. Oversampling cannot compensate for the lack of true visual diversity in rare class examples.</li>
+      <li>Dataset size: the absolute number of unique images may be insufficient to learn fine-grained severity discrimination from visual evidence alone, particularly for less distinctive damage patterns.</li>
+      <li>Label quality: the boundary between high and low severity damage is not objectively defined and may vary between annotators, introducing label noise that degrades calibration.</li>
+      <li>Domain coverage: the dataset may not represent diverse lighting conditions, vehicle types, colors, viewing angles, and geographic contexts, limiting out-of-distribution generalization.</li>
+    </ul>
+    <p><strong>6.2 Model-Level Limitations</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Low-confidence predictions: the model systematically assigns low-to-moderate confidence scores to correct predictions, as evidenced by the recall-confidence curves. This limits the use of confidence scores as reliable uncertainty estimates in deployment.</li>
+      <li>Limited ensemble diversity: both architectures belong to the EfficientNet family. Including architecturally distinct models (e.g., Vision Transformers, ConvNeXt) would provide stronger complementarity and improved ensemble gains.</li>
+      <li>Fixed auxiliary loss weight: the auxiliary loss weight (0.25) is set heuristically and not tuned via cross-validation, potentially leaving performance improvements unrealized.</li>
+    </ul>
+    <p><strong>6.3 Evaluation Limitations</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Threshold collapse artifact: the abrupt collapse of all class metrics at the ~0.50 threshold suggests a potential training-test distribution mismatch in confidence scores, warranting calibration diagnostics such as reliability diagrams and Expected Calibration Error (ECE).</li>
+      <li>Single test set: performance is reported on one held-out split from the same source distribution. Evaluation on independently collected external datasets would be necessary to confirm generalizability.</li>
     </ul>
 
     <h4>7) Future Direction</h4>
-    <p>Next steps focus on localization-aware modeling, stronger calibration, and robust deployment policy design.</p>
+    <p>The identified limitations motivate several concrete directions for future research and engineering:</p>
+    <p><strong>7.1 Data Improvement</strong></p>
     <ul style="font-size: 14px; color: #555;">
-      <li>Add detection/segmentation heads for explicit damage localization</li>
-      <li>Introduce uncertainty estimation and reject-option inference for safer automation</li>
-      <li>Expand data coverage across lighting, camera angles, and vehicle categories</li>
-      <li>Build business-mode thresholds for insurance triage and manual review routing</li>
+      <li>Synthetic data generation: leverage GANs or diffusion models to synthesize photorealistic vehicle damage images for underrepresented classes (back_high, back_low), directly addressing the root cause of poor rare-class performance.</li>
+      <li>Active learning: deploy the current model in a human-in-the-loop labeling pipeline, prioritizing annotation of high-uncertainty or rare-class examples to efficiently expand coverage.</li>
+      <li>Cross-dataset augmentation: incorporate publicly available damage datasets to increase distributional diversity and improve out-of-distribution robustness.</li>
+      <li>Annotation refinement: adopt a multi-annotator protocol with inter-rater agreement measurement (e.g., Cohen's kappa) and label consolidation to reduce the impact of ambiguous ground truth.</li>
+    </ul>
+    <p><strong>7.2 Model Architecture Improvements</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Vision Transformers: integrate ViT or Swin Transformer backbones to exploit global contextual reasoning, which may better capture the spatial extent of vehicle damage regions.</li>
+      <li>Graph-based label dependency: model semantic relationships between damage locations and severities using a graph neural module to improve multi-label prediction coherence.</li>
+      <li>Weakly supervised localization: integrate Grad-CAM or class activation map supervision to improve spatial attention and interpretability.</li>
+      <li>Vision-language models: explore adapting large models such as CLIP or LLaVA to the damage classification task via prompt engineering or parameter-efficient fine-tuning.</li>
+    </ul>
+    <p><strong>7.3 Training Strategy Improvements</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Advanced loss design: explore poly loss, distribution-balanced loss, or learnable ASL parameters as alternatives, and investigate their interaction with the auxiliary multi-task objective.</li>
+      <li>Label co-occurrence modeling: explicitly model co-occurrence statistics of the ten damage classes as soft constraints in the loss function or as prior knowledge in post-processing.</li>
+      <li>Neural architecture search (NAS): automate the search for optimal backbone and head configurations for this specific multi-label fine-grained task.</li>
+    </ul>
+    <p><strong>7.4 Deployment and Evaluation</strong></p>
+    <ul style="font-size: 14px; color: #555;">
+      <li>Calibration: apply per-class temperature scaling or isotonic regression to produce well-calibrated probability outputs suitable for downstream risk quantification in insurance workflows.</li>
+      <li>Mobile and edge deployment: distill the ensemble into a lightweight model (e.g., MobileNetV3 or EfficientNet-Lite) via knowledge distillation, enabling on-device claim assessment via smartphone cameras.</li>
+      <li>Longitudinal evaluation: establish a benchmark protocol for repeated evaluation over time to detect distribution drift and trigger systematic model re-calibration.</li>
+      <li>Human-AI comparison study: conduct a controlled study comparing model predictions against expert assessors on a standardized damage image set to quantify the human-machine performance gap.</li>
     </ul>
 
     <div class="keywords">
