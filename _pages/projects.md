@@ -588,7 +588,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="/images/car-damage/precision_confidence.png" alt="Precision Confidence Curve">
     <figcaption>Figure 2: Precision vs confidence threshold</figcaption>
 
-    <img src="/images/car-damage/recall_confidence.png" alt="Recall Confidence Curve">
+    <img src="/images/car-damage/recall_confidence.png?v=20260404" alt="Recall Confidence Curve">
     <figcaption>Figure 3: Recall vs confidence threshold</figcaption>
 
     <img src="/images/car-damage/precision_recall.png" alt="Precision Recall Curve">
