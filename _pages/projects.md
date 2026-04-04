@@ -529,7 +529,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
-    <a href="https://github.com/mknishat/Car-Damage-Classification" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Project Repository</a>
+    <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Project Repository</a>
     <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
     <a href="https://github.com/mknishat/Car-Damage-Classification/tree/main/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
 
