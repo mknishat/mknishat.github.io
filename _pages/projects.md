@@ -529,6 +529,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
   </div>
   <div class="card-body">
+    <a href="https://github.com/mknishat/Car-Damage-Classification" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Project Repository</a>
     <a href="https://github.com/mknishat/mknishat.github.io/tree/master/Dataset" class="btn-link dark" target="_blank"><i class="fab fa-github"></i> Dataset Folder</a>
     <a href="https://github.com/mknishat/mknishat.github.io/tree/master/finetune_dataset_multilabel" class="btn-link green" target="_blank"><i class="fab fa-github"></i> finetune_dataset_multilabel</a>
 
@@ -588,7 +589,7 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="/images/car-damage/precision_confidence.png" alt="Precision Confidence Curve">
     <figcaption>Figure 2: Precision vs confidence threshold</figcaption>
 
-    <img src="/images/car-damage/recall_confidence.png?v=20260404" alt="Recall Confidence Curve">
+    <img src="/images/car-damage/recall_confidence.png?v=20260404b" alt="Recall Confidence Curve">
     <figcaption>Figure 3: Recall vs confidence threshold</figcaption>
 
     <img src="/images/car-damage/precision_recall.png" alt="Precision Recall Curve">
