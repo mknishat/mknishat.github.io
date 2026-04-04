@@ -597,6 +597,8 @@ Welcome to my projects portfolio featuring research in data science, machine lea
     <img src="/images/car-damage/f1_confidence.png" alt="F1 Confidence Curve">
     <figcaption>Figure 5: F1 score vs confidence threshold</figcaption>
 
+    <p><strong>Figure-wise insights:</strong> Figure 1 (evaluation summary) shows class-level F1 and TP/FP/FN behavior, where majority classes remain more stable and minority classes account for most residual errors. Figure 2 (precision-confidence) rises with threshold, indicating cleaner positive predictions at stricter confidence settings. Figure 3 (recall-confidence) declines with threshold, showing that strict filtering increases missed positives, especially for difficult labels. Figure 4 (precision-recall) highlights the operating trade-off frontier and indicates the most balanced region in mid-threshold settings. Figure 5 (F1-confidence) peaks in a narrow middle band, which is the recommended default operating zone when balanced performance is required.</p>
+
     <h4>5) Discussion</h4>
     <p>The model shows strong micro-level stability and meaningful class-level separation, but class imbalance still shapes behavior across rare labels. Confidence-threshold tuning materially changes precision and recall trade-offs, which makes calibrated operating points essential for real-world deployment.</p>
     <ul style="font-size: 14px; color: #555;">
