@@ -27,7 +27,7 @@ author_profile: true
   </div>
 
   <div class="experience" data-year="2023">
-    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Analyst → SAP Associate</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Jul 2026</strong></p>
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Analyst → SAP Associate</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Aug 2026</strong></p>
 
     <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
       <li><em>Promoted to SAP Associate in April 2025</em></li>
@@ -39,6 +39,7 @@ author_profile: true
       <li>Provided comprehensive post-go-live support, troubleshooting, and continuous process enhancements for improved operational efficiency</li>
       <li>Participated in all phases of testing—unit, integration, and user acceptance—ensuring solution quality and reliability</li>
     </ul>
+    <p style="font-size: 15px;"><a href="{{ '/consultancy/' | relative_url }}"><i class="fas fa-arrow-right"></i> More about my consultancy life at PwC</a></p>
   </div>
 
   <hr>

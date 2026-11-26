@@ -484,3 +484,53 @@ html[data-theme="dark"] .transcript-btn-download {
 html[data-theme="dark"] .transcript-btn-download:hover {
   background: #666 !important;
 }
+
+/* ========== MY CONSULTANCY LIFE ========== */
+html[data-theme="dark"] .consult-stat {
+  background: #242424 !important;
+  border-color: #404040 !important;
+  border-top-color: #ff8a50 !important;
+}
+
+html[data-theme="dark"] .consult-stat-number,
+html[data-theme="dark"] .consult-card h3 i {
+  color: #ff8a50 !important;
+}
+
+html[data-theme="dark"] .consult-stat-label,
+html[data-theme="dark"] .consult-role-meta {
+  color: #a0a0a0 !important;
+}
+
+html[data-theme="dark"] .consult-timeline {
+  border-left-color: #404040 !important;
+}
+
+html[data-theme="dark"] .consult-role::before {
+  background: #ff8a50 !important;
+  border-color: #1a1a1a !important;
+  box-shadow: 0 0 0 1px #ff8a50 !important;
+}
+
+html[data-theme="dark"] .consult-role-title {
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .consult-card {
+  background: #242424 !important;
+  border-color: #404040 !important;
+}
+
+html[data-theme="dark"] .consult-card p {
+  color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] .consult-chip {
+  background: #3d2a1e !important;
+  color: #ffb38a !important;
+}
+
+html[data-theme="dark"] .consult-skills td {
+  border-bottom-color: #404040 !important;
+  color: #c0c0c0;
+}

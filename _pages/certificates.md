@@ -38,7 +38,7 @@ author_profile: true
         <strong>🏆 PMO for SAP Implementation Projects</strong><br>
         <span style="color: #555;">Led project management for four companies</span>
       </td>
-      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2023–Present</td>
+      <td style="padding: 12px 8px; vertical-align: top; text-align: right;">2023–2026</td>
     </tr>
     <tr style="border-bottom: 1px solid #ddd;">
       <td style="padding: 12px 8px; vertical-align: top;">
