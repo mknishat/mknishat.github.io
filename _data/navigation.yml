@@ -17,6 +17,9 @@ main:
   - title: "💼 Experiences"
     url: /experience/
 
+  - title: "🏢 My Consultancy Life"
+    url: /consultancy/
+
   - title: "🏆 Certificates"
     url: /certificates/
 
