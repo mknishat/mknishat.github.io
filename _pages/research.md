@@ -10,12 +10,33 @@ author_profile: true
   <!-- Research Areas -->
   <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-compass"></i> Research Areas</h2>
   <ul style="font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 30px;">
-    <li>Optimization under Uncertainty</li>
-    <li>Infrastructure Protection</li>
-    <li>Sustainable Transportation Network Design</li>
-    <li>Disaster Mitigation</li>
+    <li>Data-Driven Optimization under Uncertainty</li>
+    <li>Geostatistical Modeling for Emergencies</li>
+    <li>Machine Learning for Disaster Risk Mitigation</li>
     <li>Healthcare Systems Optimization</li>
+    <li>Supply Chain Resilience</li>
+    <li>UAV Network Design</li>
   </ul>
+
+  <hr style="margin: 40px 0;">
+
+  <!-- Current Research -->
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-flask"></i> Current Research</h2>
+  <div class="research-area" style="margin-bottom: 30px; padding: 25px; border-left: 4px solid #c8102e; background: #f8f9fa; border-radius: 4px;">
+    <h3 style="font-size: 18px; color: #333; margin-top: 0;"><i class="fas fa-helicopter"></i> Operations Research and Machine Learning for UAV Network Design</h3>
+    <p style="font-size: 14px; color: #666; margin: 0 0 12px 0;">Graduate Research Assistant, Iowa State University &middot; Advisor: <a href="https://www.engineering.iastate.edu/people/profile/estherjo" target="_blank">Dr. Esther Jose</a></p>
+    <p style="font-size: 15px; text-align: justify; color: #555; line-height: 1.6;">
+      As a Ph.D. student in Industrial Engineering at Iowa State University, I study how operations research and machine learning can support the design of unmanned aerial vehicle (UAV) networks. This work builds on my broader interest in data-driven optimization and geostatistical modeling under uncertainty, with a focus on emergency settings where decisions must be made with incomplete, spatially varying information.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">Operations Research</span>
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">Machine Learning</span>
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">UAV Networks</span>
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">Geostatistics</span>
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">Optimization under Uncertainty</span>
+      <span style="background: #fdecee; padding: 5px 12px; border-radius: 15px; font-size: 13px; color: #a00d26;">Emergency Response</span>
+    </div>
+  </div>
 
   <hr style="margin: 40px 0;">
 
@@ -34,7 +55,7 @@ author_profile: true
   <hr style="margin: 40px 0;">
 
   <!-- Research Directions -->
-  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-rocket"></i> Research Directions</h2>
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;"><i class="fas fa-rocket"></i> Other Research Directions</h2>
 
   <!-- Direction 1: Supply Chain -->
   <div class="research-area" style="margin-bottom: 30px; padding: 25px; border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 4px;">
@@ -76,7 +97,7 @@ author_profile: true
   <div style="background: #f0f8ff; padding: 25px; border-radius: 8px; border: 1px solid #b3d9ff;">
     <h3 style="font-size: 18px; color: #0066cc; margin-top: 0;"><i class="fas fa-handshake"></i> Research Collaboration</h3>
     <p style="font-size: 15px; text-align: justify; color: #333; line-height: 1.6;">
-      I am passionate about solving complex problems at the intersection of optimization, machine learning, and decision-making under uncertainty. I welcome opportunities to collaborate on research initiatives spanning infrastructure resilience, transportation networks, healthcare systems, and data-driven optimization frameworks. Feel free to reach out if you have research proposals or collaborative opportunities.
+      I am passionate about solving complex problems at the intersection of optimization, machine learning, and decision-making under uncertainty. I welcome opportunities to collaborate on research spanning disaster risk mitigation, emergency response, UAV networks, healthcare systems, and supply chain resilience. Feel free to reach out at <a href="mailto:mknishat@iastate.edu">mknishat@iastate.edu</a> if you have research proposals or collaborative opportunities.
     </p>
   </div>
 

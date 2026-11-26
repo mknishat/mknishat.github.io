@@ -7,6 +7,12 @@ author_profile: true
 
 <div class="main-content">
 
+  <div class="education" data-year="2026">
+    <p style="font-size: 17px; text-align: justify;"><i class="fas fa-university"></i> <strong><a href="https://www.iastate.edu/" target="_blank">Iowa State University</a></strong>, Ames, Iowa, USA<br><i class="fas fa-calendar-alt"></i> <strong>Aug 2026 – Present</strong><br><i class="fas fa-graduation-cap"></i> Doctor of Philosophy in Industrial Engineering<br><i class="fas fa-building-columns"></i> Department of Industrial and Manufacturing Systems Engineering<br><i class="fas fa-user-tie"></i> <strong>Advisor:</strong> <a href="https://www.engineering.iastate.edu/people/profile/estherjo" target="_blank">Dr. Esther Jose</a></p>
+  </div>
+
+  <hr>
+
   <div class="education" data-year="2025">
     <p style="font-size: 17px; text-align: justify;"><i class="fas fa-university"></i> <strong><a href="https://www.buet.ac.bd/web/#/" target="_blank">Bangladesh University of Engineering and Technology (BUET)</a></strong>, Bangladesh<br><i class="fas fa-calendar-alt"></i> <strong>2022 – 2025</strong><br><i class="fas fa-graduation-cap"></i> Master of Science in Industrial and Production Engineering<br><i class="fas fa-chart-line"></i> <strong>CGPA:</strong> 3.92/4.00</p>
 
