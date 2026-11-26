@@ -260,6 +260,10 @@ author_profile: true
     </div>
   </div>
 
+  <p style="text-align: center; margin: 0 0 25px 0;">
+    <a href="#consultancy-cv" class="transcript-btn"><i class="fas fa-file-pdf"></i> View My Consultancy CV</a>
+  </p>
+
   <hr>
 
   <h2 class="consult-section-title"><i class="fas fa-route"></i> Career Path at PwC</h2>
@@ -359,6 +363,16 @@ author_profile: true
 
   <hr>
 
+  <div class="transcript-viewer" id="consultancy-cv">
+    <h3><i class="fas fa-file-pdf"></i> Consultancy CV</h3>
+    <p style="font-size: 14px; color: #666; margin: 0 0 15px 0;">My CV for SAP and supply chain consulting roles.</p>
+    <div class="transcript-controls">
+      <button class="transcript-btn" onclick="openPDFFullscreen('{{ '/files/Nishat_CV_Consultancy.pdf' | relative_url }}')"><i class="fas fa-expand"></i> Open Fullscreen</button>
+      <a href="{{ '/files/Nishat_CV_Consultancy.pdf' | relative_url }}" class="transcript-btn transcript-btn-download" download><i class="fas fa-download"></i> Download PDF</a>
+    </div>
+    <iframe class="transcript-preview" src="{{ '/files/Nishat_CV_Consultancy.pdf' | relative_url }}#toolbar=0" frameborder="0" title="Consultancy CV"></iframe>
+  </div>
+
   <div class="transcript-viewer">
     <h3><i class="fas fa-file-pdf"></i> PwC Experience Certificate</h3>
     <p style="font-size: 14px; color: #666; margin: 0 0 15px 0;">Issued by PricewaterhouseCoopers Bangladesh Private Limited, confirming employment from August 14, 2023 to August 9, 2026.</p>
@@ -382,5 +396,5 @@ author_profile: true
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
   <a href="{{ '/experience/' | relative_url }}" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-briefcase"></i> Experiences</a>
   <a href="{{ '/certificates/' | relative_url }}" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-trophy"></i> Certificates</a>
-  <a href="{{ '/files/Nishat_CV.pdf' | relative_url }}" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-file-pdf"></i> CV</a>
+  <a href="{{ '/files/Nishat_CV_Consultancy.pdf' | relative_url }}" style="padding: 6px 12px; text-decoration: none; background: #f0f0f0; color: #333; border-radius: 3px; font-size: 14px; transition: all 0.3s; border: 1px solid #ccc;"><i class="fas fa-file-pdf"></i> Consultancy CV</a>
 </div>
