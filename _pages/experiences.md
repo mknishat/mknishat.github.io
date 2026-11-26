@@ -27,7 +27,7 @@ author_profile: true
   </div>
 
   <div class="experience" data-year="2023">
-    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate → SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Jul 2026</strong></p>
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Analyst → SAP Associate</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Jul 2026</strong></p>
 
     <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
       <li><em>Promoted to SAP Associate in April 2025</em></li>
