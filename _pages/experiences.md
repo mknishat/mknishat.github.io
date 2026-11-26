@@ -7,8 +7,27 @@ author_profile: true
 
 <div class="main-content">
 
+  <div style="margin: 20px 0;">
+    <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">RESEARCH EXPERIENCE</h2>
+  </div>
+
+  <div class="experience" data-year="2026">
+    <p style="font-size: 17px; text-align: justify;">🔬 <strong>Graduate Research Assistant</strong><br> 🏢 <a href="https://www.imse.iastate.edu/" target="_blank"><strong>Industrial and Manufacturing Systems Engineering, Iowa State University</strong></a>, Ames, Iowa, USA<br>📅 <strong>Aug 2026 – Present</strong></p>
+
+    <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
+      <li>Conducting research with <a href="https://www.engineering.iastate.edu/people/profile/estherjo" target="_blank">Dr. Esther Jose</a> on operations research and machine learning for UAV network design</li>
+      <li>Developing data-driven optimization and geostatistical models under uncertainty for emergency settings</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div style="margin: 20px 0;">
+    <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">INDUSTRY EXPERIENCE</h2>
+  </div>
+
   <div class="experience" data-year="2023">
-    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate → SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Present</strong></p>
+    <p style="font-size: 17px; text-align: justify;">🛠 <strong>SAP Associate → SAP Analyst</strong><br> 🏢 <a href="https://www.pwc.com/bd/en.html" target="_blank"><strong>PricewaterhouseCoopers (PwC) Bangladesh</strong></a><br>📅 <strong>Aug 2023 – Jul 2026</strong></p>
 
     <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
       <li><em>Promoted to SAP Associate in April 2025</em></li>
@@ -55,7 +74,7 @@ author_profile: true
   <hr>
 
   <div class="experience" data-year="2017">
-    <p style="font-size: 17px; text-align: justify;">🎓 <strong>Mentor & Instructor</strong><br> 🏢 <strong>Science Zone Academic Care</strong>, Jashore, Bangladesh<br>�� <strong>2017 – 2024</strong></p>
+    <p style="font-size: 17px; text-align: justify;">🎓 <strong>Mentor & Instructor</strong><br> 🏢 <strong>Science Zone Academic Care</strong>, Jashore, Bangladesh<br>📅 <strong>2017 – 2024</strong></p>
 
     <ul style="font-size: 15px; text-align: justify; padding-left: 24px;">
       <li>Extensively tutored students for over 7 years at various academic levels, including O-level, A-level, National Curriculum high school, and first-year university students</li>
